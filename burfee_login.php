@@ -10,12 +10,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $member_id = $_POST['member_id'];
     $password = $_POST['password'];
 
-    // 🕵️ Debug Log - Helping the developer find the mismatch
+    // 🕵️ Debug Log
     $log_file = 'burfee_auth.log';
     $timestamp = date('Y-m-d H:i:s');
 
     try {
-        // We attempt to find the column names dynamically to avoid crashes
+        // Fetch one record to inspect column names (case-insensitive approach)
         $stmt = $pdo->query("SELECT * FROM customer LIMIT 1");
         $sample = $stmt->fetch();
 
@@ -26,17 +26,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($sample) {
             $cols = array_keys($sample);
-            // Fallback logic if production names differ in casing or style
-            foreach (['member_id', 'memberid', 'MemberID', 'email'] as $f) {
-                if (in_array($f, $cols)) { $col_id = $f; break; }
-            }
-            foreach (['member_pass', 'memberpass', 'MemberPassword', 'password'] as $f) {
-                if (in_array($f, $cols)) { $col_pass = $f; break; }
-            }
-            foreach (['full_name', 'name', 'FullName', 'Name'] as $f) {
-                if (in_array($f, $cols)) { $col_name = $f; break; }
-            }
+
+            // Function for case-insensitive column search
+            $findCol = function($options, $existingCols) {
+                foreach ($options as $opt) {
+                    foreach ($existingCols as $actual) {
+                        if (strcasecmp($opt, $actual) === 0) return $actual;
+                    }
+                }
+                return null;
+            };
+
+            $col_id = $findCol(['MemberId', 'Memberid', 'email', 'id'], $cols) ?? $col_id;
+            $col_pass = $findCol(['MemberPass', 'Memberpass', 'password', 'pass'], $cols) ?? $col_pass;
+            $col_name = $findCol(['FullName', 'Fullname', 'name', 'DisplayName'], $cols) ?? $col_name;
+            $col_cibil = $findCol(['CibilStatus', 'Cibilstatus', 'status', 'cibil'], $cols) ?? $col_cibil;
         }
+
+        file_put_contents($log_file, "[$timestamp] Attempting login for $member_id using ID column: $col_id\n", FILE_APPEND);
 
         $stmt = $pdo->prepare("SELECT * FROM customer WHERE $col_id = ?");
         $stmt->execute([$member_id]);
@@ -44,35 +51,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $authenticated = false;
         if ($member) {
-            // Support both plain text (old legacy) and hashed (migrated/modern legacy)
+            // Check password - legacy often uses plain text
             if ($member[$col_pass] === $password) {
                 $authenticated = true;
             } elseif (password_verify($password, $member[$col_pass])) {
                 $authenticated = true;
             } else {
-                file_put_contents($log_file, "[$timestamp] Fail: Password mismatch for $member_id\n", FILE_APPEND);
+                file_put_contents($log_file, "[$timestamp] Fail: Password mismatch for $member_id. Input: $password, DB: " . substr($member[$col_pass], 0, 3) . "...\n", FILE_APPEND);
             }
         } else {
             file_put_contents($log_file, "[$timestamp] Fail: Member $member_id not found in table using column $col_id\n", FILE_APPEND);
         }
 
         if ($authenticated) {
-            // Find or Migrate to 'users' table
+            // Migration / Session handling
             $stmt = $pdo->prepare("SELECT * FROM users WHERE email = ?");
             $stmt->execute([$member[$col_id]]);
             $user = $stmt->fetch();
 
+            $actual_name = $member[$col_name] ?? $member[$col_id];
+
             if (!$user) {
                 $status = $member[$col_cibil] ?? 'good';
-                $name = $member[$col_name] ?? $member[$col_id];
 
                 $stmt = $pdo->prepare("INSERT INTO users (name, email, password, role, cibil_status) VALUES (?, ?, ?, 'customer', ?)");
-                $stmt->execute([$name, $member[$col_id], password_hash($password, PASSWORD_DEFAULT), $status]);
+                $stmt->execute([$actual_name, $member[$col_id], password_hash($password, PASSWORD_DEFAULT), $status]);
                 $user_id = $pdo->lastInsertId();
 
                 $_SESSION['user_id'] = $user_id;
                 $_SESSION['role'] = 'customer';
-                $_SESSION['name'] = $name;
+                $_SESSION['name'] = $actual_name;
             } else {
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['role'] = $user['role'];
