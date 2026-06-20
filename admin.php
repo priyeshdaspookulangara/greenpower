@@ -5,18 +5,40 @@ if (!isAdmin()) {
     redirect('index.php');
 }
 
-// Handle Product Add
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_product'])) {
+$edit_product = null;
+if (isset($_GET['edit_product'])) {
+    $stmt = $pdo->prepare("SELECT * FROM products WHERE id = ?");
+    $stmt->execute([$_GET['edit_product']]);
+    $edit_product = $stmt->fetch();
+    if ($edit_product) {
+        $stmt = $pdo->prepare("SELECT * FROM product_properties WHERE product_id = ?");
+        $stmt->execute([$edit_product['id']]);
+        $edit_product['properties'] = $stmt->fetchAll();
+    }
+}
+
+// Handle Product Add/Edit
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && (isset($_POST['add_product']) || isset($_POST['edit_product_submit']))) {
     $name = $_POST['name'];
     $category = $_POST['category'];
     $price = $_POST['price'];
     $stock = $_POST['stock'];
+    $is_edit = isset($_POST['edit_product_submit']);
+    $product_id = $is_edit ? $_POST['product_id'] : null;
 
     $pdo->beginTransaction();
     try {
-        $stmt = $pdo->prepare("INSERT INTO products (name, category, price, stock) VALUES (?, ?, ?, ?)");
-        $stmt->execute([$name, $category, $price, $stock]);
-        $product_id = $pdo->lastInsertId();
+        if ($is_edit) {
+            $stmt = $pdo->prepare("UPDATE products SET name = ?, category = ?, price = ?, stock = ? WHERE id = ?");
+            $stmt->execute([$name, $category, $price, $stock, $product_id]);
+            // Delete old properties and re-insert
+            $stmt = $pdo->prepare("DELETE FROM product_properties WHERE product_id = ?");
+            $stmt->execute([$product_id]);
+        } else {
+            $stmt = $pdo->prepare("INSERT INTO products (name, category, price, stock) VALUES (?, ?, ?, ?)");
+            $stmt->execute([$name, $category, $price, $stock]);
+            $product_id = $pdo->lastInsertId();
+        }
 
         if (isset($_POST['prop_names'])) {
             foreach ($_POST['prop_names'] as $i => $prop_name) {
@@ -28,8 +50,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_product'])) {
             }
         }
         $pdo->commit();
+        redirect('admin.php');
     } catch (Exception $e) {
         $pdo->rollBack();
+        $error = "Error: " . $e->getMessage();
     }
 }
 
@@ -81,6 +105,10 @@ include 'includes/header.php';
             </div>
         </div>
 
+        <?php if(isset($error)): ?>
+            <div style="background: #fee2e2; color: #dc2626; padding: 1rem; border-radius: 8px; margin-bottom: 2rem;"><?php echo $error; ?></div>
+        <?php endif; ?>
+
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem;">
             <div class="admin-card stat-box">
                 <div class="label">Total Revenue</div>
@@ -122,6 +150,7 @@ include 'includes/header.php';
                             <td style="font-weight: 600;"><?php echo formatPrice($p['price']); ?></td>
                             <td><?php echo $p['stock']; ?> units</td>
                             <td style="text-align: right; padding-right: 20px;">
+                                <a href="admin.php?edit_product=<?php echo $p['id']; ?>" style="color: #007bff; margin-right: 15px;"><i class="fas fa-edit"></i></a>
                                 <a href="admin.php?delete_product=<?php echo $p['id']; ?>" style="color: #dc3545;" onclick="return confirm('Delete this product?')"><i class="fas fa-trash"></i></a>
                             </td>
                         </tr>
@@ -154,12 +183,6 @@ include 'includes/header.php';
                             <td>#<?php echo $t['order_id']; ?></td>
                             <td><?php echo htmlspecialchars($t['user_name'] ?? 'System'); ?></td>
                             <td>
-                                <?php
-                                    $class = 'status-scheduled'; // Default blue
-                                    if($t['type'] == 'company_revenue') $class = 'status-completed'; // Green
-                                    if($t['type'] == 'referral_commission') $class = 'status-in-progress'; // Orange
-                                    if($t['type'] == 'third_party_subsidy') $class = 'status-postponed'; // Red
-                                ?>
                                 <span class="badge" style="font-size: 0.7rem; color: #fff; background: <?php
                                     if($t['type'] == 'company_revenue') echo '#28a745';
                                     elseif($t['type'] == 'referral_commission') echo '#fd7e14';
@@ -178,42 +201,54 @@ include 'includes/header.php';
     </main>
 </div>
 
-<!-- PRODUCT ADD MODAL -->
-<div class="modal-overlay" id="productModal">
+<!-- PRODUCT MODAL (ADD/EDIT) -->
+<div class="modal-overlay <?php echo $edit_product ? 'active' : ''; ?>" id="productModal">
     <div class="login-modal" style="max-width: 600px; text-align: left;">
         <span class="close-btn" onclick="closeProductModal()">&times;</span>
-        <h3 style="margin-bottom: 1.5rem; color: #333;">Schedule New Product</h3>
+        <h3 style="margin-bottom: 1.5rem; color: #333;"><?php echo $edit_product ? 'Edit Product' : 'Add New Product'; ?></h3>
         <form method="POST">
+            <?php if($edit_product): ?>
+                <input type="hidden" name="product_id" value="<?php echo $edit_product['id']; ?>">
+            <?php endif; ?>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
                 <div>
                     <label style="color: #666; font-size: 0.9rem;">Product Name</label>
-                    <input type="text" name="name" required placeholder="e.g. 440W Solar Panel">
+                    <input type="text" name="name" required value="<?php echo $edit_product ? htmlspecialchars($edit_product['name']) : ''; ?>" placeholder="e.g. 440W Solar Panel">
                 </div>
                 <div>
                     <label style="color: #666; font-size: 0.9rem;">Category</label>
                     <select name="category" style="width: 100%; padding: 14px; border-radius: 6px; border: 1px solid #ddd; margin-bottom: 15px;">
-                        <option value="solar_panel">Solar Panel</option>
-                        <option value="battery">Battery</option>
+                        <option value="solar_panel" <?php echo ($edit_product && $edit_product['category'] == 'solar_panel') ? 'selected' : ''; ?>>Solar Panel</option>
+                        <option value="battery" <?php echo ($edit_product && $edit_product['category'] == 'battery') ? 'selected' : ''; ?>>Battery</option>
                     </select>
                 </div>
             </div>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
                 <div>
                     <label style="color: #666; font-size: 0.9rem;">Unit Price (₹)</label>
-                    <input type="number" name="price" step="0.01" required>
+                    <input type="number" name="price" step="0.01" required value="<?php echo $edit_product ? $edit_product['price'] : ''; ?>">
                 </div>
                 <div>
                     <label style="color: #666; font-size: 0.9rem;">Inventory Stock</label>
-                    <input type="number" name="stock" required>
+                    <input type="number" name="stock" required value="<?php echo $edit_product ? $edit_product['stock'] : ''; ?>">
                 </div>
             </div>
 
             <h5 style="margin: 1rem 0 0.5rem; color: #333; font-size: 0.9rem;">Technical Specifications</h5>
             <div id="specs-container">
-                <div style="display: flex; gap: 10px; margin-bottom: 10px;">
-                    <input type="text" name="prop_names[]" placeholder="Spec Name" style="margin-bottom: 0;">
-                    <input type="text" name="prop_values[]" placeholder="Value" style="margin-bottom: 0;">
-                </div>
+                <?php if($edit_product && !empty($edit_product['properties'])): ?>
+                    <?php foreach($edit_product['properties'] as $prop): ?>
+                        <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+                            <input type="text" name="prop_names[]" value="<?php echo htmlspecialchars($prop['property_name']); ?>" placeholder="Spec Name" style="margin-bottom: 0;">
+                            <input type="text" name="prop_values[]" value="<?php echo htmlspecialchars($prop['property_value']); ?>" placeholder="Value" style="margin-bottom: 0;">
+                        </div>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+                        <input type="text" name="prop_names[]" placeholder="Spec Name" style="margin-bottom: 0;">
+                        <input type="text" name="prop_values[]" placeholder="Value" style="margin-bottom: 0;">
+                    </div>
+                <?php endif; ?>
             </div>
             <button type="button" class="btn" style="background: #f8f9fa; color: #333; font-size: 0.8rem; border: 1px solid #ddd; margin-top: 5px;" onclick="addSpecRow()">
                 <i class="fas fa-plus mr-1"></i> Add Specification
@@ -221,7 +256,9 @@ include 'includes/header.php';
 
             <div style="text-align: right; margin-top: 2rem;">
                 <button type="button" class="btn" style="background: #6c757d; color: #fff; margin-right: 10px;" onclick="closeProductModal()">Cancel</button>
-                <button type="submit" name="add_product" class="btn" style="background: #28a745; color: #fff; padding: 12px 30px;">Save Product</button>
+                <button type="submit" name="<?php echo $edit_product ? 'edit_product_submit' : 'add_product'; ?>" class="btn" style="background: #28a745; color: #fff; padding: 12px 30px;">
+                    <?php echo $edit_product ? 'Update Product' : 'Save Product'; ?>
+                </button>
             </div>
         </form>
     </div>
@@ -230,12 +267,19 @@ include 'includes/header.php';
 <script>
     const productModal = document.getElementById('productModal');
     function openProductModal() {
+        // Clear form if it was an edit
+        if (!productModal.classList.contains('active')) {
+            window.location.href = 'admin.php';
+        }
         productModal.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
     function closeProductModal() {
         productModal.classList.remove('active');
         document.body.style.overflow = 'auto';
+        if (window.location.search.includes('edit_product')) {
+            window.location.href = 'admin.php';
+        }
     }
     function addSpecRow() {
         const container = document.getElementById('specs-container');
@@ -248,6 +292,11 @@ include 'includes/header.php';
             <input type="text" name="prop_values[]" placeholder="Value" style="margin-bottom: 0;">
         `;
         container.appendChild(div);
+    }
+
+    // If modal is open from PHP, ensure overflow hidden
+    if (productModal.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
     }
 </script>
 

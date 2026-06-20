@@ -6,15 +6,16 @@ require_once __DIR__ . '/functions.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SolarShop - Sustainable Energy Solutions</title>
+    <title>SolarShop - Engineering Sustainable Excellence</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
+<body class="<?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? '' : 'dark-theme'; ?>">
     <header>
         <nav>
             <div class="logo">
-                <div class="logo-text">SolarShop</div>
-                <div class="logo-subtext">Sustainable<br>Energy</div>
+                <a href="index.php" class="logo-text">SolarShop</a>
+                <div class="logo-subtext">Sustainable<br>Excellence</div>
             </div>
             <div class="hamburger" id="hamburger">
                 <span></span><span></span><span></span>
@@ -31,6 +32,7 @@ require_once __DIR__ . '/functions.php';
                     </li>
                     <li class="nav-item"><a href="logout.php" class="nav-btn-signup">LOGOUT</a></li>
                 <?php else: ?>
+                    <li class="nav-item"><a href="index.php#products">PRODUCTS</a></li>
                     <li class="nav-item">
                         <a href="#" onclick="openLoginModal(event)">SIGN IN</a>
                     </li>
@@ -46,7 +48,7 @@ require_once __DIR__ . '/functions.php';
             <span class="close-btn" onclick="closeLoginModal()">&times;</span>
 
             <div class="modal-logo">
-                <div class="logo-text" style="color: var(--brand-blue); font-size: 2rem;">SolarShop</div>
+                <div class="logo-text" style="color: var(--brand-blue); font-size: 2.2rem;">SolarShop</div>
             </div>
 
             <h2>Welcome Back!</h2>
@@ -57,6 +59,9 @@ require_once __DIR__ . '/functions.php';
                 <input type="password" name="password" placeholder="Password" required>
                 <button type="submit" class="submit-btn">Login</button>
             </form>
+            <p style="margin-top: 20px; font-size: 0.8rem;">
+                Existing Burfee Member? <a href="burfee_login.php" style="color: var(--brand-blue);">Login here</a>
+            </p>
         </div>
     </div>
 
@@ -72,7 +77,7 @@ require_once __DIR__ . '/functions.php';
         const loginModal = document.getElementById('loginModal');
 
         function openLoginModal(e) {
-            e.preventDefault();
+            if(e) e.preventDefault();
             loginModal.classList.add('active');
             document.body.style.overflow = 'hidden';
         }

@@ -26,6 +26,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $pdo->beginTransaction();
     try {
         foreach ($cart_items as $item) {
+            // Check and update stock
+            $stmt = $pdo->prepare("UPDATE products SET stock = stock - 1 WHERE id = ? AND stock > 0");
+            $stmt->execute([$item['id']]);
+            if ($stmt->rowCount() === 0) {
+                throw new Exception("Product " . $item['name'] . " is out of stock.");
+            }
+
             // Create Order
             $stmt = $pdo->prepare("INSERT INTO orders (user_id, product_id, total_price, cibil_status_at_purchase, order_status) VALUES (?, ?, ?, ?, 'completed')");
             $stmt->execute([$user['id'], $item['id'], $item['price'], $user['cibil_status']]);

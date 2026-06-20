@@ -35,13 +35,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if (!$user) {
             // Auto-register them in our main system
-            $stmt = $pdo->prepare("INSERT INTO users (name, email, password, role, cibil_status) VALUES (?, ?, ?, 'customer', 'good')");
-            $stmt->execute([$member['name'], $member['MemberId'], password_hash($password, PASSWORD_DEFAULT)]);
+            $stmt = $pdo->prepare("INSERT INTO users (name, email, password, role, cibil_status) VALUES (?, ?, ?, 'customer', ?)");
+            $stmt->execute([$member['FullName'], $member['MemberId'], password_hash($password, PASSWORD_DEFAULT), $member['CibilStatus'] ?? 'good']);
             $user_id = $pdo->lastInsertId();
 
             $_SESSION['user_id'] = $user_id;
             $_SESSION['role'] = 'customer';
-            $_SESSION['name'] = $member['name'];
+            $_SESSION['name'] = $member['FullName'];
         } else {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['role'] = $user['role'];

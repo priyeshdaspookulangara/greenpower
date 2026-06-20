@@ -872,3 +872,1437 @@
 [Sat Jun 20 10:34:41 2026] [::1]:49092 Accepted
 [Sat Jun 20 10:34:41 2026] [::1]:49092 [200]: GET /assets/css/style.css
 [Sat Jun 20 10:34:41 2026] [::1]:49092 Closing
+[Sat Jun 20 10:46:10 2026] [::1]:43994 Accepted
+[Sat Jun 20 10:46:10 2026] [::1]:43994 [200]: GET /index.php
+[Sat Jun 20 10:46:10 2026] [::1]:43994 Closing
+[Sat Jun 20 10:46:10 2026] [::1]:44004 Accepted
+[Sat Jun 20 10:46:10 2026] [::1]:44010 Accepted
+[Sat Jun 20 10:46:10 2026] [::1]:44022 Accepted
+[Sat Jun 20 10:46:10 2026] [::1]:44004 [200]: GET /assets/css/style.css
+[Sat Jun 20 10:46:10 2026] [::1]:44004 Closing
+[Sat Jun 20 10:46:10 2026] [::1]:44010 [200]: GET /assets/images/solar-panel-grid.jpg
+[Sat Jun 20 10:46:10 2026] [::1]:44010 Closing
+[Sat Jun 20 10:46:10 2026] [::1]:44022 [200]: GET /assets/images/battery-grid.jpg
+[Sat Jun 20 10:46:10 2026] [::1]:44022 Closing
+[Sat Jun 20 10:46:10 2026] [::1]:44024 Accepted
+[Sat Jun 20 10:46:10 2026] [::1]:44024 [200]: GET /assets/images/solar-maintenance.jpg
+[Sat Jun 20 10:46:10 2026] [::1]:44024 Closing
+[Sat Jun 20 10:46:10 2026] [::1]:44032 Accepted
+[Sat Jun 20 10:46:10 2026] [::1]:44032 [200]: GET /assets/images/solar-hero.jpg
+[Sat Jun 20 10:46:10 2026] [::1]:44032 Closing
+[Sat Jun 20 10:46:11 2026] [::1]:60126 Accepted
+[Sat Jun 20 10:46:11 2026] [::1]:60126 [200]: GET /product.php?id=1
+[Sat Jun 20 10:46:11 2026] [::1]:60126 Closing
+[Sat Jun 20 10:46:11 2026] [::1]:60142 Accepted
+[Sat Jun 20 10:46:11 2026] [::1]:60142 [200]: GET /assets/css/style.css
+[Sat Jun 20 10:46:11 2026] [::1]:60142 Closing
+[Sat Jun 20 10:46:13 2026] [::1]:60154 Accepted
+[Sat Jun 20 10:46:13 2026] [::1]:60154 [302]: POST /product.php?id=1
+[Sat Jun 20 10:46:13 2026] [::1]:60154 Closing
+[Sat Jun 20 10:46:13 2026] [::1]:60156 Accepted
+[Sat Jun 20 10:46:13 2026] [::1]:60156 [200]: GET /cart.php
+[Sat Jun 20 10:46:13 2026] [::1]:60156 Closing
+[Sat Jun 20 10:46:13 2026] [::1]:60170 Accepted
+[Sat Jun 20 10:46:13 2026] [::1]:60170 [200]: GET /assets/css/style.css
+[Sat Jun 20 10:46:13 2026] [::1]:60170 Closing
+[Sat Jun 20 10:46:14 2026] [::1]:60178 Accepted
+[Sat Jun 20 10:46:14 2026] [::1]:60178 [302]: POST /login.php
+[Sat Jun 20 10:46:14 2026] [::1]:60178 Closing
+[Sat Jun 20 10:46:14 2026] [::1]:60182 Accepted
+[Sat Jun 20 10:46:14 2026] [::1]:60182 [200]: GET /index.php
+[Sat Jun 20 10:46:14 2026] [::1]:60182 Closing
+[Sat Jun 20 10:46:14 2026] [::1]:60186 Accepted
+[Sat Jun 20 10:46:14 2026] [::1]:60196 Accepted
+[Sat Jun 20 10:46:14 2026] [::1]:60186 [200]: GET /assets/css/style.css
+[Sat Jun 20 10:46:14 2026] [::1]:60200 Accepted
+[Sat Jun 20 10:46:14 2026] [::1]:60196 [200]: GET /assets/images/solar-panel-grid.jpg
+[Sat Jun 20 10:46:14 2026] [::1]:60200 [200]: GET /assets/images/battery-grid.jpg
+[Sat Jun 20 10:46:14 2026] [::1]:60186 Closing
+[Sat Jun 20 10:46:14 2026] [::1]:60196 Closing
+[Sat Jun 20 10:46:14 2026] [::1]:60200 Closing
+[Sat Jun 20 10:46:14 2026] [::1]:60204 Accepted
+[Sat Jun 20 10:46:14 2026] [::1]:60204 [200]: GET /assets/images/solar-maintenance.jpg
+[Sat Jun 20 10:46:14 2026] [::1]:60204 Closing
+[Sat Jun 20 10:46:14 2026] [::1]:60216 Accepted
+[Sat Jun 20 10:46:14 2026] [::1]:60216 [200]: GET /assets/images/solar-hero.jpg
+[Sat Jun 20 10:46:14 2026] [::1]:60216 Closing
+[Sat Jun 20 10:46:15 2026] [::1]:60226 Accepted
+[Sat Jun 20 10:46:15 2026] [::1]:60226 [200]: GET /admin.php
+[Sat Jun 20 10:46:15 2026] [::1]:60226 Closing
+[Sat Jun 20 10:46:15 2026] [::1]:60242 Accepted
+[Sat Jun 20 10:46:15 2026] [::1]:60242 [200]: GET /assets/css/style.css
+[Sat Jun 20 10:46:15 2026] [::1]:60242 Closing
+[Sat Jun 20 10:53:53 2026] [::1]:49900 Accepted
+[Sat Jun 20 10:53:53 2026] [::1]:49900 [200]: GET /index.php
+[Sat Jun 20 10:53:53 2026] [::1]:49900 Closing
+[Sat Jun 20 10:53:53 2026] [::1]:49914 Accepted
+[Sat Jun 20 10:53:53 2026] [::1]:49916 Accepted
+[Sat Jun 20 10:53:53 2026] [::1]:49926 Accepted
+[Sat Jun 20 10:53:53 2026] [::1]:49914 [200]: GET /assets/css/style.css
+[Sat Jun 20 10:53:53 2026] [::1]:49916 [200]: GET /assets/images/solar-panel-grid.jpg
+[Sat Jun 20 10:53:53 2026] [::1]:49926 [200]: GET /assets/images/battery-grid.jpg
+[Sat Jun 20 10:53:53 2026] [::1]:49916 Closing
+[Sat Jun 20 10:53:53 2026] [::1]:49926 Closing
+[Sat Jun 20 10:53:53 2026] [::1]:49914 Closing
+[Sat Jun 20 10:53:53 2026] [::1]:49942 Accepted
+[Sat Jun 20 10:53:53 2026] [::1]:49942 [200]: GET /assets/images/solar-maintenance.jpg
+[Sat Jun 20 10:53:53 2026] [::1]:49942 Closing
+[Sat Jun 20 10:53:53 2026] [::1]:49950 Accepted
+[Sat Jun 20 10:53:53 2026] [::1]:49950 [200]: GET /assets/images/solar-hero.jpg
+[Sat Jun 20 10:53:53 2026] [::1]:49950 Closing
+[Sat Jun 20 10:53:55 2026] [::1]:49964 Accepted
+[Sat Jun 20 10:53:55 2026] [::1]:49964 [200]: GET /product.php?id=1
+[Sat Jun 20 10:53:55 2026] [::1]:49964 Closing
+[Sat Jun 20 10:53:55 2026] [::1]:49974 Accepted
+[Sat Jun 20 10:53:55 2026] [::1]:49974 [200]: GET /assets/css/style.css
+[Sat Jun 20 10:53:55 2026] [::1]:49974 Closing
+[Sat Jun 20 10:53:56 2026] [::1]:49976 Accepted
+[Sat Jun 20 10:53:56 2026] [::1]:49976 [302]: POST /product.php?id=1
+[Sat Jun 20 10:53:56 2026] [::1]:49976 Closing
+[Sat Jun 20 10:53:56 2026] [::1]:49986 Accepted
+[Sat Jun 20 10:53:56 2026] [::1]:49986 [200]: GET /cart.php
+[Sat Jun 20 10:53:56 2026] [::1]:49986 Closing
+[Sat Jun 20 10:53:56 2026] [::1]:50000 Accepted
+[Sat Jun 20 10:53:56 2026] [::1]:50000 [200]: GET /assets/css/style.css
+[Sat Jun 20 10:53:56 2026] [::1]:50000 Closing
+[Sat Jun 20 10:53:57 2026] [::1]:50010 Accepted
+[Sat Jun 20 10:53:57 2026] [::1]:50010 [302]: POST /login.php
+[Sat Jun 20 10:53:57 2026] [::1]:50010 Closing
+[Sat Jun 20 10:53:57 2026] [::1]:50016 Accepted
+[Sat Jun 20 10:53:57 2026] [::1]:50016 [200]: GET /index.php
+[Sat Jun 20 10:53:57 2026] [::1]:50016 Closing
+[Sat Jun 20 10:53:57 2026] [::1]:50024 Accepted
+[Sat Jun 20 10:53:57 2026] [::1]:50040 Accepted
+[Sat Jun 20 10:53:57 2026] [::1]:50052 Accepted
+[Sat Jun 20 10:53:57 2026] [::1]:50024 [200]: GET /assets/css/style.css
+[Sat Jun 20 10:53:57 2026] [::1]:50040 [200]: GET /assets/images/solar-panel-grid.jpg
+[Sat Jun 20 10:53:57 2026] [::1]:50024 Closing
+[Sat Jun 20 10:53:57 2026] [::1]:50040 Closing
+[Sat Jun 20 10:53:57 2026] [::1]:50052 [200]: GET /assets/images/battery-grid.jpg
+[Sat Jun 20 10:53:57 2026] [::1]:50052 Closing
+[Sat Jun 20 10:53:57 2026] [::1]:50060 Accepted
+[Sat Jun 20 10:53:57 2026] [::1]:50060 [200]: GET /assets/images/solar-maintenance.jpg
+[Sat Jun 20 10:53:57 2026] [::1]:50060 Closing
+[Sat Jun 20 10:53:57 2026] [::1]:50062 Accepted
+[Sat Jun 20 10:53:57 2026] [::1]:50062 [200]: GET /assets/images/solar-hero.jpg
+[Sat Jun 20 10:53:57 2026] [::1]:50062 Closing
+[Sat Jun 20 10:53:58 2026] [::1]:50066 Accepted
+[Sat Jun 20 10:53:58 2026] [::1]:50066 [200]: GET /admin.php
+[Sat Jun 20 10:53:58 2026] [::1]:50066 Closing
+[Sat Jun 20 10:53:58 2026] [::1]:50080 Accepted
+[Sat Jun 20 10:53:58 2026] [::1]:50080 [200]: GET /assets/css/style.css
+[Sat Jun 20 10:53:58 2026] [::1]:50080 Closing
+[Sat Jun 20 10:55:22 2026] [::1]:48874 Accepted
+[Sat Jun 20 10:55:22 2026] [::1]:48874 [200]: GET /login.php
+[Sat Jun 20 10:55:22 2026] [::1]:48874 Closing
+[Sat Jun 20 10:55:22 2026] [::1]:48886 Accepted
+[Sat Jun 20 10:55:22 2026] [::1]:48886 [200]: GET /assets/css/style.css
+[Sat Jun 20 10:55:22 2026] [::1]:48886 Closing
+[Sat Jun 20 11:03:43 2026] [::1]:38256 Accepted
+[Sat Jun 20 11:03:43 2026] [::1]:38256 [200]: GET /login.php
+[Sat Jun 20 11:03:43 2026] [::1]:38256 Closing
+[Sat Jun 20 11:03:43 2026] [::1]:38262 Accepted
+[Sat Jun 20 11:03:43 2026] [::1]:38262 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:03:43 2026] [::1]:38262 Closing
+[Sat Jun 20 11:03:43 2026] [::1]:38276 Accepted
+[Sat Jun 20 11:03:43 2026] [::1]:38276 [200]: POST /login.php
+[Sat Jun 20 11:03:43 2026] [::1]:38276 Closing
+[Sat Jun 20 11:03:43 2026] [::1]:38286 Accepted
+[Sat Jun 20 11:03:43 2026] [::1]:38286 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:03:43 2026] [::1]:38286 Closing
+[Sat Jun 20 11:08:13 2026] [::1]:42200 Accepted
+[Sat Jun 20 11:08:13 2026] [::1]:42200 [200]: GET /login.php
+[Sat Jun 20 11:08:13 2026] [::1]:42200 Closing
+[Sat Jun 20 11:08:13 2026] [::1]:42202 Accepted
+[Sat Jun 20 11:08:13 2026] [::1]:42202 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:08:13 2026] [::1]:42202 Closing
+[Sat Jun 20 11:08:13 2026] [::1]:42212 Accepted
+[Sat Jun 20 11:08:13 2026] [::1]:42212 [200]: POST /login.php
+[Sat Jun 20 11:08:13 2026] [::1]:42212 Closing
+[Sat Jun 20 11:08:13 2026] [::1]:42222 Accepted
+[Sat Jun 20 11:08:13 2026] [::1]:42222 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:08:13 2026] [::1]:42222 Closing
+[Sat Jun 20 11:09:32 2026] [::1]:33396 Accepted
+[Sat Jun 20 11:09:32 2026] [::1]:33396 [200]: GET /login.php
+[Sat Jun 20 11:09:32 2026] [::1]:33396 Closing
+[Sat Jun 20 11:09:32 2026] [::1]:33408 Accepted
+[Sat Jun 20 11:09:32 2026] [::1]:33408 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:09:32 2026] [::1]:33408 Closing
+[Sat Jun 20 11:09:32 2026] [::1]:33424 Accepted
+[Sat Jun 20 11:09:32 2026] [::1]:33424 [200]: POST /login.php
+[Sat Jun 20 11:09:32 2026] [::1]:33424 Closing
+[Sat Jun 20 11:09:32 2026] [::1]:33428 Accepted
+[Sat Jun 20 11:09:32 2026] [::1]:33428 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:09:32 2026] [::1]:33428 Closing
+[Sat Jun 20 11:10:03 2026] [::1]:51120 Accepted
+[Sat Jun 20 11:10:03 2026] [::1]:51120 [200]: GET /register.php
+[Sat Jun 20 11:10:03 2026] [::1]:51120 Closing
+[Sat Jun 20 11:10:03 2026] [::1]:51132 Accepted
+[Sat Jun 20 11:10:03 2026] [::1]:51132 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:10:03 2026] [::1]:51132 Closing
+[Sat Jun 20 11:10:48 2026] [::1]:58934 Accepted
+[Sat Jun 20 11:10:48 2026] [::1]:58934 [200]: GET /register.php
+[Sat Jun 20 11:10:48 2026] [::1]:58934 Closing
+[Sat Jun 20 11:10:48 2026] [::1]:58944 Accepted
+[Sat Jun 20 11:10:48 2026] [::1]:58944 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:10:48 2026] [::1]:58944 Closing
+[Sat Jun 20 11:10:48 2026] [::1]:58950 Accepted
+[Sat Jun 20 11:10:48 2026] [::1]:58950 [302]: POST /register.php
+[Sat Jun 20 11:10:48 2026] [::1]:58950 Closing
+[Sat Jun 20 11:10:48 2026] [::1]:58956 Accepted
+[Sat Jun 20 11:10:48 2026] [::1]:58956 [200]: GET /login.php?registered=1
+[Sat Jun 20 11:10:48 2026] [::1]:58956 Closing
+[Sat Jun 20 11:10:48 2026] [::1]:58958 Accepted
+[Sat Jun 20 11:10:48 2026] [::1]:58958 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:10:48 2026] [::1]:58958 Closing
+[Sat Jun 20 11:12:10 2026] [::1]:43410 Accepted
+[Sat Jun 20 11:12:10 2026] [::1]:43410 [200]: GET /register.php
+[Sat Jun 20 11:12:10 2026] [::1]:43410 Closing
+[Sat Jun 20 11:12:10 2026] [::1]:43414 Accepted
+[Sat Jun 20 11:12:10 2026] [::1]:43414 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:12:10 2026] [::1]:43414 Closing
+[Sat Jun 20 11:12:10 2026] [::1]:43420 Accepted
+[Sat Jun 20 11:12:10 2026] [::1]:43420 [302]: POST /register.php
+[Sat Jun 20 11:12:10 2026] [::1]:43420 Closing
+[Sat Jun 20 11:12:10 2026] [::1]:43426 Accepted
+[Sat Jun 20 11:12:10 2026] [::1]:43426 [200]: GET /login.php?registered=1
+[Sat Jun 20 11:12:10 2026] [::1]:43426 Closing
+[Sat Jun 20 11:12:10 2026] [::1]:43440 Accepted
+[Sat Jun 20 11:12:10 2026] [::1]:43440 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:12:10 2026] [::1]:43440 Closing
+[Sat Jun 20 11:12:10 2026] [::1]:43450 Accepted
+[Sat Jun 20 11:12:11 2026] [::1]:43450 [302]: POST /login.php?registered=1
+[Sat Jun 20 11:12:11 2026] [::1]:43450 Closing
+[Sat Jun 20 11:12:11 2026] [::1]:43452 Accepted
+[Sat Jun 20 11:12:11 2026] [::1]:43452 [200]: GET /index.php
+[Sat Jun 20 11:12:11 2026] [::1]:43452 Closing
+[Sat Jun 20 11:12:11 2026] [::1]:43460 Accepted
+[Sat Jun 20 11:12:11 2026] [::1]:43466 Accepted
+[Sat Jun 20 11:12:11 2026] [::1]:43474 Accepted
+[Sat Jun 20 11:12:11 2026] [::1]:43460 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:12:11 2026] [::1]:43466 [200]: GET /assets/images/solar-panel-grid.jpg
+[Sat Jun 20 11:12:11 2026] [::1]:43474 [200]: GET /assets/images/battery-grid.jpg
+[Sat Jun 20 11:12:11 2026] [::1]:43466 Closing
+[Sat Jun 20 11:12:11 2026] [::1]:43474 Closing
+[Sat Jun 20 11:12:11 2026] [::1]:43460 Closing
+[Sat Jun 20 11:12:11 2026] [::1]:43486 Accepted
+[Sat Jun 20 11:12:11 2026] [::1]:43486 [200]: GET /assets/images/solar-maintenance.jpg
+[Sat Jun 20 11:12:11 2026] [::1]:43486 Closing
+[Sat Jun 20 11:12:11 2026] [::1]:43492 Accepted
+[Sat Jun 20 11:12:11 2026] [::1]:43492 [200]: GET /assets/images/solar-hero.jpg
+[Sat Jun 20 11:12:11 2026] [::1]:43492 Closing
+[Sat Jun 20 11:12:11 2026] [::1]:43496 Accepted
+[Sat Jun 20 11:12:11 2026] [::1]:43496 [200]: GET /dashboard.php
+[Sat Jun 20 11:12:11 2026] [::1]:43496 Closing
+[Sat Jun 20 11:12:11 2026] [::1]:43506 Accepted
+[Sat Jun 20 11:12:11 2026] [::1]:43506 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:12:11 2026] [::1]:43506 Closing
+[Sat Jun 20 11:12:12 2026] [::1]:51102 Accepted
+[Sat Jun 20 11:12:12 2026] [::1]:51102 [200]: GET /product.php?id=1
+[Sat Jun 20 11:12:12 2026] [::1]:51102 Closing
+[Sat Jun 20 11:12:12 2026] [::1]:51108 Accepted
+[Sat Jun 20 11:12:12 2026] [::1]:51108 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:12:12 2026] [::1]:51108 Closing
+[Sat Jun 20 11:12:13 2026] [::1]:51114 Accepted
+[Sat Jun 20 11:12:13 2026] [::1]:51114 [302]: POST /product.php?id=1
+[Sat Jun 20 11:12:13 2026] [::1]:51114 Closing
+[Sat Jun 20 11:12:13 2026] [::1]:51118 Accepted
+[Sat Jun 20 11:12:13 2026] [::1]:51118 [200]: GET /cart.php
+[Sat Jun 20 11:12:13 2026] [::1]:51118 Closing
+[Sat Jun 20 11:12:13 2026] [::1]:51126 Accepted
+[Sat Jun 20 11:12:13 2026] [::1]:51126 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:12:13 2026] [::1]:51126 Closing
+[Sat Jun 20 11:12:13 2026] [::1]:51134 Accepted
+[Sat Jun 20 11:12:13 2026] [::1]:51134 [200]: GET /checkout.php
+[Sat Jun 20 11:12:13 2026] [::1]:51134 Closing
+[Sat Jun 20 11:12:13 2026] [::1]:51146 Accepted
+[Sat Jun 20 11:12:13 2026] [::1]:51146 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:12:13 2026] [::1]:51146 Closing
+[Sat Jun 20 11:13:09 2026] [::1]:53532 Accepted
+[Sat Jun 20 11:13:09 2026] [::1]:53532 [200]: GET /register.php
+[Sat Jun 20 11:13:09 2026] [::1]:53532 Closing
+[Sat Jun 20 11:13:09 2026] [::1]:53540 Accepted
+[Sat Jun 20 11:13:09 2026] [::1]:53540 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:13:09 2026] [::1]:53540 Closing
+[Sat Jun 20 11:13:10 2026] [::1]:53552 Accepted
+[Sat Jun 20 11:13:10 2026] [::1]:53552 [302]: POST /register.php
+[Sat Jun 20 11:13:10 2026] [::1]:53552 Closing
+[Sat Jun 20 11:13:10 2026] [::1]:53556 Accepted
+[Sat Jun 20 11:13:10 2026] [::1]:53556 [200]: GET /login.php?registered=1
+[Sat Jun 20 11:13:10 2026] [::1]:53556 Closing
+[Sat Jun 20 11:13:10 2026] [::1]:53558 Accepted
+[Sat Jun 20 11:13:10 2026] [::1]:53558 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:13:10 2026] [::1]:53558 Closing
+[Sat Jun 20 11:13:10 2026] [::1]:53562 Accepted
+[Sat Jun 20 11:13:10 2026] [::1]:53562 [200]: GET /login.php
+[Sat Jun 20 11:13:10 2026] [::1]:53562 Closing
+[Sat Jun 20 11:13:10 2026] [::1]:53576 Accepted
+[Sat Jun 20 11:13:10 2026] [::1]:53576 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:13:10 2026] [::1]:53576 Closing
+[Sat Jun 20 11:13:10 2026] [::1]:53592 Accepted
+[Sat Jun 20 11:13:10 2026] [::1]:53592 [302]: POST /login.php
+[Sat Jun 20 11:13:10 2026] [::1]:53592 Closing
+[Sat Jun 20 11:13:10 2026] [::1]:53604 Accepted
+[Sat Jun 20 11:13:10 2026] [::1]:53604 [200]: GET /index.php
+[Sat Jun 20 11:13:10 2026] [::1]:53604 Closing
+[Sat Jun 20 11:13:10 2026] [::1]:53606 Accepted
+[Sat Jun 20 11:13:10 2026] [::1]:53612 Accepted
+[Sat Jun 20 11:13:10 2026] [::1]:53606 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:13:10 2026] [::1]:53618 Accepted
+[Sat Jun 20 11:13:10 2026] [::1]:53612 [200]: GET /assets/images/solar-panel-grid.jpg
+[Sat Jun 20 11:13:10 2026] [::1]:53618 [200]: GET /assets/images/battery-grid.jpg
+[Sat Jun 20 11:13:10 2026] [::1]:53606 Closing
+[Sat Jun 20 11:13:10 2026] [::1]:53612 Closing
+[Sat Jun 20 11:13:10 2026] [::1]:53618 Closing
+[Sat Jun 20 11:13:10 2026] [::1]:53630 Accepted
+[Sat Jun 20 11:13:10 2026] [::1]:53630 [200]: GET /assets/images/solar-maintenance.jpg
+[Sat Jun 20 11:13:10 2026] [::1]:53630 Closing
+[Sat Jun 20 11:13:10 2026] [::1]:53646 Accepted
+[Sat Jun 20 11:13:10 2026] [::1]:53646 [200]: GET /product.php?id=1
+[Sat Jun 20 11:13:10 2026] [::1]:53646 Closing
+[Sat Jun 20 11:13:10 2026] [::1]:53658 Accepted
+[Sat Jun 20 11:13:10 2026] [::1]:53658 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:13:10 2026] [::1]:53658 Closing
+[Sat Jun 20 11:13:10 2026] [::1]:53672 Accepted
+[Sat Jun 20 11:13:10 2026] [::1]:53672 [302]: POST /product.php?id=1
+[Sat Jun 20 11:13:10 2026] [::1]:53672 Closing
+[Sat Jun 20 11:13:10 2026] [::1]:53678 Accepted
+[Sat Jun 20 11:13:10 2026] [::1]:53678 [200]: GET /cart.php
+[Sat Jun 20 11:13:10 2026] [::1]:53678 Closing
+[Sat Jun 20 11:13:10 2026] [::1]:53690 Accepted
+[Sat Jun 20 11:13:10 2026] [::1]:53690 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:13:10 2026] [::1]:53690 Closing
+[Sat Jun 20 11:13:10 2026] [::1]:53692 Accepted
+[Sat Jun 20 11:13:10 2026] [::1]:53692 [200]: GET /checkout.php
+[Sat Jun 20 11:13:10 2026] [::1]:53692 Closing
+[Sat Jun 20 11:13:10 2026] [::1]:53702 Accepted
+[Sat Jun 20 11:13:10 2026] [::1]:53702 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:13:10 2026] [::1]:53702 Closing
+[Sat Jun 20 11:14:12 2026] [::1]:33086 Accepted
+[Sat Jun 20 11:14:12 2026] [::1]:33086 [200]: GET /register.php
+[Sat Jun 20 11:14:12 2026] [::1]:33086 Closing
+[Sat Jun 20 11:14:12 2026] [::1]:33102 Accepted
+[Sat Jun 20 11:14:12 2026] [::1]:33102 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:14:12 2026] [::1]:33102 Closing
+[Sat Jun 20 11:14:13 2026] [::1]:33114 Accepted
+[Sat Jun 20 11:14:13 2026] [::1]:33114 [302]: POST /register.php
+[Sat Jun 20 11:14:13 2026] [::1]:33114 Closing
+[Sat Jun 20 11:14:13 2026] [::1]:33116 Accepted
+[Sat Jun 20 11:14:13 2026] [::1]:33116 [200]: GET /login.php?registered=1
+[Sat Jun 20 11:14:13 2026] [::1]:33116 Closing
+[Sat Jun 20 11:14:13 2026] [::1]:33120 Accepted
+[Sat Jun 20 11:14:13 2026] [::1]:33120 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:14:13 2026] [::1]:33120 Closing
+[Sat Jun 20 11:14:13 2026] [::1]:33128 Accepted
+[Sat Jun 20 11:14:13 2026] [::1]:33128 [200]: GET /login.php
+[Sat Jun 20 11:14:13 2026] [::1]:33128 Closing
+[Sat Jun 20 11:14:13 2026] [::1]:33132 Accepted
+[Sat Jun 20 11:14:13 2026] [::1]:33132 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:14:13 2026] [::1]:33132 Closing
+[Sat Jun 20 11:14:13 2026] [::1]:33138 Accepted
+[Sat Jun 20 11:14:13 2026] [::1]:33138 [302]: POST /login.php
+[Sat Jun 20 11:14:13 2026] [::1]:33138 Closing
+[Sat Jun 20 11:14:13 2026] [::1]:33144 Accepted
+[Sat Jun 20 11:14:13 2026] [::1]:33144 [200]: GET /index.php
+[Sat Jun 20 11:14:13 2026] [::1]:33144 Closing
+[Sat Jun 20 11:14:13 2026] [::1]:33160 Accepted
+[Sat Jun 20 11:14:13 2026] [::1]:33172 Accepted
+[Sat Jun 20 11:14:13 2026] [::1]:33182 Accepted
+[Sat Jun 20 11:14:13 2026] [::1]:33184 Accepted
+[Sat Jun 20 11:14:13 2026] [::1]:33160 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:14:13 2026] [::1]:33160 Closing
+[Sat Jun 20 11:14:13 2026] [::1]:33172 [200]: GET /assets/images/solar-panel-grid.jpg
+[Sat Jun 20 11:14:13 2026] [::1]:33172 Closing
+[Sat Jun 20 11:14:13 2026] [::1]:33188 Accepted
+[Sat Jun 20 11:14:13 2026] [::1]:33182 [200]: GET /assets/images/battery-grid.jpg
+[Sat Jun 20 11:14:13 2026] [::1]:33182 Closing
+[Sat Jun 20 11:14:13 2026] [::1]:33184 [200]: GET /assets/images/solar-maintenance.jpg
+[Sat Jun 20 11:14:13 2026] [::1]:33184 Closing
+[Sat Jun 20 11:14:13 2026] [::1]:33188 [200]: GET /product.php?id=1
+[Sat Jun 20 11:14:13 2026] [::1]:33188 Closing
+[Sat Jun 20 11:14:13 2026] [::1]:33194 Accepted
+[Sat Jun 20 11:14:13 2026] [::1]:33194 [200]: GET /assets/images/solar-hero.jpg
+[Sat Jun 20 11:14:13 2026] [::1]:33194 Closing
+[Sat Jun 20 11:14:13 2026] [::1]:33200 Accepted
+[Sat Jun 20 11:14:13 2026] [::1]:33200 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:14:13 2026] [::1]:33200 Closing
+[Sat Jun 20 11:14:13 2026] [::1]:33206 Accepted
+[Sat Jun 20 11:14:13 2026] [::1]:33206 [302]: POST /product.php?id=1
+[Sat Jun 20 11:14:13 2026] [::1]:33206 Closing
+[Sat Jun 20 11:14:13 2026] [::1]:33210 Accepted
+[Sat Jun 20 11:14:13 2026] [::1]:33210 [200]: GET /cart.php
+[Sat Jun 20 11:14:13 2026] [::1]:33210 Closing
+[Sat Jun 20 11:14:13 2026] [::1]:33218 Accepted
+[Sat Jun 20 11:14:13 2026] [::1]:33218 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:14:13 2026] [::1]:33218 Closing
+[Sat Jun 20 11:14:13 2026] [::1]:33222 Accepted
+[Sat Jun 20 11:14:13 2026] [::1]:33222 [200]: GET /checkout.php
+[Sat Jun 20 11:14:13 2026] [::1]:33222 Closing
+[Sat Jun 20 11:14:13 2026] [::1]:33232 Accepted
+[Sat Jun 20 11:14:13 2026] [::1]:33232 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:14:13 2026] [::1]:33232 Closing
+[Sat Jun 20 11:14:14 2026] [::1]:33246 Accepted
+[Sat Jun 20 11:14:14 2026] [::1]:33246 [302]: POST /checkout.php
+[Sat Jun 20 11:14:14 2026] [::1]:33246 Closing
+[Sat Jun 20 11:14:14 2026] [::1]:33258 Accepted
+[Sat Jun 20 11:14:14 2026] [::1]:33258 [200]: GET /dashboard.php?success=1
+[Sat Jun 20 11:14:14 2026] [::1]:33258 Closing
+[Sat Jun 20 11:14:14 2026] [::1]:33262 Accepted
+[Sat Jun 20 11:14:14 2026] [::1]:33262 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:14:14 2026] [::1]:33262 Closing
+[Sat Jun 20 11:14:47 2026] [::1]:56254 Accepted
+[Sat Jun 20 11:14:47 2026] [::1]:56254 [200]: GET /register.php
+[Sat Jun 20 11:14:47 2026] [::1]:56254 Closing
+[Sat Jun 20 11:14:47 2026] [::1]:56256 Accepted
+[Sat Jun 20 11:14:47 2026] [::1]:56256 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:14:47 2026] [::1]:56256 Closing
+[Sat Jun 20 11:14:47 2026] [::1]:56258 Accepted
+[Sat Jun 20 11:14:47 2026] [::1]:56258 [302]: POST /register.php
+[Sat Jun 20 11:14:47 2026] [::1]:56258 Closing
+[Sat Jun 20 11:14:47 2026] [::1]:56266 Accepted
+[Sat Jun 20 11:14:47 2026] [::1]:56266 [200]: GET /login.php?registered=1
+[Sat Jun 20 11:14:47 2026] [::1]:56266 Closing
+[Sat Jun 20 11:14:47 2026] [::1]:56280 Accepted
+[Sat Jun 20 11:14:47 2026] [::1]:56286 Accepted
+[Sat Jun 20 11:14:47 2026] [::1]:56280 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:14:47 2026] [::1]:56286 [200]: GET /register.php?ref=referrer_1435@example.com
+[Sat Jun 20 11:14:47 2026] [::1]:56286 Closing
+[Sat Jun 20 11:14:47 2026] [::1]:56280 Closing
+[Sat Jun 20 11:14:47 2026] [::1]:56290 Accepted
+[Sat Jun 20 11:14:47 2026] [::1]:56290 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:14:47 2026] [::1]:56290 Closing
+[Sat Jun 20 11:14:48 2026] [::1]:56302 Accepted
+[Sat Jun 20 11:14:48 2026] [::1]:56302 [302]: POST /register.php?ref=referrer_1435@example.com
+[Sat Jun 20 11:14:48 2026] [::1]:56302 Closing
+[Sat Jun 20 11:14:48 2026] [::1]:56314 Accepted
+[Sat Jun 20 11:14:48 2026] [::1]:56314 [200]: GET /login.php?registered=1
+[Sat Jun 20 11:14:48 2026] [::1]:56314 Closing
+[Sat Jun 20 11:14:48 2026] [::1]:56330 Accepted
+[Sat Jun 20 11:14:48 2026] [::1]:56330 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:14:48 2026] [::1]:56330 Closing
+[Sat Jun 20 11:14:48 2026] [::1]:56346 Accepted
+[Sat Jun 20 11:14:48 2026] [::1]:56346 [200]: GET /login.php
+[Sat Jun 20 11:14:48 2026] [::1]:56346 Closing
+[Sat Jun 20 11:14:48 2026] [::1]:56354 Accepted
+[Sat Jun 20 11:14:48 2026] [::1]:56354 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:14:48 2026] [::1]:56354 Closing
+[Sat Jun 20 11:14:48 2026] [::1]:56364 Accepted
+[Sat Jun 20 11:14:48 2026] [::1]:56364 [302]: POST /login.php
+[Sat Jun 20 11:14:48 2026] [::1]:56364 Closing
+[Sat Jun 20 11:14:48 2026] [::1]:56372 Accepted
+[Sat Jun 20 11:14:48 2026] [::1]:56372 [200]: GET /index.php
+[Sat Jun 20 11:14:48 2026] [::1]:56372 Closing
+[Sat Jun 20 11:14:48 2026] [::1]:56378 Accepted
+[Sat Jun 20 11:14:48 2026] [::1]:56394 Accepted
+[Sat Jun 20 11:14:48 2026] [::1]:56378 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:14:48 2026] [::1]:56410 Accepted
+[Sat Jun 20 11:14:48 2026] [::1]:56394 [200]: GET /assets/images/solar-panel-grid.jpg
+[Sat Jun 20 11:14:48 2026] [::1]:56410 [200]: GET /assets/images/battery-grid.jpg
+[Sat Jun 20 11:14:48 2026] [::1]:56378 Closing
+[Sat Jun 20 11:14:48 2026] [::1]:56394 Closing
+[Sat Jun 20 11:14:48 2026] [::1]:56410 Closing
+[Sat Jun 20 11:14:48 2026] [::1]:56424 Accepted
+[Sat Jun 20 11:14:48 2026] [::1]:56424 [200]: GET /product.php?id=1
+[Sat Jun 20 11:14:48 2026] [::1]:56424 Closing
+[Sat Jun 20 11:14:48 2026] [::1]:56426 Accepted
+[Sat Jun 20 11:14:48 2026] [::1]:56426 [200]: GET /assets/images/solar-maintenance.jpg
+[Sat Jun 20 11:14:48 2026] [::1]:56426 Closing
+[Sat Jun 20 11:14:48 2026] [::1]:56428 Accepted
+[Sat Jun 20 11:14:48 2026] [::1]:56428 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:14:48 2026] [::1]:56428 Closing
+[Sat Jun 20 11:14:49 2026] [::1]:56440 Accepted
+[Sat Jun 20 11:14:49 2026] [::1]:56440 [302]: POST /product.php?id=1
+[Sat Jun 20 11:14:49 2026] [::1]:56440 Closing
+[Sat Jun 20 11:14:49 2026] [::1]:56444 Accepted
+[Sat Jun 20 11:14:49 2026] [::1]:56444 [200]: GET /cart.php
+[Sat Jun 20 11:14:49 2026] [::1]:56444 Closing
+[Sat Jun 20 11:14:49 2026] [::1]:56446 Accepted
+[Sat Jun 20 11:14:49 2026] [::1]:56448 Accepted
+[Sat Jun 20 11:14:49 2026] [::1]:56446 [200]: GET /checkout.php
+[Sat Jun 20 11:14:49 2026] [::1]:56446 Closing
+[Sat Jun 20 11:14:49 2026] [::1]:56448 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:14:49 2026] [::1]:56448 Closing
+[Sat Jun 20 11:14:49 2026] [::1]:56458 Accepted
+[Sat Jun 20 11:14:49 2026] [::1]:56458 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:14:49 2026] [::1]:56458 Closing
+[Sat Jun 20 11:14:49 2026] [::1]:56468 Accepted
+[Sat Jun 20 11:14:49 2026] [::1]:56468 [302]: POST /checkout.php
+[Sat Jun 20 11:14:49 2026] [::1]:56468 Closing
+[Sat Jun 20 11:14:49 2026] [::1]:56476 Accepted
+[Sat Jun 20 11:14:49 2026] [::1]:56476 [200]: GET /dashboard.php?success=1
+[Sat Jun 20 11:14:49 2026] [::1]:56476 Closing
+[Sat Jun 20 11:14:49 2026] [::1]:56488 Accepted
+[Sat Jun 20 11:14:49 2026] [::1]:56488 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:14:49 2026] [::1]:56488 Closing
+[Sat Jun 20 11:14:49 2026] [::1]:56498 Accepted
+[Sat Jun 20 11:14:49 2026] [::1]:56498 [302]: GET /logout.php
+[Sat Jun 20 11:14:49 2026] [::1]:56498 Closing
+[Sat Jun 20 11:14:49 2026] [::1]:56502 Accepted
+[Sat Jun 20 11:14:49 2026] [::1]:56502 [200]: GET /login.php
+[Sat Jun 20 11:14:49 2026] [::1]:56502 Closing
+[Sat Jun 20 11:14:49 2026] [::1]:56510 Accepted
+[Sat Jun 20 11:14:49 2026] [::1]:56510 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:14:49 2026] [::1]:56510 Closing
+[Sat Jun 20 11:14:49 2026] [::1]:56522 Accepted
+[Sat Jun 20 11:14:49 2026] [::1]:56522 [200]: GET /login.php
+[Sat Jun 20 11:14:49 2026] [::1]:56522 Closing
+[Sat Jun 20 11:14:49 2026] [::1]:56526 Accepted
+[Sat Jun 20 11:14:49 2026] [::1]:56526 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:14:49 2026] [::1]:56526 Closing
+[Sat Jun 20 11:14:49 2026] [::1]:56530 Accepted
+[Sat Jun 20 11:14:49 2026] [::1]:56530 [302]: POST /login.php
+[Sat Jun 20 11:14:49 2026] [::1]:56530 Closing
+[Sat Jun 20 11:14:49 2026] [::1]:56540 Accepted
+[Sat Jun 20 11:14:49 2026] [::1]:56540 [200]: GET /index.php
+[Sat Jun 20 11:14:49 2026] [::1]:56540 Closing
+[Sat Jun 20 11:14:49 2026] [::1]:56552 Accepted
+[Sat Jun 20 11:14:49 2026] [::1]:56562 Accepted
+[Sat Jun 20 11:14:49 2026] [::1]:56570 Accepted
+[Sat Jun 20 11:14:49 2026] [::1]:56552 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:14:49 2026] [::1]:56552 Closing
+[Sat Jun 20 11:14:49 2026] [::1]:56562 [200]: GET /assets/images/solar-panel-grid.jpg
+[Sat Jun 20 11:14:49 2026] [::1]:56562 Closing
+[Sat Jun 20 11:14:49 2026] [::1]:56570 [200]: GET /assets/images/battery-grid.jpg
+[Sat Jun 20 11:14:49 2026] [::1]:56570 Closing
+[Sat Jun 20 11:14:49 2026] [::1]:56574 Accepted
+[Sat Jun 20 11:14:49 2026] [::1]:56574 [200]: GET /assets/images/solar-maintenance.jpg
+[Sat Jun 20 11:14:49 2026] [::1]:56574 Closing
+[Sat Jun 20 11:14:49 2026] [::1]:56578 Accepted
+[Sat Jun 20 11:14:49 2026] [::1]:56590 Accepted
+[Sat Jun 20 11:14:49 2026] [::1]:56578 [200]: GET /dashboard.php
+[Sat Jun 20 11:14:49 2026] [::1]:56578 Closing
+[Sat Jun 20 11:14:49 2026] [::1]:56590 [200]: GET /assets/images/solar-hero.jpg
+[Sat Jun 20 11:14:49 2026] [::1]:56590 Closing
+[Sat Jun 20 11:14:49 2026] [::1]:56602 Accepted
+[Sat Jun 20 11:14:49 2026] [::1]:56602 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:14:49 2026] [::1]:56602 Closing
+[Sat Jun 20 11:15:33 2026] [::1]:47820 Accepted
+[Sat Jun 20 11:15:33 2026] [::1]:47820 [200]: GET /register.php
+[Sat Jun 20 11:15:33 2026] [::1]:47820 Closing
+[Sat Jun 20 11:15:33 2026] [::1]:47832 Accepted
+[Sat Jun 20 11:15:33 2026] [::1]:47832 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:15:33 2026] [::1]:47832 Closing
+[Sat Jun 20 11:15:33 2026] [::1]:47840 Accepted
+[Sat Jun 20 11:15:33 2026] [::1]:47840 [302]: POST /register.php
+[Sat Jun 20 11:15:33 2026] [::1]:47840 Closing
+[Sat Jun 20 11:15:33 2026] [::1]:47850 Accepted
+[Sat Jun 20 11:15:33 2026] [::1]:47850 [200]: GET /login.php?registered=1
+[Sat Jun 20 11:15:33 2026] [::1]:47850 Closing
+[Sat Jun 20 11:15:33 2026] [::1]:47860 Accepted
+[Sat Jun 20 11:15:33 2026] [::1]:47860 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:15:33 2026] [::1]:47860 Closing
+[Sat Jun 20 11:15:33 2026] [::1]:47864 Accepted
+[Sat Jun 20 11:15:33 2026] [::1]:47864 [200]: GET /register.php?ref=referrer_9945@example.com
+[Sat Jun 20 11:15:33 2026] [::1]:47864 Closing
+[Sat Jun 20 11:15:33 2026] [::1]:47870 Accepted
+[Sat Jun 20 11:15:33 2026] [::1]:47870 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:15:33 2026] [::1]:47870 Closing
+[Sat Jun 20 11:15:34 2026] [::1]:47886 Accepted
+[Sat Jun 20 11:15:34 2026] [::1]:47886 [302]: POST /register.php?ref=referrer_9945@example.com
+[Sat Jun 20 11:15:34 2026] [::1]:47886 Closing
+[Sat Jun 20 11:15:34 2026] [::1]:47888 Accepted
+[Sat Jun 20 11:15:34 2026] [::1]:47888 [200]: GET /login.php?registered=1
+[Sat Jun 20 11:15:34 2026] [::1]:47888 Closing
+[Sat Jun 20 11:15:34 2026] [::1]:47900 Accepted
+[Sat Jun 20 11:15:34 2026] [::1]:47900 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:15:34 2026] [::1]:47900 Closing
+[Sat Jun 20 11:15:34 2026] [::1]:47904 Accepted
+[Sat Jun 20 11:15:34 2026] [::1]:47904 [200]: GET /login.php
+[Sat Jun 20 11:15:34 2026] [::1]:47904 Closing
+[Sat Jun 20 11:15:34 2026] [::1]:47910 Accepted
+[Sat Jun 20 11:15:34 2026] [::1]:47910 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:15:34 2026] [::1]:47910 Closing
+[Sat Jun 20 11:15:34 2026] [::1]:47920 Accepted
+[Sat Jun 20 11:15:34 2026] [::1]:47920 [302]: POST /login.php
+[Sat Jun 20 11:15:34 2026] [::1]:47920 Closing
+[Sat Jun 20 11:15:34 2026] [::1]:47922 Accepted
+[Sat Jun 20 11:15:34 2026] [::1]:47922 [200]: GET /index.php
+[Sat Jun 20 11:15:34 2026] [::1]:47922 Closing
+[Sat Jun 20 11:15:34 2026] [::1]:47932 Accepted
+[Sat Jun 20 11:15:34 2026] [::1]:47940 Accepted
+[Sat Jun 20 11:15:34 2026] [::1]:47944 Accepted
+[Sat Jun 20 11:15:34 2026] [::1]:47932 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:15:34 2026] [::1]:47932 Closing
+[Sat Jun 20 11:15:34 2026] [::1]:47940 [200]: GET /assets/images/solar-panel-grid.jpg
+[Sat Jun 20 11:15:34 2026] [::1]:47940 Closing
+[Sat Jun 20 11:15:34 2026] [::1]:47956 Accepted
+[Sat Jun 20 11:15:34 2026] [::1]:47960 Accepted
+[Sat Jun 20 11:15:34 2026] [::1]:47944 [200]: GET /assets/images/battery-grid.jpg
+[Sat Jun 20 11:15:34 2026] [::1]:47944 Closing
+[Sat Jun 20 11:15:34 2026] [::1]:47956 [200]: GET /product.php?id=1
+[Sat Jun 20 11:15:34 2026] [::1]:47956 Closing
+[Sat Jun 20 11:15:34 2026] [::1]:47960 [200]: GET /assets/images/solar-maintenance.jpg
+[Sat Jun 20 11:15:34 2026] [::1]:47960 Closing
+[Sat Jun 20 11:15:34 2026] [::1]:47972 Accepted
+[Sat Jun 20 11:15:34 2026] [::1]:47972 [200]: GET /assets/images/solar-hero.jpg
+[Sat Jun 20 11:15:34 2026] [::1]:47972 Closing
+[Sat Jun 20 11:15:34 2026] [::1]:47974 Accepted
+[Sat Jun 20 11:15:34 2026] [::1]:47974 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:15:34 2026] [::1]:47974 Closing
+[Sat Jun 20 11:15:35 2026] [::1]:47978 Accepted
+[Sat Jun 20 11:15:35 2026] [::1]:47978 [302]: POST /product.php?id=1
+[Sat Jun 20 11:15:35 2026] [::1]:47978 Closing
+[Sat Jun 20 11:15:35 2026] [::1]:47992 Accepted
+[Sat Jun 20 11:15:35 2026] [::1]:47992 [200]: GET /cart.php
+[Sat Jun 20 11:15:35 2026] [::1]:47992 Closing
+[Sat Jun 20 11:15:35 2026] [::1]:48008 Accepted
+[Sat Jun 20 11:15:35 2026] [::1]:48008 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:15:35 2026] [::1]:48008 Closing
+[Sat Jun 20 11:15:35 2026] [::1]:48014 Accepted
+[Sat Jun 20 11:15:35 2026] [::1]:48014 [200]: GET /checkout.php
+[Sat Jun 20 11:15:35 2026] [::1]:48014 Closing
+[Sat Jun 20 11:15:35 2026] [::1]:48026 Accepted
+[Sat Jun 20 11:15:35 2026] [::1]:48026 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:15:35 2026] [::1]:48026 Closing
+[Sat Jun 20 11:15:35 2026] [::1]:48030 Accepted
+[Sat Jun 20 11:15:35 2026] [::1]:48030 [302]: POST /checkout.php
+[Sat Jun 20 11:15:35 2026] [::1]:48030 Closing
+[Sat Jun 20 11:15:35 2026] [::1]:48038 Accepted
+[Sat Jun 20 11:15:35 2026] [::1]:48038 [200]: GET /dashboard.php?success=1
+[Sat Jun 20 11:15:35 2026] [::1]:48038 Closing
+[Sat Jun 20 11:15:35 2026] [::1]:48052 Accepted
+[Sat Jun 20 11:15:35 2026] [::1]:48052 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:15:35 2026] [::1]:48052 Closing
+[Sat Jun 20 11:15:35 2026] [::1]:48062 Accepted
+[Sat Jun 20 11:15:35 2026] [::1]:48062 [302]: GET /logout.php
+[Sat Jun 20 11:15:35 2026] [::1]:48062 Closing
+[Sat Jun 20 11:15:35 2026] [::1]:48076 Accepted
+[Sat Jun 20 11:15:35 2026] [::1]:48076 [200]: GET /login.php
+[Sat Jun 20 11:15:35 2026] [::1]:48076 Closing
+[Sat Jun 20 11:15:35 2026] [::1]:48078 Accepted
+[Sat Jun 20 11:15:35 2026] [::1]:48078 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:15:35 2026] [::1]:48078 Closing
+[Sat Jun 20 11:15:35 2026] [::1]:48084 Accepted
+[Sat Jun 20 11:15:35 2026] [::1]:48084 [200]: GET /login.php
+[Sat Jun 20 11:15:35 2026] [::1]:48084 Closing
+[Sat Jun 20 11:15:35 2026] [::1]:48092 Accepted
+[Sat Jun 20 11:15:35 2026] [::1]:48092 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:15:35 2026] [::1]:48092 Closing
+[Sat Jun 20 11:15:35 2026] [::1]:48096 Accepted
+[Sat Jun 20 11:15:35 2026] [::1]:48096 [302]: POST /login.php
+[Sat Jun 20 11:15:35 2026] [::1]:48096 Closing
+[Sat Jun 20 11:15:35 2026] [::1]:48106 Accepted
+[Sat Jun 20 11:15:35 2026] [::1]:48106 [200]: GET /index.php
+[Sat Jun 20 11:15:35 2026] [::1]:48106 Closing
+[Sat Jun 20 11:15:35 2026] [::1]:48122 Accepted
+[Sat Jun 20 11:15:35 2026] [::1]:48132 Accepted
+[Sat Jun 20 11:15:35 2026] [::1]:48138 Accepted
+[Sat Jun 20 11:15:35 2026] [::1]:48122 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:15:35 2026] [::1]:48122 Closing
+[Sat Jun 20 11:15:35 2026] [::1]:48132 [200]: GET /assets/images/solar-panel-grid.jpg
+[Sat Jun 20 11:15:35 2026] [::1]:48132 Closing
+[Sat Jun 20 11:15:35 2026] [::1]:48138 [200]: GET /assets/images/battery-grid.jpg
+[Sat Jun 20 11:15:35 2026] [::1]:48138 Closing
+[Sat Jun 20 11:15:35 2026] [::1]:48144 Accepted
+[Sat Jun 20 11:15:35 2026] [::1]:48144 [200]: GET /assets/images/solar-maintenance.jpg
+[Sat Jun 20 11:15:35 2026] [::1]:48144 Closing
+[Sat Jun 20 11:15:35 2026] [::1]:48150 Accepted
+[Sat Jun 20 11:15:35 2026] [::1]:48150 [200]: GET /dashboard.php
+[Sat Jun 20 11:15:35 2026] [::1]:48150 Closing
+[Sat Jun 20 11:15:35 2026] [::1]:48152 Accepted
+[Sat Jun 20 11:15:35 2026] [::1]:48152 [200]: GET /assets/images/solar-hero.jpg
+[Sat Jun 20 11:15:35 2026] [::1]:48152 Closing
+[Sat Jun 20 11:15:35 2026] [::1]:48166 Accepted
+[Sat Jun 20 11:15:35 2026] [::1]:48166 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:15:35 2026] [::1]:48166 Closing
+[Sat Jun 20 11:16:45 2026] [::1]:54264 Accepted
+[Sat Jun 20 11:16:45 2026] [::1]:54264 [200]: GET /register.php
+[Sat Jun 20 11:16:45 2026] [::1]:54264 Closing
+[Sat Jun 20 11:16:45 2026] [::1]:54276 Accepted
+[Sat Jun 20 11:16:45 2026] [::1]:54276 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:16:45 2026] [::1]:54276 Closing
+[Sat Jun 20 11:16:45 2026] [::1]:54290 Accepted
+[Sat Jun 20 11:16:45 2026] [::1]:54290 [302]: POST /register.php
+[Sat Jun 20 11:16:45 2026] [::1]:54290 Closing
+[Sat Jun 20 11:16:45 2026] [::1]:54298 Accepted
+[Sat Jun 20 11:16:45 2026] [::1]:54298 [200]: GET /login.php?registered=1
+[Sat Jun 20 11:16:45 2026] [::1]:54298 Closing
+[Sat Jun 20 11:16:45 2026] [::1]:54304 Accepted
+[Sat Jun 20 11:16:45 2026] [::1]:54304 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:16:45 2026] [::1]:54304 Closing
+[Sat Jun 20 11:16:45 2026] [::1]:54314 Accepted
+[Sat Jun 20 11:16:45 2026] [::1]:54314 [200]: GET /register.php?ref=ref_7748@example.com
+[Sat Jun 20 11:16:45 2026] [::1]:54314 Closing
+[Sat Jun 20 11:16:46 2026] [::1]:54316 Accepted
+[Sat Jun 20 11:16:46 2026] [::1]:54316 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:16:46 2026] [::1]:54316 Closing
+[Sat Jun 20 11:16:46 2026] [::1]:54322 Accepted
+[Sat Jun 20 11:16:46 2026] [::1]:54322 [302]: POST /register.php?ref=ref_7748@example.com
+[Sat Jun 20 11:16:46 2026] [::1]:54322 Closing
+[Sat Jun 20 11:16:46 2026] [::1]:54326 Accepted
+[Sat Jun 20 11:16:46 2026] [::1]:54326 [200]: GET /login.php?registered=1
+[Sat Jun 20 11:16:46 2026] [::1]:54326 Closing
+[Sat Jun 20 11:16:46 2026] [::1]:54338 Accepted
+[Sat Jun 20 11:16:46 2026] [::1]:54338 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:16:46 2026] [::1]:54338 Closing
+[Sat Jun 20 11:16:46 2026] [::1]:54350 Accepted
+[Sat Jun 20 11:16:46 2026] [::1]:54350 [200]: GET /login.php
+[Sat Jun 20 11:16:46 2026] [::1]:54350 Closing
+[Sat Jun 20 11:16:46 2026] [::1]:54358 Accepted
+[Sat Jun 20 11:16:46 2026] [::1]:54358 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:16:46 2026] [::1]:54358 Closing
+[Sat Jun 20 11:16:47 2026] [::1]:54364 Accepted
+[Sat Jun 20 11:16:47 2026] [::1]:54364 [302]: POST /login.php
+[Sat Jun 20 11:16:47 2026] [::1]:54364 Closing
+[Sat Jun 20 11:16:47 2026] [::1]:54370 Accepted
+[Sat Jun 20 11:16:47 2026] [::1]:54370 [200]: GET /index.php
+[Sat Jun 20 11:16:47 2026] [::1]:54370 Closing
+[Sat Jun 20 11:16:47 2026] [::1]:54374 Accepted
+[Sat Jun 20 11:16:47 2026] [::1]:54384 Accepted
+[Sat Jun 20 11:16:47 2026] [::1]:54400 Accepted
+[Sat Jun 20 11:16:47 2026] [::1]:54374 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:16:47 2026] [::1]:54374 Closing
+[Sat Jun 20 11:16:47 2026] [::1]:54384 [200]: GET /assets/images/solar-panel-grid.jpg
+[Sat Jun 20 11:16:47 2026] [::1]:54384 Closing
+[Sat Jun 20 11:16:47 2026] [::1]:54400 [200]: GET /assets/images/battery-grid.jpg
+[Sat Jun 20 11:16:47 2026] [::1]:54400 Closing
+[Sat Jun 20 11:16:47 2026] [::1]:54412 Accepted
+[Sat Jun 20 11:16:47 2026] [::1]:54420 Accepted
+[Sat Jun 20 11:16:47 2026] [::1]:54412 [200]: GET /product.php?id=1
+[Sat Jun 20 11:16:47 2026] [::1]:54412 Closing
+[Sat Jun 20 11:16:47 2026] [::1]:54420 [200]: GET /assets/images/solar-maintenance.jpg
+[Sat Jun 20 11:16:47 2026] [::1]:54420 Closing
+[Sat Jun 20 11:16:47 2026] [::1]:54426 Accepted
+[Sat Jun 20 11:16:47 2026] [::1]:54426 [200]: GET /assets/images/solar-hero.jpg
+[Sat Jun 20 11:16:47 2026] [::1]:54426 Closing
+[Sat Jun 20 11:16:47 2026] [::1]:54428 Accepted
+[Sat Jun 20 11:16:47 2026] [::1]:54428 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:16:47 2026] [::1]:54428 Closing
+[Sat Jun 20 11:16:47 2026] [::1]:54434 Accepted
+[Sat Jun 20 11:16:47 2026] [::1]:54434 [302]: POST /product.php?id=1
+[Sat Jun 20 11:16:47 2026] [::1]:54434 Closing
+[Sat Jun 20 11:16:47 2026] [::1]:54450 Accepted
+[Sat Jun 20 11:16:47 2026] [::1]:54450 [200]: GET /cart.php
+[Sat Jun 20 11:16:47 2026] [::1]:54450 Closing
+[Sat Jun 20 11:16:47 2026] [::1]:54452 Accepted
+[Sat Jun 20 11:16:47 2026] [::1]:54452 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:16:47 2026] [::1]:54452 Closing
+[Sat Jun 20 11:16:47 2026] [::1]:54456 Accepted
+[Sat Jun 20 11:16:47 2026] [::1]:54456 [200]: GET /checkout.php
+[Sat Jun 20 11:16:47 2026] [::1]:54456 Closing
+[Sat Jun 20 11:16:47 2026] [::1]:54468 Accepted
+[Sat Jun 20 11:16:47 2026] [::1]:54468 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:16:47 2026] [::1]:54468 Closing
+[Sat Jun 20 11:16:47 2026] [::1]:54484 Accepted
+[Sat Jun 20 11:16:47 2026] [::1]:54484 [302]: POST /checkout.php
+[Sat Jun 20 11:16:47 2026] [::1]:54484 Closing
+[Sat Jun 20 11:16:47 2026] [::1]:54488 Accepted
+[Sat Jun 20 11:16:47 2026] [::1]:54488 [200]: GET /dashboard.php?success=1
+[Sat Jun 20 11:16:47 2026] [::1]:54488 Closing
+[Sat Jun 20 11:16:47 2026] [::1]:54500 Accepted
+[Sat Jun 20 11:16:47 2026] [::1]:54500 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:16:47 2026] [::1]:54500 Closing
+[Sat Jun 20 11:17:19 2026] [::1]:34702 Accepted
+[Sat Jun 20 11:17:19 2026] [::1]:34702 [200]: GET /login.php
+[Sat Jun 20 11:17:19 2026] [::1]:34702 Closing
+[Sat Jun 20 11:17:19 2026] [::1]:34718 Accepted
+[Sat Jun 20 11:17:19 2026] [::1]:34718 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:17:19 2026] [::1]:34718 Closing
+[Sat Jun 20 11:17:19 2026] [::1]:34734 Accepted
+[Sat Jun 20 11:17:19 2026] [::1]:34734 [200]: POST /login.php
+[Sat Jun 20 11:17:19 2026] [::1]:34734 Closing
+[Sat Jun 20 11:17:19 2026] [::1]:34738 Accepted
+[Sat Jun 20 11:17:19 2026] [::1]:34738 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:17:19 2026] [::1]:34738 Closing
+[Sat Jun 20 11:17:19 2026] [::1]:34754 Accepted
+[Sat Jun 20 11:17:19 2026] [::1]:34754 [200]: GET /product.php?id=1
+[Sat Jun 20 11:17:19 2026] [::1]:34754 Closing
+[Sat Jun 20 11:17:19 2026] [::1]:34764 Accepted
+[Sat Jun 20 11:17:19 2026] [::1]:34764 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:17:19 2026] [::1]:34764 Closing
+[Sat Jun 20 11:17:20 2026] [::1]:34768 Accepted
+[Sat Jun 20 11:17:20 2026] [::1]:34768 [302]: POST /product.php?id=1
+[Sat Jun 20 11:17:20 2026] [::1]:34768 Closing
+[Sat Jun 20 11:17:20 2026] [::1]:34784 Accepted
+[Sat Jun 20 11:17:20 2026] [::1]:34784 [200]: GET /cart.php
+[Sat Jun 20 11:17:20 2026] [::1]:34784 Closing
+[Sat Jun 20 11:17:20 2026] [::1]:34792 Accepted
+[Sat Jun 20 11:17:20 2026] [::1]:34792 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:17:20 2026] [::1]:34792 Closing
+[Sat Jun 20 11:17:20 2026] [::1]:34804 Accepted
+[Sat Jun 20 11:17:20 2026] [::1]:34804 [302]: GET /checkout.php
+[Sat Jun 20 11:17:20 2026] [::1]:34804 Closing
+[Sat Jun 20 11:17:20 2026] [::1]:34816 Accepted
+[Sat Jun 20 11:17:20 2026] [::1]:34816 [200]: GET /login.php
+[Sat Jun 20 11:17:20 2026] [::1]:34816 Closing
+[Sat Jun 20 11:17:20 2026] [::1]:34830 Accepted
+[Sat Jun 20 11:17:20 2026] [::1]:34830 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:17:20 2026] [::1]:34830 Closing
+[Sat Jun 20 11:18:30 2026] [::1]:60534 Accepted
+[Sat Jun 20 11:18:30 2026] [::1]:60534 [200]: GET /register.php
+[Sat Jun 20 11:18:30 2026] [::1]:60534 Closing
+[Sat Jun 20 11:18:30 2026] [::1]:60538 Accepted
+[Sat Jun 20 11:18:30 2026] [::1]:60538 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:18:30 2026] [::1]:60538 Closing
+[Sat Jun 20 11:18:30 2026] [::1]:60542 Accepted
+[Sat Jun 20 11:18:30 2026] [::1]:60542 [302]: POST /register.php
+[Sat Jun 20 11:18:30 2026] [::1]:60542 Closing
+[Sat Jun 20 11:18:30 2026] [::1]:60548 Accepted
+[Sat Jun 20 11:18:30 2026] [::1]:60548 [200]: GET /login.php?registered=1
+[Sat Jun 20 11:18:30 2026] [::1]:60548 Closing
+[Sat Jun 20 11:18:30 2026] [::1]:60564 Accepted
+[Sat Jun 20 11:18:30 2026] [::1]:60564 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:18:30 2026] [::1]:60564 Closing
+[Sat Jun 20 11:18:30 2026] [::1]:60570 Accepted
+[Sat Jun 20 11:18:30 2026] [::1]:60570 [200]: GET /login.php
+[Sat Jun 20 11:18:30 2026] [::1]:60570 Closing
+[Sat Jun 20 11:18:30 2026] [::1]:60582 Accepted
+[Sat Jun 20 11:18:30 2026] [::1]:60582 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:18:30 2026] [::1]:60582 Closing
+[Sat Jun 20 11:18:30 2026] [::1]:60592 Accepted
+[Sat Jun 20 11:18:30 2026] [::1]:60592 [302]: POST /login.php
+[Sat Jun 20 11:18:30 2026] [::1]:60592 Closing
+[Sat Jun 20 11:18:30 2026] [::1]:60594 Accepted
+[Sat Jun 20 11:18:30 2026] [::1]:60594 [200]: GET /index.php
+[Sat Jun 20 11:18:30 2026] [::1]:60594 Closing
+[Sat Jun 20 11:18:30 2026] [::1]:60610 Accepted
+[Sat Jun 20 11:18:30 2026] [::1]:60616 Accepted
+[Sat Jun 20 11:18:30 2026] [::1]:60622 Accepted
+[Sat Jun 20 11:18:30 2026] [::1]:60626 Accepted
+[Sat Jun 20 11:18:30 2026] [::1]:60610 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:18:30 2026] [::1]:60616 [200]: GET /product.php?id=1
+[Sat Jun 20 11:18:30 2026] [::1]:60616 Closing
+[Sat Jun 20 11:18:30 2026] [::1]:60610 Closing
+[Sat Jun 20 11:18:30 2026] [::1]:60640 Accepted
+[Sat Jun 20 11:18:30 2026] [::1]:60622 [200]: GET /assets/images/solar-panel-grid.jpg
+[Sat Jun 20 11:18:30 2026] [::1]:60626 [200]: GET /assets/images/battery-grid.jpg
+[Sat Jun 20 11:18:30 2026] [::1]:60622 Closing
+[Sat Jun 20 11:18:30 2026] [::1]:60626 Closing
+[Sat Jun 20 11:18:30 2026] [::1]:60640 [200]: GET /assets/images/solar-maintenance.jpg
+[Sat Jun 20 11:18:30 2026] [::1]:60640 Closing
+[Sat Jun 20 11:18:30 2026] [::1]:60654 Accepted
+[Sat Jun 20 11:18:30 2026] [::1]:60654 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:18:30 2026] [::1]:60654 Closing
+[Sat Jun 20 11:18:31 2026] [::1]:60666 Accepted
+[Sat Jun 20 11:18:31 2026] [::1]:60666 [302]: POST /product.php?id=1
+[Sat Jun 20 11:18:31 2026] [::1]:60666 Closing
+[Sat Jun 20 11:18:31 2026] [::1]:60678 Accepted
+[Sat Jun 20 11:18:31 2026] [::1]:60678 [200]: GET /cart.php
+[Sat Jun 20 11:18:31 2026] [::1]:60678 Closing
+[Sat Jun 20 11:18:31 2026] [::1]:60694 Accepted
+[Sat Jun 20 11:18:31 2026] [::1]:60700 Accepted
+[Sat Jun 20 11:18:31 2026] [::1]:60694 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:18:31 2026] [::1]:60700 [200]: GET /cart.php
+[Sat Jun 20 11:18:31 2026] [::1]:60700 Closing
+[Sat Jun 20 11:18:31 2026] [::1]:60694 Closing
+[Sat Jun 20 11:18:31 2026] [::1]:60706 Accepted
+[Sat Jun 20 11:18:31 2026] [::1]:60706 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:18:31 2026] [::1]:60706 Closing
+[Sat Jun 20 11:19:45 2026] [::1]:59298 Accepted
+[Sat Jun 20 11:19:45 2026] [::1]:59298 [200]: GET /register.php
+[Sat Jun 20 11:19:45 2026] [::1]:59298 Closing
+[Sat Jun 20 11:19:45 2026] [::1]:59302 Accepted
+[Sat Jun 20 11:19:45 2026] [::1]:59302 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:19:45 2026] [::1]:59302 Closing
+[Sat Jun 20 11:19:45 2026] [::1]:59306 Accepted
+[Sat Jun 20 11:19:45 2026] [::1]:59306 [302]: POST /register.php
+[Sat Jun 20 11:19:45 2026] [::1]:59306 Closing
+[Sat Jun 20 11:19:45 2026] [::1]:59322 Accepted
+[Sat Jun 20 11:19:45 2026] [::1]:59322 [200]: GET /login.php?registered=1
+[Sat Jun 20 11:19:45 2026] [::1]:59322 Closing
+[Sat Jun 20 11:19:45 2026] [::1]:59330 Accepted
+[Sat Jun 20 11:19:45 2026] [::1]:59330 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:19:45 2026] [::1]:59330 Closing
+[Sat Jun 20 11:19:45 2026] [::1]:59334 Accepted
+[Sat Jun 20 11:19:45 2026] [::1]:59334 [200]: GET /login.php
+[Sat Jun 20 11:19:45 2026] [::1]:59334 Closing
+[Sat Jun 20 11:19:45 2026] [::1]:59338 Accepted
+[Sat Jun 20 11:19:45 2026] [::1]:59338 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:19:45 2026] [::1]:59338 Closing
+[Sat Jun 20 11:19:46 2026] [::1]:59340 Accepted
+[Sat Jun 20 11:19:46 2026] [::1]:59340 [302]: POST /login.php
+[Sat Jun 20 11:19:46 2026] [::1]:59340 Closing
+[Sat Jun 20 11:19:46 2026] [::1]:59348 Accepted
+[Sat Jun 20 11:19:46 2026] [::1]:59348 [200]: GET /index.php
+[Sat Jun 20 11:19:46 2026] [::1]:59348 Closing
+[Sat Jun 20 11:19:46 2026] [::1]:59356 Accepted
+[Sat Jun 20 11:19:46 2026] [::1]:59362 Accepted
+[Sat Jun 20 11:19:46 2026] [::1]:59356 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:19:46 2026] [::1]:59374 Accepted
+[Sat Jun 20 11:19:46 2026] [::1]:59362 [200]: GET /assets/images/solar-panel-grid.jpg
+[Sat Jun 20 11:19:46 2026] [::1]:59374 [200]: GET /assets/images/battery-grid.jpg
+[Sat Jun 20 11:19:46 2026] [::1]:59356 Closing
+[Sat Jun 20 11:19:46 2026] [::1]:59362 Closing
+[Sat Jun 20 11:19:46 2026] [::1]:59374 Closing
+[Sat Jun 20 11:19:46 2026] [::1]:59390 Accepted
+[Sat Jun 20 11:19:46 2026] [::1]:59404 Accepted
+[Sat Jun 20 11:19:46 2026] [::1]:59390 [200]: GET /product.php?id=1
+[Sat Jun 20 11:19:46 2026] [::1]:59390 Closing
+[Sat Jun 20 11:19:46 2026] [::1]:59404 [200]: GET /assets/images/solar-maintenance.jpg
+[Sat Jun 20 11:19:46 2026] [::1]:59404 Closing
+[Sat Jun 20 11:19:46 2026] [::1]:59406 Accepted
+[Sat Jun 20 11:19:46 2026] [::1]:59406 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:19:46 2026] [::1]:59406 Closing
+[Sat Jun 20 11:19:46 2026] [::1]:59422 Accepted
+[Sat Jun 20 11:19:46 2026] [::1]:59422 [302]: POST /product.php?id=1
+[Sat Jun 20 11:19:46 2026] [::1]:59422 Closing
+[Sat Jun 20 11:19:46 2026] [::1]:59424 Accepted
+[Sat Jun 20 11:19:46 2026] [::1]:59424 [200]: GET /cart.php
+[Sat Jun 20 11:19:46 2026] [::1]:59424 Closing
+[Sat Jun 20 11:19:46 2026] [::1]:59426 Accepted
+[Sat Jun 20 11:19:46 2026] [::1]:59426 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:19:46 2026] [::1]:59426 Closing
+[Sat Jun 20 11:19:46 2026] [::1]:59442 Accepted
+[Sat Jun 20 11:19:46 2026] [::1]:59442 [200]: GET /cart.php
+[Sat Jun 20 11:19:46 2026] [::1]:59442 Closing
+[Sat Jun 20 11:19:46 2026] [::1]:59448 Accepted
+[Sat Jun 20 11:19:46 2026] [::1]:59448 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:19:46 2026] [::1]:59448 Closing
+[Sat Jun 20 11:19:46 2026] [::1]:59450 Accepted
+[Sat Jun 20 11:19:46 2026] [::1]:59450 [200]: GET /checkout.php
+[Sat Jun 20 11:19:46 2026] [::1]:59450 Closing
+[Sat Jun 20 11:19:46 2026] [::1]:59462 Accepted
+[Sat Jun 20 11:19:46 2026] [::1]:59462 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:19:46 2026] [::1]:59462 Closing
+[Sat Jun 20 11:19:46 2026] [::1]:59468 Accepted
+[Sat Jun 20 11:19:46 2026] [::1]:59468 [302]: POST /checkout.php
+[Sat Jun 20 11:19:46 2026] [::1]:59468 Closing
+[Sat Jun 20 11:19:46 2026] [::1]:59482 Accepted
+[Sat Jun 20 11:19:46 2026] [::1]:59482 [200]: GET /dashboard.php?success=1
+[Sat Jun 20 11:19:46 2026] [::1]:59482 Closing
+[Sat Jun 20 11:19:46 2026] [::1]:59494 Accepted
+[Sat Jun 20 11:19:46 2026] [::1]:59494 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:19:46 2026] [::1]:59494 Closing
+[Sat Jun 20 11:21:33 2026] [::1]:58534 Accepted
+[Sat Jun 20 11:21:33 2026] [::1]:58534 [200]: GET /register.php
+[Sat Jun 20 11:21:33 2026] [::1]:58534 Closing
+[Sat Jun 20 11:21:33 2026] [::1]:58540 Accepted
+[Sat Jun 20 11:21:33 2026] [::1]:58540 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:21:33 2026] [::1]:58540 Closing
+[Sat Jun 20 11:21:34 2026] [::1]:58550 Accepted
+[Sat Jun 20 11:21:34 2026] [::1]:58550 [302]: POST /register.php
+[Sat Jun 20 11:21:34 2026] [::1]:58550 Closing
+[Sat Jun 20 11:21:34 2026] [::1]:58562 Accepted
+[Sat Jun 20 11:21:34 2026] [::1]:58562 [200]: GET /login.php?registered=1
+[Sat Jun 20 11:21:34 2026] [::1]:58562 Closing
+[Sat Jun 20 11:21:34 2026] [::1]:58566 Accepted
+[Sat Jun 20 11:21:34 2026] [::1]:58566 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:21:34 2026] [::1]:58566 Closing
+[Sat Jun 20 11:21:34 2026] [::1]:58570 Accepted
+[Sat Jun 20 11:21:34 2026] [::1]:58570 [200]: GET /login.php
+[Sat Jun 20 11:21:34 2026] [::1]:58570 Closing
+[Sat Jun 20 11:21:34 2026] [::1]:58572 Accepted
+[Sat Jun 20 11:21:34 2026] [::1]:58572 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:21:34 2026] [::1]:58572 Closing
+[Sat Jun 20 11:21:34 2026] [::1]:58578 Accepted
+[Sat Jun 20 11:21:34 2026] [::1]:58578 [302]: POST /login.php
+[Sat Jun 20 11:21:34 2026] [::1]:58578 Closing
+[Sat Jun 20 11:21:34 2026] [::1]:58580 Accepted
+[Sat Jun 20 11:21:34 2026] [::1]:58580 [200]: GET /index.php
+[Sat Jun 20 11:21:34 2026] [::1]:58580 Closing
+[Sat Jun 20 11:21:34 2026] [::1]:58590 Accepted
+[Sat Jun 20 11:21:34 2026] [::1]:58604 Accepted
+[Sat Jun 20 11:21:34 2026] [::1]:58612 Accepted
+[Sat Jun 20 11:21:34 2026] [::1]:58590 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:21:34 2026] [::1]:58604 [200]: GET /assets/images/solar-panel-grid.jpg
+[Sat Jun 20 11:21:34 2026] [::1]:58590 Closing
+[Sat Jun 20 11:21:34 2026] [::1]:58604 Closing
+[Sat Jun 20 11:21:34 2026] [::1]:58612 [200]: GET /assets/images/battery-grid.jpg
+[Sat Jun 20 11:21:34 2026] [::1]:58612 Closing
+[Sat Jun 20 11:21:34 2026] [::1]:58626 Accepted
+[Sat Jun 20 11:21:34 2026] [::1]:58626 [200]: GET /product.php?id=1
+[Sat Jun 20 11:21:34 2026] [::1]:58626 Closing
+[Sat Jun 20 11:21:34 2026] [::1]:58630 Accepted
+[Sat Jun 20 11:21:34 2026] [::1]:58630 [200]: GET /assets/images/solar-maintenance.jpg
+[Sat Jun 20 11:21:34 2026] [::1]:58630 Closing
+[Sat Jun 20 11:21:34 2026] [::1]:58636 Accepted
+[Sat Jun 20 11:21:34 2026] [::1]:58636 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:21:34 2026] [::1]:58636 Closing
+[Sat Jun 20 11:21:34 2026] [::1]:58652 Accepted
+[Sat Jun 20 11:21:34 2026] [::1]:58652 [302]: POST /product.php?id=1
+[Sat Jun 20 11:21:34 2026] [::1]:58652 Closing
+[Sat Jun 20 11:21:34 2026] [::1]:58666 Accepted
+[Sat Jun 20 11:21:34 2026] [::1]:58666 [200]: GET /cart.php
+[Sat Jun 20 11:21:34 2026] [::1]:58666 Closing
+[Sat Jun 20 11:21:34 2026] [::1]:58682 Accepted
+[Sat Jun 20 11:21:34 2026] [::1]:58682 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:21:34 2026] [::1]:58682 Closing
+[Sat Jun 20 11:21:34 2026] [::1]:58692 Accepted
+[Sat Jun 20 11:21:34 2026] [::1]:58692 [200]: GET /cart.php
+[Sat Jun 20 11:21:34 2026] [::1]:58692 Closing
+[Sat Jun 20 11:21:34 2026] [::1]:58704 Accepted
+[Sat Jun 20 11:21:34 2026] [::1]:58704 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:21:34 2026] [::1]:58704 Closing
+[Sat Jun 20 11:21:35 2026] [::1]:58712 Accepted
+[Sat Jun 20 11:21:35 2026] [::1]:58712 [200]: GET /checkout.php
+[Sat Jun 20 11:21:35 2026] [::1]:58712 Closing
+[Sat Jun 20 11:21:35 2026] [::1]:58716 Accepted
+[Sat Jun 20 11:21:35 2026] [::1]:58716 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:21:35 2026] [::1]:58716 Closing
+[Sat Jun 20 11:21:35 2026] [::1]:58730 Accepted
+[Sat Jun 20 11:21:35 2026] [::1]:58730 [302]: POST /checkout.php
+[Sat Jun 20 11:21:35 2026] [::1]:58730 Closing
+[Sat Jun 20 11:21:35 2026] [::1]:58732 Accepted
+[Sat Jun 20 11:21:35 2026] [::1]:58732 [200]: GET /dashboard.php?success=1
+[Sat Jun 20 11:21:35 2026] [::1]:58732 Closing
+[Sat Jun 20 11:21:35 2026] [::1]:58748 Accepted
+[Sat Jun 20 11:21:35 2026] [::1]:58748 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:21:35 2026] [::1]:58748 Closing
+[Sat Jun 20 11:21:35 2026] [::1]:58756 Accepted
+[Sat Jun 20 11:21:35 2026] [::1]:58756 [302]: GET /logout.php
+[Sat Jun 20 11:21:35 2026] [::1]:58756 Closing
+[Sat Jun 20 11:21:35 2026] [::1]:58766 Accepted
+[Sat Jun 20 11:21:35 2026] [::1]:58766 [200]: GET /login.php
+[Sat Jun 20 11:21:35 2026] [::1]:58766 Closing
+[Sat Jun 20 11:21:35 2026] [::1]:58768 Accepted
+[Sat Jun 20 11:21:35 2026] [::1]:58768 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:21:35 2026] [::1]:58768 Closing
+[Sat Jun 20 11:21:35 2026] [::1]:58784 Accepted
+[Sat Jun 20 11:21:35 2026] [::1]:58784 [200]: GET /burfee_login.php
+[Sat Jun 20 11:21:35 2026] [::1]:58784 Closing
+[Sat Jun 20 11:21:35 2026] [::1]:58800 Accepted
+[Sat Jun 20 11:21:35 2026] [::1]:58800 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:21:35 2026] [::1]:58800 Closing
+[Sat Jun 20 11:22:37 2026] [::1]:48474 Accepted
+[Sat Jun 20 11:22:37 2026] [::1]:48474 [200]: GET /register.php
+[Sat Jun 20 11:22:37 2026] [::1]:48474 Closing
+[Sat Jun 20 11:22:37 2026] [::1]:48488 Accepted
+[Sat Jun 20 11:22:37 2026] [::1]:48488 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:22:37 2026] [::1]:48488 Closing
+[Sat Jun 20 11:22:37 2026] [::1]:48492 Accepted
+[Sat Jun 20 11:22:37 2026] [::1]:48492 [302]: POST /register.php
+[Sat Jun 20 11:22:37 2026] [::1]:48492 Closing
+[Sat Jun 20 11:22:37 2026] [::1]:48508 Accepted
+[Sat Jun 20 11:22:37 2026] [::1]:48508 [200]: GET /login.php?registered=1
+[Sat Jun 20 11:22:37 2026] [::1]:48508 Closing
+[Sat Jun 20 11:22:37 2026] [::1]:48522 Accepted
+[Sat Jun 20 11:22:37 2026] [::1]:48522 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:22:37 2026] [::1]:48522 Closing
+[Sat Jun 20 11:22:37 2026] [::1]:48536 Accepted
+[Sat Jun 20 11:22:37 2026] [::1]:48536 [200]: GET /login.php
+[Sat Jun 20 11:22:37 2026] [::1]:48536 Closing
+[Sat Jun 20 11:22:37 2026] [::1]:48548 Accepted
+[Sat Jun 20 11:22:37 2026] [::1]:48548 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:22:37 2026] [::1]:48548 Closing
+[Sat Jun 20 11:22:37 2026] [::1]:48564 Accepted
+[Sat Jun 20 11:22:37 2026] [::1]:48564 [302]: POST /login.php
+[Sat Jun 20 11:22:37 2026] [::1]:48564 Closing
+[Sat Jun 20 11:22:37 2026] [::1]:48574 Accepted
+[Sat Jun 20 11:22:37 2026] [::1]:48574 [200]: GET /index.php
+[Sat Jun 20 11:22:37 2026] [::1]:48574 Closing
+[Sat Jun 20 11:22:37 2026] [::1]:48582 Accepted
+[Sat Jun 20 11:22:37 2026] [::1]:48582 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:22:37 2026] [::1]:48582 Closing
+[Sat Jun 20 11:22:37 2026] [::1]:48586 Accepted
+[Sat Jun 20 11:22:37 2026] [::1]:48596 Accepted
+[Sat Jun 20 11:22:37 2026] [::1]:48598 Accepted
+[Sat Jun 20 11:22:37 2026] [::1]:48586 [200]: GET /assets/images/solar-panel-grid.jpg
+[Sat Jun 20 11:22:37 2026] [::1]:48596 [200]: GET /assets/images/battery-grid.jpg
+[Sat Jun 20 11:22:37 2026] [::1]:48586 Closing
+[Sat Jun 20 11:22:37 2026] [::1]:48598 [200]: GET /assets/images/solar-maintenance.jpg
+[Sat Jun 20 11:22:37 2026] [::1]:48596 Closing
+[Sat Jun 20 11:22:37 2026] [::1]:48598 Closing
+[Sat Jun 20 11:22:37 2026] [::1]:48614 Accepted
+[Sat Jun 20 11:22:37 2026] [::1]:48614 [200]: GET /product.php?id=1
+[Sat Jun 20 11:22:37 2026] [::1]:48614 Closing
+[Sat Jun 20 11:22:37 2026] [::1]:48618 Accepted
+[Sat Jun 20 11:22:37 2026] [::1]:48618 [200]: GET /assets/images/solar-hero.jpg
+[Sat Jun 20 11:22:37 2026] [::1]:48618 Closing
+[Sat Jun 20 11:22:37 2026] [::1]:48622 Accepted
+[Sat Jun 20 11:22:37 2026] [::1]:48622 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:22:37 2026] [::1]:48622 Closing
+[Sat Jun 20 11:22:38 2026] [::1]:48630 Accepted
+[Sat Jun 20 11:22:38 2026] [::1]:48630 [302]: POST /product.php?id=1
+[Sat Jun 20 11:22:38 2026] [::1]:48630 Closing
+[Sat Jun 20 11:22:38 2026] [::1]:48644 Accepted
+[Sat Jun 20 11:22:38 2026] [::1]:48644 [200]: GET /cart.php
+[Sat Jun 20 11:22:38 2026] [::1]:48644 Closing
+[Sat Jun 20 11:22:38 2026] [::1]:48660 Accepted
+[Sat Jun 20 11:22:38 2026] [::1]:48660 [200]: GET /cart.php
+[Sat Jun 20 11:22:38 2026] [::1]:48660 Closing
+[Sat Jun 20 11:22:38 2026] [::1]:48674 Accepted
+[Sat Jun 20 11:22:38 2026] [::1]:48674 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:22:38 2026] [::1]:48674 Closing
+[Sat Jun 20 11:22:38 2026] [::1]:48690 Accepted
+[Sat Jun 20 11:22:38 2026] [::1]:48690 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:22:38 2026] [::1]:48690 Closing
+[Sat Jun 20 11:22:38 2026] [::1]:48694 Accepted
+[Sat Jun 20 11:22:38 2026] [::1]:48694 [200]: GET /checkout.php
+[Sat Jun 20 11:22:38 2026] [::1]:48694 Closing
+[Sat Jun 20 11:22:38 2026] [::1]:48710 Accepted
+[Sat Jun 20 11:22:38 2026] [::1]:48710 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:22:38 2026] [::1]:48710 Closing
+[Sat Jun 20 11:22:38 2026] [::1]:48714 Accepted
+[Sat Jun 20 11:22:38 2026] [::1]:48714 [302]: POST /checkout.php
+[Sat Jun 20 11:22:38 2026] [::1]:48714 Closing
+[Sat Jun 20 11:22:38 2026] [::1]:48724 Accepted
+[Sat Jun 20 11:22:38 2026] [::1]:48724 [200]: GET /dashboard.php?success=1
+[Sat Jun 20 11:22:38 2026] [::1]:48724 Closing
+[Sat Jun 20 11:22:38 2026] [::1]:48730 Accepted
+[Sat Jun 20 11:22:38 2026] [::1]:48730 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:22:38 2026] [::1]:48730 Closing
+[Sat Jun 20 11:22:38 2026] [::1]:48732 Accepted
+[Sat Jun 20 11:22:38 2026] [::1]:48732 [302]: GET /logout.php
+[Sat Jun 20 11:22:38 2026] [::1]:48732 Closing
+[Sat Jun 20 11:22:38 2026] [::1]:48748 Accepted
+[Sat Jun 20 11:22:38 2026] [::1]:48748 [200]: GET /login.php
+[Sat Jun 20 11:22:38 2026] [::1]:48748 Closing
+[Sat Jun 20 11:22:38 2026] [::1]:48758 Accepted
+[Sat Jun 20 11:22:38 2026] [::1]:48758 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:22:38 2026] [::1]:48758 Closing
+[Sat Jun 20 11:22:38 2026] [::1]:48772 Accepted
+[Sat Jun 20 11:22:38 2026] [::1]:48772 [200]: GET /burfee_login.php
+[Sat Jun 20 11:22:38 2026] [::1]:48772 Closing
+[Sat Jun 20 11:22:38 2026] [::1]:48778 Accepted
+[Sat Jun 20 11:22:38 2026] [::1]:48778 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:22:38 2026] [::1]:48778 Closing
+[Sat Jun 20 11:22:38 2026] [::1]:48790 Accepted
+[Sat Jun 20 11:22:38 2026] [::1]:48790 [302]: POST /burfee_login.php
+[Sat Jun 20 11:22:38 2026] [::1]:48790 Closing
+[Sat Jun 20 11:22:38 2026] [::1]:48802 Accepted
+[Sat Jun 20 11:22:38 2026] [::1]:48802 [200]: GET /index.php
+[Sat Jun 20 11:22:38 2026] [::1]:48802 Closing
+[Sat Jun 20 11:22:38 2026] [::1]:48806 Accepted
+[Sat Jun 20 11:22:38 2026] [::1]:48812 Accepted
+[Sat Jun 20 11:22:38 2026] [::1]:48826 Accepted
+[Sat Jun 20 11:22:38 2026] [::1]:48806 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:22:38 2026] [::1]:48812 [200]: GET /assets/images/solar-panel-grid.jpg
+[Sat Jun 20 11:22:38 2026] [::1]:48806 Closing
+[Sat Jun 20 11:22:38 2026] [::1]:48812 Closing
+[Sat Jun 20 11:22:38 2026] [::1]:48826 [200]: GET /assets/images/battery-grid.jpg
+[Sat Jun 20 11:22:38 2026] [::1]:48826 Closing
+[Sat Jun 20 11:22:38 2026] [::1]:48830 Accepted
+[Sat Jun 20 11:22:38 2026] [::1]:48830 [200]: GET /assets/images/solar-maintenance.jpg
+[Sat Jun 20 11:22:38 2026] [::1]:48830 Closing
+[Sat Jun 20 11:22:38 2026] [::1]:48838 Accepted
+[Sat Jun 20 11:22:38 2026] [::1]:48838 [200]: GET /assets/images/solar-hero.jpg
+[Sat Jun 20 11:22:38 2026] [::1]:48838 Closing
+[Sat Jun 20 11:22:38 2026] [::1]:48840 Accepted
+[Sat Jun 20 11:22:38 2026] [::1]:48840 [200]: GET /dashboard.php
+[Sat Jun 20 11:22:38 2026] [::1]:48840 Closing
+[Sat Jun 20 11:22:38 2026] [::1]:48842 Accepted
+[Sat Jun 20 11:22:38 2026] [::1]:48842 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:22:38 2026] [::1]:48842 Closing
+[Sat Jun 20 11:26:30 2026] [::1]:35322 Accepted
+[Sat Jun 20 11:26:30 2026] [::1]:35322 [302]: GET /logout.php
+[Sat Jun 20 11:26:30 2026] [::1]:35322 Closing
+[Sat Jun 20 11:26:30 2026] [::1]:35326 Accepted
+[Sat Jun 20 11:26:30 2026] [::1]:35326 [200]: GET /login.php
+[Sat Jun 20 11:26:30 2026] [::1]:35326 Closing
+[Sat Jun 20 11:26:30 2026] [::1]:35328 Accepted
+[Sat Jun 20 11:26:30 2026] [::1]:35328 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:26:30 2026] [::1]:35328 Closing
+[Sat Jun 20 11:26:30 2026] [::1]:35342 Accepted
+[Sat Jun 20 11:26:30 2026] [::1]:35342 [200]: GET /burfee_login.php
+[Sat Jun 20 11:26:30 2026] [::1]:35342 Closing
+[Sat Jun 20 11:26:30 2026] [::1]:35344 Accepted
+[Sat Jun 20 11:26:30 2026] [::1]:35344 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:26:30 2026] [::1]:35344 Closing
+[Sat Jun 20 11:27:05 2026] [::1]:49730 Accepted
+[Sat Jun 20 11:27:05 2026] [::1]:49730 [302]: GET /logout.php
+[Sat Jun 20 11:27:05 2026] [::1]:49730 Closing
+[Sat Jun 20 11:27:05 2026] [::1]:49734 Accepted
+[Sat Jun 20 11:27:05 2026] [::1]:49734 [200]: GET /login.php
+[Sat Jun 20 11:27:05 2026] [::1]:49734 Closing
+[Sat Jun 20 11:27:05 2026] [::1]:49740 Accepted
+[Sat Jun 20 11:27:05 2026] [::1]:49740 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:27:05 2026] [::1]:49740 Closing
+[Sat Jun 20 11:27:05 2026] [::1]:49748 Accepted
+[Sat Jun 20 11:27:05 2026] [::1]:49748 [200]: GET /burfee_login.php
+[Sat Jun 20 11:27:05 2026] [::1]:49748 Closing
+[Sat Jun 20 11:27:05 2026] [::1]:49754 Accepted
+[Sat Jun 20 11:27:05 2026] [::1]:49754 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:27:05 2026] [::1]:49754 Closing
+[Sat Jun 20 11:27:05 2026] [::1]:49766 Accepted
+[Sat Jun 20 11:27:05 2026] [::1]:49766 [302]: POST /burfee_login.php
+[Sat Jun 20 11:27:05 2026] [::1]:49766 Closing
+[Sat Jun 20 11:27:05 2026] [::1]:49778 Accepted
+[Sat Jun 20 11:27:05 2026] [::1]:49778 [200]: GET /index.php
+[Sat Jun 20 11:27:05 2026] [::1]:49778 Closing
+[Sat Jun 20 11:27:05 2026] [::1]:49788 Accepted
+[Sat Jun 20 11:27:05 2026] [::1]:49798 Accepted
+[Sat Jun 20 11:27:05 2026] [::1]:49788 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:27:05 2026] [::1]:49800 Accepted
+[Sat Jun 20 11:27:05 2026] [::1]:49798 [200]: GET /assets/images/solar-panel-grid.jpg
+[Sat Jun 20 11:27:05 2026] [::1]:49800 [200]: GET /assets/images/battery-grid.jpg
+[Sat Jun 20 11:27:05 2026] [::1]:49788 Closing
+[Sat Jun 20 11:27:05 2026] [::1]:49798 Closing
+[Sat Jun 20 11:27:05 2026] [::1]:49800 Closing
+[Sat Jun 20 11:27:05 2026] [::1]:49810 Accepted
+[Sat Jun 20 11:27:05 2026] [::1]:49810 [200]: GET /assets/images/solar-maintenance.jpg
+[Sat Jun 20 11:27:05 2026] [::1]:49810 Closing
+[Sat Jun 20 11:27:05 2026] [::1]:49820 Accepted
+[Sat Jun 20 11:27:05 2026] [::1]:49820 [200]: GET /assets/images/solar-hero.jpg
+[Sat Jun 20 11:27:05 2026] [::1]:49820 Closing
+[Sat Jun 20 11:27:05 2026] [::1]:49822 Accepted
+[Sat Jun 20 11:27:05 2026] [::1]:49822 [200]: GET /dashboard.php
+[Sat Jun 20 11:27:05 2026] [::1]:49822 Closing
+[Sat Jun 20 11:27:05 2026] [::1]:49830 Accepted
+[Sat Jun 20 11:27:05 2026] [::1]:49830 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:27:05 2026] [::1]:49830 Closing
+[Sat Jun 20 11:27:05 2026] [::1]:49844 Accepted
+[Sat Jun 20 11:27:05 2026] [::1]:49844 [302]: GET /logout.php
+[Sat Jun 20 11:27:05 2026] [::1]:49844 Closing
+[Sat Jun 20 11:27:05 2026] [::1]:49846 Accepted
+[Sat Jun 20 11:27:05 2026] [::1]:49846 [200]: GET /login.php
+[Sat Jun 20 11:27:05 2026] [::1]:49846 Closing
+[Sat Jun 20 11:27:05 2026] [::1]:49848 Accepted
+[Sat Jun 20 11:27:05 2026] [::1]:49848 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:27:05 2026] [::1]:49848 Closing
+[Sat Jun 20 11:27:06 2026] [::1]:49852 Accepted
+[Sat Jun 20 11:27:06 2026] [::1]:49852 [200]: GET /login.php
+[Sat Jun 20 11:27:06 2026] [::1]:49852 Closing
+[Sat Jun 20 11:27:06 2026] [::1]:49860 Accepted
+[Sat Jun 20 11:27:06 2026] [::1]:49860 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:27:06 2026] [::1]:49860 Closing
+[Sat Jun 20 11:27:06 2026] [::1]:49866 Accepted
+[Sat Jun 20 11:27:06 2026] [::1]:49866 [200]: POST /login.php
+[Sat Jun 20 11:27:06 2026] [::1]:49866 Closing
+[Sat Jun 20 11:27:06 2026] [::1]:49872 Accepted
+[Sat Jun 20 11:27:06 2026] [::1]:49872 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:27:06 2026] [::1]:49872 Closing
+[Sat Jun 20 11:27:06 2026] [::1]:49882 Accepted
+[Sat Jun 20 11:27:06 2026] [::1]:49882 [302]: GET /admin.php
+[Sat Jun 20 11:27:06 2026] [::1]:49882 Closing
+[Sat Jun 20 11:27:06 2026] [::1]:49896 Accepted
+[Sat Jun 20 11:27:06 2026] [::1]:49896 [200]: GET /index.php
+[Sat Jun 20 11:27:06 2026] [::1]:49896 Closing
+[Sat Jun 20 11:27:06 2026] [::1]:49912 Accepted
+[Sat Jun 20 11:27:06 2026] [::1]:49922 Accepted
+[Sat Jun 20 11:27:06 2026] [::1]:49934 Accepted
+[Sat Jun 20 11:27:06 2026] [::1]:49912 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:27:06 2026] [::1]:49912 Closing
+[Sat Jun 20 11:27:06 2026] [::1]:49922 [200]: GET /assets/images/solar-panel-grid.jpg
+[Sat Jun 20 11:27:06 2026] [::1]:49922 Closing
+[Sat Jun 20 11:27:06 2026] [::1]:49934 [200]: GET /assets/images/battery-grid.jpg
+[Sat Jun 20 11:27:06 2026] [::1]:49934 Closing
+[Sat Jun 20 11:27:06 2026] [::1]:49940 Accepted
+[Sat Jun 20 11:27:06 2026] [::1]:49940 [200]: GET /assets/images/solar-maintenance.jpg
+[Sat Jun 20 11:27:06 2026] [::1]:49940 Closing
+[Sat Jun 20 11:27:06 2026] [::1]:49954 Accepted
+[Sat Jun 20 11:27:06 2026] [::1]:49954 [200]: GET /assets/images/solar-hero.jpg
+[Sat Jun 20 11:27:06 2026] [::1]:49954 Closing
+[Sat Jun 20 11:28:13 2026] [::1]:54682 Accepted
+[Sat Jun 20 11:28:13 2026] [::1]:54682 [302]: GET /logout.php
+[Sat Jun 20 11:28:13 2026] [::1]:54682 Closing
+[Sat Jun 20 11:28:13 2026] [::1]:54696 Accepted
+[Sat Jun 20 11:28:13 2026] [::1]:54696 [200]: GET /login.php
+[Sat Jun 20 11:28:13 2026] [::1]:54696 Closing
+[Sat Jun 20 11:28:13 2026] [::1]:54704 Accepted
+[Sat Jun 20 11:28:13 2026] [::1]:54704 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:28:13 2026] [::1]:54704 Closing
+[Sat Jun 20 11:28:13 2026] [::1]:54718 Accepted
+[Sat Jun 20 11:28:13 2026] [::1]:54718 [200]: GET /burfee_login.php
+[Sat Jun 20 11:28:13 2026] [::1]:54718 Closing
+[Sat Jun 20 11:28:13 2026] [::1]:54728 Accepted
+[Sat Jun 20 11:28:13 2026] [::1]:54728 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:28:13 2026] [::1]:54728 Closing
+[Sat Jun 20 11:28:14 2026] [::1]:54742 Accepted
+[Sat Jun 20 11:28:14 2026] [::1]:54742 [302]: POST /burfee_login.php
+[Sat Jun 20 11:28:14 2026] [::1]:54742 Closing
+[Sat Jun 20 11:28:14 2026] [::1]:54758 Accepted
+[Sat Jun 20 11:28:14 2026] [::1]:54758 [200]: GET /index.php
+[Sat Jun 20 11:28:14 2026] [::1]:54758 Closing
+[Sat Jun 20 11:28:14 2026] [::1]:54766 Accepted
+[Sat Jun 20 11:28:14 2026] [::1]:54780 Accepted
+[Sat Jun 20 11:28:14 2026] [::1]:54766 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:28:14 2026] [::1]:54792 Accepted
+[Sat Jun 20 11:28:14 2026] [::1]:54780 [200]: GET /assets/images/solar-panel-grid.jpg
+[Sat Jun 20 11:28:14 2026] [::1]:54792 [200]: GET /assets/images/battery-grid.jpg
+[Sat Jun 20 11:28:14 2026] [::1]:54766 Closing
+[Sat Jun 20 11:28:14 2026] [::1]:54780 Closing
+[Sat Jun 20 11:28:14 2026] [::1]:54792 Closing
+[Sat Jun 20 11:28:14 2026] [::1]:54802 Accepted
+[Sat Jun 20 11:28:14 2026] [::1]:54802 [200]: GET /assets/images/solar-maintenance.jpg
+[Sat Jun 20 11:28:14 2026] [::1]:54802 Closing
+[Sat Jun 20 11:28:14 2026] [::1]:54816 Accepted
+[Sat Jun 20 11:28:14 2026] [::1]:54816 [200]: GET /assets/images/solar-hero.jpg
+[Sat Jun 20 11:28:14 2026] [::1]:54816 Closing
+[Sat Jun 20 11:28:14 2026] [::1]:54822 Accepted
+[Sat Jun 20 11:28:14 2026] [::1]:54822 [200]: GET /dashboard.php
+[Sat Jun 20 11:28:14 2026] [::1]:54822 Closing
+[Sat Jun 20 11:28:14 2026] [::1]:54826 Accepted
+[Sat Jun 20 11:28:14 2026] [::1]:54826 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:28:14 2026] [::1]:54826 Closing
+[Sat Jun 20 11:28:14 2026] [::1]:54836 Accepted
+[Sat Jun 20 11:28:14 2026] [::1]:54836 [302]: GET /logout.php
+[Sat Jun 20 11:28:14 2026] [::1]:54836 Closing
+[Sat Jun 20 11:28:14 2026] [::1]:54848 Accepted
+[Sat Jun 20 11:28:14 2026] [::1]:54848 [200]: GET /login.php
+[Sat Jun 20 11:28:14 2026] [::1]:54848 Closing
+[Sat Jun 20 11:28:14 2026] [::1]:54864 Accepted
+[Sat Jun 20 11:28:14 2026] [::1]:54864 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:28:14 2026] [::1]:54864 Closing
+[Sat Jun 20 11:28:14 2026] [::1]:54866 Accepted
+[Sat Jun 20 11:28:14 2026] [::1]:54866 [200]: GET /login.php
+[Sat Jun 20 11:28:14 2026] [::1]:54866 Closing
+[Sat Jun 20 11:28:14 2026] [::1]:54872 Accepted
+[Sat Jun 20 11:28:14 2026] [::1]:54872 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:28:14 2026] [::1]:54872 Closing
+[Sat Jun 20 11:28:14 2026] [::1]:54884 Accepted
+[Sat Jun 20 11:28:14 2026] [::1]:54884 [200]: POST /login.php
+[Sat Jun 20 11:28:14 2026] [::1]:54884 Closing
+[Sat Jun 20 11:28:14 2026] [::1]:54896 Accepted
+[Sat Jun 20 11:28:14 2026] [::1]:54896 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:28:14 2026] [::1]:54896 Closing
+[Sat Jun 20 11:28:14 2026] [::1]:54898 Accepted
+[Sat Jun 20 11:28:14 2026] [::1]:54898 [302]: GET /admin.php
+[Sat Jun 20 11:28:14 2026] [::1]:54898 Closing
+[Sat Jun 20 11:28:14 2026] [::1]:54908 Accepted
+[Sat Jun 20 11:28:14 2026] [::1]:54908 [200]: GET /index.php
+[Sat Jun 20 11:28:14 2026] [::1]:54908 Closing
+[Sat Jun 20 11:28:14 2026] [::1]:54924 Accepted
+[Sat Jun 20 11:28:14 2026] [::1]:54930 Accepted
+[Sat Jun 20 11:28:14 2026] [::1]:54942 Accepted
+[Sat Jun 20 11:28:14 2026] [::1]:54924 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:28:14 2026] [::1]:54930 [200]: GET /assets/images/solar-panel-grid.jpg
+[Sat Jun 20 11:28:14 2026] [::1]:54924 Closing
+[Sat Jun 20 11:28:14 2026] [::1]:54930 Closing
+[Sat Jun 20 11:28:14 2026] [::1]:54942 [200]: GET /assets/images/battery-grid.jpg
+[Sat Jun 20 11:28:14 2026] [::1]:54942 Closing
+[Sat Jun 20 11:28:14 2026] [::1]:54956 Accepted
+[Sat Jun 20 11:28:14 2026] [::1]:54956 [200]: GET /assets/images/solar-maintenance.jpg
+[Sat Jun 20 11:28:14 2026] [::1]:54956 Closing
+[Sat Jun 20 11:28:14 2026] [::1]:54970 Accepted
+[Sat Jun 20 11:28:14 2026] [::1]:54970 [200]: GET /assets/images/solar-hero.jpg
+[Sat Jun 20 11:28:14 2026] [::1]:54970 Closing
+[Sat Jun 20 11:29:14 2026] [::1]:40910 Accepted
+[Sat Jun 20 11:29:14 2026] [::1]:40910 [200]: GET /burfee_login.php
+[Sat Jun 20 11:29:14 2026] [::1]:40910 Closing
+[Sat Jun 20 11:29:14 2026] [::1]:40920 Accepted
+[Sat Jun 20 11:29:14 2026] [::1]:40920 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:29:14 2026] [::1]:40920 Closing
+[Sat Jun 20 11:29:14 2026] [::1]:40922 Accepted
+[Sat Jun 20 11:29:14 2026] [::1]:40922 [302]: POST /burfee_login.php
+[Sat Jun 20 11:29:14 2026] [::1]:40922 Closing
+[Sat Jun 20 11:29:14 2026] [::1]:40934 Accepted
+[Sat Jun 20 11:29:14 2026] [::1]:40934 [200]: GET /index.php
+[Sat Jun 20 11:29:14 2026] [::1]:40934 Closing
+[Sat Jun 20 11:29:14 2026] [::1]:40950 Accepted
+[Sat Jun 20 11:29:14 2026] [::1]:40962 Accepted
+[Sat Jun 20 11:29:14 2026] [::1]:40976 Accepted
+[Sat Jun 20 11:29:14 2026] [::1]:40950 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:29:14 2026] [::1]:40962 [200]: GET /assets/images/solar-panel-grid.jpg
+[Sat Jun 20 11:29:14 2026] [::1]:40950 Closing
+[Sat Jun 20 11:29:14 2026] [::1]:40962 Closing
+[Sat Jun 20 11:29:14 2026] [::1]:40976 [200]: GET /assets/images/battery-grid.jpg
+[Sat Jun 20 11:29:14 2026] [::1]:40976 Closing
+[Sat Jun 20 11:29:14 2026] [::1]:40982 Accepted
+[Sat Jun 20 11:29:14 2026] [::1]:40982 [200]: GET /assets/images/solar-maintenance.jpg
+[Sat Jun 20 11:29:14 2026] [::1]:40982 Closing
+[Sat Jun 20 11:29:14 2026] [::1]:40988 Accepted
+[Sat Jun 20 11:29:14 2026] [::1]:40988 [200]: GET /assets/images/solar-hero.jpg
+[Sat Jun 20 11:29:14 2026] [::1]:40988 Closing
+[Sat Jun 20 11:29:14 2026] [::1]:41004 Accepted
+[Sat Jun 20 11:29:14 2026] [::1]:41004 [302]: GET /logout.php
+[Sat Jun 20 11:29:14 2026] [::1]:41004 Closing
+[Sat Jun 20 11:29:14 2026] [::1]:41018 Accepted
+[Sat Jun 20 11:29:14 2026] [::1]:41018 [200]: GET /login.php
+[Sat Jun 20 11:29:14 2026] [::1]:41018 Closing
+[Sat Jun 20 11:29:14 2026] [::1]:41022 Accepted
+[Sat Jun 20 11:29:14 2026] [::1]:41022 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:29:14 2026] [::1]:41022 Closing
+[Sat Jun 20 11:29:14 2026] [::1]:41032 Accepted
+[Sat Jun 20 11:29:14 2026] [::1]:41032 [200]: GET /login.php
+[Sat Jun 20 11:29:14 2026] [::1]:41032 Closing
+[Sat Jun 20 11:29:14 2026] [::1]:41044 Accepted
+[Sat Jun 20 11:29:14 2026] [::1]:41044 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:29:14 2026] [::1]:41044 Closing
+[Sat Jun 20 11:29:15 2026] [::1]:41054 Accepted
+[Sat Jun 20 11:29:15 2026] [::1]:41054 [200]: POST /login.php
+[Sat Jun 20 11:29:15 2026] [::1]:41054 Closing
+[Sat Jun 20 11:29:15 2026] [::1]:41066 Accepted
+[Sat Jun 20 11:29:15 2026] [::1]:41066 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:29:15 2026] [::1]:41066 Closing
+[Sat Jun 20 11:30:20 2026] [::1]:44458 Accepted
+[Sat Jun 20 11:30:20 2026] [::1]:44458 [200]: GET /login.php
+[Sat Jun 20 11:30:20 2026] [::1]:44458 Closing
+[Sat Jun 20 11:30:20 2026] [::1]:44468 Accepted
+[Sat Jun 20 11:30:20 2026] [::1]:44468 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:30:20 2026] [::1]:44468 Closing
+[Sat Jun 20 11:30:20 2026] [::1]:44484 Accepted
+[Sat Jun 20 11:30:21 2026] [::1]:44484 [200]: POST /login.php
+[Sat Jun 20 11:30:21 2026] [::1]:44484 Closing
+[Sat Jun 20 11:30:21 2026] [::1]:44498 Accepted
+[Sat Jun 20 11:30:21 2026] [::1]:44498 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:30:21 2026] [::1]:44498 Closing
+[Sat Jun 20 11:30:21 2026] [::1]:44500 Accepted
+[Sat Jun 20 11:30:21 2026] [::1]:44500 [302]: GET /admin.php
+[Sat Jun 20 11:30:21 2026] [::1]:44500 Closing
+[Sat Jun 20 11:30:21 2026] [::1]:44504 Accepted
+[Sat Jun 20 11:30:21 2026] [::1]:44504 [200]: GET /index.php
+[Sat Jun 20 11:30:21 2026] [::1]:44504 Closing
+[Sat Jun 20 11:30:21 2026] [::1]:44512 Accepted
+[Sat Jun 20 11:30:21 2026] [::1]:44516 Accepted
+[Sat Jun 20 11:30:21 2026] [::1]:44524 Accepted
+[Sat Jun 20 11:30:21 2026] [::1]:44512 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:30:21 2026] [::1]:44516 [200]: GET /assets/images/solar-panel-grid.jpg
+[Sat Jun 20 11:30:21 2026] [::1]:44524 [200]: GET /assets/images/battery-grid.jpg
+[Sat Jun 20 11:30:21 2026] [::1]:44512 Closing
+[Sat Jun 20 11:30:21 2026] [::1]:44516 Closing
+[Sat Jun 20 11:30:21 2026] [::1]:44524 Closing
+[Sat Jun 20 11:30:21 2026] [::1]:44534 Accepted
+[Sat Jun 20 11:30:21 2026] [::1]:44534 [200]: GET /assets/images/solar-maintenance.jpg
+[Sat Jun 20 11:30:21 2026] [::1]:44534 Closing
+[Sat Jun 20 11:30:21 2026] [::1]:44540 Accepted
+[Sat Jun 20 11:30:21 2026] [::1]:44540 [200]: GET /assets/images/solar-hero.jpg
+[Sat Jun 20 11:30:21 2026] [::1]:44540 Closing
+[Sat Jun 20 11:32:04 2026] [::1]:37912 Accepted
+[Sat Jun 20 11:32:04 2026] [::1]:37912 [200]: GET /login.php
+[Sat Jun 20 11:32:04 2026] [::1]:37912 Closing
+[Sat Jun 20 11:32:04 2026] [::1]:37914 Accepted
+[Sat Jun 20 11:32:04 2026] [::1]:37914 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:32:04 2026] [::1]:37914 Closing
+[Sat Jun 20 11:32:05 2026] [::1]:37930 Accepted
+[Sat Jun 20 11:32:05 2026] [::1]:37930 [200]: POST /login.php
+[Sat Jun 20 11:32:05 2026] [::1]:37930 Closing
+[Sat Jun 20 11:32:05 2026] [::1]:37946 Accepted
+[Sat Jun 20 11:32:05 2026] [::1]:37946 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:32:05 2026] [::1]:37946 Closing
+[Sat Jun 20 11:32:06 2026] [::1]:37954 Accepted
+[Sat Jun 20 11:32:06 2026] [::1]:37954 [302]: GET /admin.php
+[Sat Jun 20 11:32:06 2026] [::1]:37954 Closing
+[Sat Jun 20 11:32:06 2026] [::1]:37958 Accepted
+[Sat Jun 20 11:32:06 2026] [::1]:37958 [200]: GET /index.php
+[Sat Jun 20 11:32:06 2026] [::1]:37958 Closing
+[Sat Jun 20 11:32:06 2026] [::1]:37966 Accepted
+[Sat Jun 20 11:32:06 2026] [::1]:37970 Accepted
+[Sat Jun 20 11:32:06 2026] [::1]:37984 Accepted
+[Sat Jun 20 11:32:06 2026] [::1]:37966 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:32:06 2026] [::1]:37966 Closing
+[Sat Jun 20 11:32:06 2026] [::1]:37970 [200]: GET /assets/images/solar-panel-grid.jpg
+[Sat Jun 20 11:32:06 2026] [::1]:37970 Closing
+[Sat Jun 20 11:32:06 2026] [::1]:37984 [200]: GET /assets/images/battery-grid.jpg
+[Sat Jun 20 11:32:06 2026] [::1]:37984 Closing
+[Sat Jun 20 11:32:06 2026] [::1]:37986 Accepted
+[Sat Jun 20 11:32:06 2026] [::1]:37986 [200]: GET /assets/images/solar-maintenance.jpg
+[Sat Jun 20 11:32:06 2026] [::1]:37986 Closing
+[Sat Jun 20 11:32:06 2026] [::1]:37996 Accepted
+[Sat Jun 20 11:32:06 2026] [::1]:37996 [200]: GET /assets/images/solar-hero.jpg
+[Sat Jun 20 11:32:06 2026] [::1]:37996 Closing
+[Sat Jun 20 11:33:09 2026] [::1]:44402 Accepted
+[Sat Jun 20 11:33:09 2026] [::1]:44402 [200]: GET /login.php
+[Sat Jun 20 11:33:09 2026] [::1]:44402 Closing
+[Sat Jun 20 11:33:09 2026] [::1]:44414 Accepted
+[Sat Jun 20 11:33:09 2026] [::1]:44414 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:33:09 2026] [::1]:44414 Closing
+[Sat Jun 20 11:33:09 2026] [::1]:44418 Accepted
+[Sat Jun 20 11:33:10 2026] [::1]:44418 [200]: POST /login.php
+[Sat Jun 20 11:33:10 2026] [::1]:44418 Closing
+[Sat Jun 20 11:33:10 2026] [::1]:44430 Accepted
+[Sat Jun 20 11:33:10 2026] [::1]:44430 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:33:10 2026] [::1]:44430 Closing
+[Sat Jun 20 11:34:58 2026] [::1]:35348 Accepted
+[Sat Jun 20 11:34:58 2026] [::1]:35348 [200]: GET /login.php
+[Sat Jun 20 11:34:58 2026] [::1]:35348 Closing
+[Sat Jun 20 11:34:58 2026] [::1]:35360 Accepted
+[Sat Jun 20 11:34:58 2026] [::1]:35360 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:34:58 2026] [::1]:35360 Closing
+[Sat Jun 20 11:34:58 2026] [::1]:35364 Accepted
+[Sat Jun 20 11:34:58 2026] [::1]:35364 [200]: POST /login.php
+[Sat Jun 20 11:34:58 2026] [::1]:35364 Closing
+[Sat Jun 20 11:34:58 2026] [::1]:35374 Accepted
+[Sat Jun 20 11:34:58 2026] [::1]:35374 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:34:58 2026] [::1]:35374 Closing
+[Sat Jun 20 11:36:06 2026] [::1]:35234 Accepted
+[Sat Jun 20 11:36:06 2026] [::1]:35234 [200]: GET /login.php
+[Sat Jun 20 11:36:06 2026] [::1]:35234 Closing
+[Sat Jun 20 11:36:06 2026] [::1]:35246 Accepted
+[Sat Jun 20 11:36:06 2026] [::1]:35246 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:36:06 2026] [::1]:35246 Closing
+[Sat Jun 20 11:36:06 2026] [::1]:35262 Accepted
+[Sat Jun 20 11:36:06 2026] [::1]:35262 [200]: POST /login.php
+[Sat Jun 20 11:36:06 2026] [::1]:35262 Closing
+[Sat Jun 20 11:36:06 2026] [::1]:35268 Accepted
+[Sat Jun 20 11:36:06 2026] [::1]:35268 [200]: GET /assets/css/style.css
+[Sat Jun 20 11:36:06 2026] [::1]:35268 Closing

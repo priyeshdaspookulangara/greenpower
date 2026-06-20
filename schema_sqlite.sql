@@ -1,30 +1,35 @@
--- Solar Shop Database Schema (SQLite version for sandbox testing)
+-- 📦 SolarShop Database Schema (SQLite Version)
 
--- Users Table
-CREATE TABLE IF NOT EXISTS users (
+CREATE TABLE users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
     email TEXT NOT NULL UNIQUE,
     password TEXT NOT NULL,
-    role TEXT CHECK(role IN ('admin', 'customer')) DEFAULT 'customer',
-    cibil_status TEXT CHECK(cibil_status IN ('good', 'low')) DEFAULT 'good',
+    role TEXT DEFAULT 'customer', -- 'admin', 'customer'
+    cibil_status TEXT DEFAULT 'good', -- 'good', 'low'
     referrer_id INTEGER NULL,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (referrer_id) REFERENCES users(id) ON DELETE SET NULL
 );
 
--- Products Table
-CREATE TABLE IF NOT EXISTS products (
+CREATE TABLE customer (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    MemberId TEXT NOT NULL UNIQUE,
+    MemberPass TEXT NOT NULL,
+    FullName TEXT,
+    CibilStatus TEXT DEFAULT 'good'
+);
+
+CREATE TABLE products (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
-    category TEXT CHECK(category IN ('solar_panel', 'battery')) NOT NULL,
+    category TEXT NOT NULL, -- 'solar_panel', 'battery'
     price REAL NOT NULL,
     stock INTEGER DEFAULT 0,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
--- Product Properties Table
-CREATE TABLE IF NOT EXISTS product_properties (
+CREATE TABLE product_properties (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     product_id INTEGER NOT NULL,
     property_name TEXT NOT NULL,
@@ -33,53 +38,52 @@ CREATE TABLE IF NOT EXISTS product_properties (
     FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
 );
 
--- Orders Table
-CREATE TABLE IF NOT EXISTS orders (
+CREATE TABLE orders (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     user_id INTEGER NOT NULL,
     product_id INTEGER NOT NULL,
     total_price REAL NOT NULL,
     cibil_status_at_purchase TEXT NOT NULL,
-    order_status TEXT DEFAULT 'completed',
+    order_status TEXT DEFAULT 'pending',
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY (product_id) REFERENCES products(id)
 );
 
--- Transactions Table
-CREATE TABLE IF NOT EXISTS transactions (
+CREATE TABLE transactions (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     order_id INTEGER NOT NULL,
     user_id INTEGER NOT NULL,
     amount REAL NOT NULL,
-    type TEXT NOT NULL,
+    type TEXT NOT NULL, -- 'subsidy_payout', 'referral_commission', 'company_revenue', 'third_party_subsidy'
     description TEXT,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (order_id) REFERENCES orders(id),
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
--- Level Income Table
-CREATE TABLE IF NOT EXISTS level_income (
+CREATE TABLE level_income (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     user_id INTEGER NOT NULL,
     source_order_id INTEGER NOT NULL,
     amount REAL NOT NULL,
     level INTEGER NOT NULL,
-    status TEXT DEFAULT 'paid',
+    status TEXT DEFAULT 'pending',
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY (source_order_id) REFERENCES orders(id)
 );
 
--- Customer Table
-CREATE TABLE IF NOT EXISTS customer (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    email TEXT NOT NULL UNIQUE,
-    password TEXT NOT NULL,
-    name TEXT
-);
+-- Seed Initial Data
+INSERT INTO users (name, email, password, role) VALUES
+('Admin User', 'admin@example.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin');
 
--- Seed Admin
-INSERT INTO users (name, email, password, role, cibil_status)
-VALUES ('Admin User', 'admin@example.com', '$2y$10$eb4MRnTj.ZpYW03465eaDOx8ltTltaEByRpEyrFgVcXQPCm40J/PG', 'admin', 'good');
+INSERT INTO products (name, category, price, stock) VALUES
+('EcoSolar 500W', 'solar_panel', 25000.00, 10),
+('VoltMax 150Ah', 'battery', 15000.00, 15);
+
+INSERT INTO product_properties (product_id, property_name, property_value) VALUES
+(1, 'Wattage', '500W'),
+(1, 'Efficiency', '21.5%'),
+(2, 'Capacity', '150Ah'),
+(2, 'Voltage', '12V');
