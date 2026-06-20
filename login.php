@@ -50,6 +50,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <p style="margin-top: 15px; text-align: center;">
                 Need an account? <a href="register.php" style="color: var(--neon-blue);">Register here</a>
             </p>
+            <p style="text-align: center;">
+                Existing Burfee Member? <a href="burfee_login.php" style="color: var(--neon-blue);">Login here</a>
+            </p>
         </div>
     </div>
 </body>

@@ -47,3 +47,15 @@
 [Sat Jun 20 08:06:18 2026] [::1]:52120 Accepted
 [Sat Jun 20 08:06:18 2026] [::1]:52120 [200]: GET /assets/css/style.css
 [Sat Jun 20 08:06:18 2026] [::1]:52120 Closing
+[Sat Jun 20 08:23:36 2026] [::1]:51474 Accepted
+[Sat Jun 20 08:23:37 2026] [::1]:51474 [200]: GET /burfee_login.php
+[Sat Jun 20 08:23:37 2026] [::1]:51474 Closing
+[Sat Jun 20 08:23:37 2026] [::1]:51482 Accepted
+[Sat Jun 20 08:23:37 2026] [::1]:51482 [302]: POST /burfee_login.php
+[Sat Jun 20 08:23:37 2026] [::1]:51482 Closing
+[Sat Jun 20 08:23:37 2026] [::1]:51490 Accepted
+[Sat Jun 20 08:23:37 2026] [::1]:51490 [200]: GET /dashboard.php
+[Sat Jun 20 08:23:37 2026] [::1]:51490 Closing
+[Sat Jun 20 08:23:37 2026] [::1]:51506 Accepted
+[Sat Jun 20 08:23:37 2026] [::1]:51506 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:23:37 2026] [::1]:51506 Closing

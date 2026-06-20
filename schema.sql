@@ -65,3 +65,15 @@ CREATE TABLE IF NOT EXISTS level_income (
     FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY (source_order_id) REFERENCES orders(id)
 );
+
+-- Table for existing Burfee members
+CREATE TABLE IF NOT EXISTS customer (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    MemberId TEXT NOT NULL UNIQUE,
+    MemberPass TEXT NOT NULL,
+    name TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Seed some dummy data
+INSERT INTO customer (MemberId, MemberPass, name) VALUES ('BC1001', 'password123', 'John Burfee');
