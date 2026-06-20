@@ -1,0 +1,49 @@
+[Sat Jun 20 08:06:04 2026] PHP 8.3.6 Development Server (http://localhost:8000) started
+[Sat Jun 20 08:06:13 2026] [::1]:37316 Accepted
+[Sat Jun 20 08:06:13 2026] [::1]:37316 [200]: GET /register.php
+[Sat Jun 20 08:06:13 2026] [::1]:37316 Closing
+[Sat Jun 20 08:06:13 2026] [::1]:37318 Accepted
+[Sat Jun 20 08:06:13 2026] [::1]:37318 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:06:13 2026] [::1]:37318 Closing
+[Sat Jun 20 08:06:13 2026] [::1]:37334 Accepted
+[Sat Jun 20 08:06:13 2026] [::1]:37334 [302]: POST /register.php
+[Sat Jun 20 08:06:13 2026] [::1]:37334 Closing
+[Sat Jun 20 08:06:13 2026] [::1]:37340 Accepted
+[Sat Jun 20 08:06:13 2026] [::1]:37340 [200]: GET /login.php
+[Sat Jun 20 08:06:13 2026] [::1]:37340 Closing
+[Sat Jun 20 08:06:13 2026] [::1]:37342 Accepted
+[Sat Jun 20 08:06:13 2026] [::1]:37342 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:06:13 2026] [::1]:37342 Closing
+[Sat Jun 20 08:06:14 2026] [::1]:52016 Accepted
+[Sat Jun 20 08:06:14 2026] [::1]:52016 [200]: GET /login.php
+[Sat Jun 20 08:06:14 2026] [::1]:52016 Closing
+[Sat Jun 20 08:06:14 2026] [::1]:52020 Accepted
+[Sat Jun 20 08:06:14 2026] [::1]:52020 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:06:14 2026] [::1]:52020 Closing
+[Sat Jun 20 08:06:15 2026] [::1]:52036 Accepted
+[Sat Jun 20 08:06:15 2026] [::1]:52036 [302]: POST /login.php
+[Sat Jun 20 08:06:15 2026] [::1]:52036 Closing
+[Sat Jun 20 08:06:15 2026] [::1]:52046 Accepted
+[Sat Jun 20 08:06:15 2026] [::1]:52046 [200]: GET /index.php
+[Sat Jun 20 08:06:15 2026] [::1]:52046 Closing
+[Sat Jun 20 08:06:15 2026] [::1]:52062 Accepted
+[Sat Jun 20 08:06:15 2026] [::1]:52062 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:06:15 2026] [::1]:52062 Closing
+[Sat Jun 20 08:06:16 2026] [::1]:52066 Accepted
+[Sat Jun 20 08:06:16 2026] [::1]:52066 [200]: GET /admin.php
+[Sat Jun 20 08:06:16 2026] [::1]:52066 Closing
+[Sat Jun 20 08:06:16 2026] [::1]:52080 Accepted
+[Sat Jun 20 08:06:16 2026] [::1]:52080 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:06:16 2026] [::1]:52080 Closing
+[Sat Jun 20 08:06:16 2026] [::1]:52094 Accepted
+[Sat Jun 20 08:06:16 2026] [::1]:52094 [200]: POST /admin.php
+[Sat Jun 20 08:06:16 2026] [::1]:52094 Closing
+[Sat Jun 20 08:06:16 2026] [::1]:52100 Accepted
+[Sat Jun 20 08:06:16 2026] [::1]:52100 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:06:16 2026] [::1]:52100 Closing
+[Sat Jun 20 08:06:18 2026] [::1]:52112 Accepted
+[Sat Jun 20 08:06:18 2026] [::1]:52112 [200]: GET /index.php
+[Sat Jun 20 08:06:18 2026] [::1]:52112 Closing
+[Sat Jun 20 08:06:18 2026] [::1]:52120 Accepted
+[Sat Jun 20 08:06:18 2026] [::1]:52120 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:06:18 2026] [::1]:52120 Closing
