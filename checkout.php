@@ -89,56 +89,58 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 include 'includes/header.php';
 ?>
 
-<div class="container" style="max-width: 900px;">
-    <div class="glass-card">
-        <h2 class="neon-text" style="margin-bottom: 1.5rem;">Order Confirmation</h2>
+<div class="container" style="max-width: 900px; padding-top: 40px; padding-bottom: 80px;">
+    <div class="card" style="padding: 40px;">
+        <h2 style="margin-bottom: 1.5rem; color: var(--brand-blue);">Order Confirmation</h2>
 
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
             <div>
-                <p><strong>Customer:</strong> <?php echo htmlspecialchars($user['name'] ?? 'Guest'); ?></p>
-                <p><strong>CIBIL Status:</strong> <span class="neon-text" style="font-weight: bold;"><?php echo strtoupper($user['cibil_status'] ?? 'N/A'); ?></span></p>
+                <p style="margin-bottom: 10px;"><strong>Customer:</strong> <?php echo htmlspecialchars($user['name'] ?? 'Guest'); ?></p>
+                <p><strong>CIBIL Status:</strong> <span style="font-weight: bold; color: var(--brand-green);"><?php echo strtoupper($user['cibil_status'] ?? 'N/A'); ?></span></p>
             </div>
-            <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 10px; border-left: 4px solid var(--neon-blue);">
-                <h4 style="margin-bottom: 10px;">Processing Logic:</h4>
+            <div style="background: var(--light-bg); padding: 20px; border-radius: 8px; border-left: 4px solid var(--brand-green);">
+                <h4 style="margin-bottom: 10px; color: var(--brand-blue);">Financial Processing Logic:</h4>
                 <?php if (($user['cibil_status'] ?? '') === 'good'): ?>
-                    <p style="font-size: 0.9rem;">✅ <strong>Profile A:</strong> Direct Subsidy Active.</p>
-                    <p style="font-size: 0.8rem; color: #aaa;">Commissions and Level Income will be distributed as per system rules.</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 5px;">✅ <strong>Profile A:</strong> Direct Government Subsidy</p>
+                    <p style="font-size: 0.85rem; color: #666; line-height: 1.4;">Subsidy-based Level Income and Manufacturer Commission bonuses will be automatically distributed.</p>
                 <?php else: ?>
-                    <p style="font-size: 0.9rem;">⚠️ <strong>Profile B:</strong> Third-Party Routing.</p>
-                    <p style="font-size: 0.8rem; color: #aaa;">Transaction will be processed through the alternative subsidy channel.</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 5px;">⚠️ <strong>Profile B:</strong> Third-Party Routing</p>
+                    <p style="font-size: 0.85rem; color: #666; line-height: 1.4;">Your order will be processed through our designated third-party subsidy channel for approval.</p>
                 <?php endif; ?>
             </div>
         </div>
 
-        <table style="margin-bottom: 2rem;">
+        <table class="table" style="margin-bottom: 2rem; width: 100%; border-collapse: collapse;">
             <thead>
-                <tr>
-                    <th>Item</th>
-                    <th style="text-align: right;">Price</th>
+                <tr style="border-bottom: 2px solid #eee;">
+                    <th style="padding: 15px; text-align: left;">Item Description</th>
+                    <th style="padding: 15px; text-align: right;">Price</th>
                 </tr>
             </thead>
             <tbody>
                 <?php foreach ($cart_items as $item): ?>
-                    <tr>
-                        <td><?php echo htmlspecialchars($item['name']); ?></td>
-                        <td style="text-align: right;"><?php echo formatPrice($item['price']); ?></td>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 15px;"><?php echo htmlspecialchars($item['name']); ?></td>
+                        <td style="padding: 15px; text-align: right;"><?php echo formatPrice($item['price']); ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
             <tfoot>
                 <tr>
-                    <th style="font-size: 1.2rem;">Total Amount</th>
-                    <th class="neon-text" style="text-align: right; font-size: 1.8rem;"><?php echo formatPrice($total); ?></th>
+                    <th style="padding: 20px 15px; font-size: 1.2rem; text-align: left;">Total Payable Amount</th>
+                    <th style="padding: 20px 15px; text-align: right; font-size: 1.8rem; color: var(--brand-green);"><?php echo formatPrice($total); ?></th>
                 </tr>
             </tfoot>
         </table>
 
         <?php if (isset($error)): ?>
-            <p style="color: #ff4d4d; margin-bottom: 20px;"><?php echo $error; ?></p>
+            <div style="background: #fff5f5; color: #e53e3e; padding: 15px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #feb2b2;">
+                <?php echo $error; ?>
+            </div>
         <?php endif; ?>
 
         <form method="POST">
-            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 18px; font-size: 1.3rem; letter-spacing: 1px;">Confirm and Pay</button>
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 20px; font-size: 1.3rem; border-radius: 10px;">Complete Transaction</button>
         </form>
     </div>
 </div>

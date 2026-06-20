@@ -78,14 +78,14 @@ include 'includes/header.php';
 <div class="admin-wrapper">
     <aside class="sidebar">
         <div class="sidebar-header">
-            <h4 style="color: #fff; margin: 0;">SOLARSHOP ADMIN</h4>
+            <h4 style="color: var(--brand-blue); margin: 0; font-weight: 900; letter-spacing: -1px;">SOLARSHOP ADMIN</h4>
         </div>
-        <ul class="sidebar-nav">
-            <li><a href="admin.php" class="active"><i class="fas fa-th-large"></i> Overview</a></li>
-            <li><a href="#inventory"><i class="fas fa-box"></i> Inventory</a></li>
-            <li><a href="#ledger"><i class="fas fa-file-invoice-dollar"></i> Financial Ledger</a></li>
-            <li><a href="index.php"><i class="fas fa-shopping-cart"></i> View Shop</a></li>
-            <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        <ul class="sidebar-nav" style="margin-top: 20px;">
+            <li><a href="admin.php" class="active"><i class="fas fa-th-large" style="width: 20px;"></i> Overview</a></li>
+            <li><a href="#inventory"><i class="fas fa-box" style="width: 20px;"></i> Inventory</a></li>
+            <li><a href="#ledger"><i class="fas fa-file-invoice-dollar" style="width: 20px;"></i> Financial Ledger</a></li>
+            <li><a href="index.php"><i class="fas fa-shopping-cart" style="width: 20px;"></i> View Shop</a></li>
+            <li><a href="logout.php"><i class="fas fa-sign-out-alt" style="width: 20px;"></i> Logout</a></li>
         </ul>
     </aside>
 
@@ -98,9 +98,9 @@ include 'includes/header.php';
                 </ol>
             </nav>
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-                <h1 class="m-0" style="color: #334155;">Admin Overview</h1>
-                <button class="btn btn-primary" onclick="openProductModal()" style="background-color: #28a745; color: #fff;">
-                    <i class="fas fa-plus mr-2"></i> Add New Product
+                <h1 class="m-0" style="color: var(--brand-blue); font-weight: 900;">Admin Overview</h1>
+                <button class="btn btn-primary" onclick="openProductModal()" style="background-color: var(--brand-green); color: #fff; font-weight: 700;">
+                    <i class="fas fa-plus" style="margin-right: 10px;"></i> Add New Product
                 </button>
             </div>
         </div>
@@ -112,7 +112,7 @@ include 'includes/header.php';
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem;">
             <div class="admin-card stat-box">
                 <div class="label">Total Revenue</div>
-                <div class="value" style="color: #28a745;"><?php echo formatPrice($total_revenue); ?></div>
+                <div class="value" style="color: var(--brand-green);"><?php echo formatPrice($total_revenue); ?></div>
             </div>
             <div class="admin-card stat-box">
                 <div class="label">Total Orders</div>

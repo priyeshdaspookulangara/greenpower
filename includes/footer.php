@@ -2,8 +2,8 @@
         <div class="footer-content" style="max-width: 1800px; margin: 0 auto; padding: 0 5%;">
             <div class="footer-main">
                 <div class="footer-column">
-                    <h3 style="color: var(--brand-blue); font-size: 1.8rem; text-transform: lowercase;">solarshop</h3>
-                    <p style="color: #aaa; font-size: 0.95rem; margin-top: 1rem;">Engineering sustainable energy solutions so every home is efficient, reliable, and green.</p>
+                    <h3 style="color: var(--brand-green); font-size: 1.8rem; text-transform: uppercase; font-weight: 900;">SolarShop</h3>
+                    <p style="color: #bdc3c7; font-size: 0.95rem; margin-top: 1rem;">Engineering sustainable energy solutions so every home is efficient, reliable, and green.</p>
                 </div>
 
                 <div class="footer-column">

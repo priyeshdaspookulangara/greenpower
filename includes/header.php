@@ -10,7 +10,7 @@ require_once __DIR__ . '/functions.php';
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body class="<?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? '' : 'dark-theme'; ?>">
+<body>
     <header>
         <nav>
             <div class="logo">
@@ -33,7 +33,7 @@ require_once __DIR__ . '/functions.php';
                     <li class="nav-item"><a href="logout.php" class="nav-btn-signup">LOGOUT</a></li>
                 <?php else: ?>
                     <li class="nav-item"><a href="index.php#products">PRODUCTS</a></li>
-                    <li class="nav-item"><a href="burfee_login.php" style="color: #ffcc00; font-weight: bold;">BURFEE LOGIN</a></li>
+                    <li class="nav-item"><a href="burfee_login.php" style="color: var(--brand-green); font-weight: 800;">BURFEE LOGIN</a></li>
                     <li class="nav-item">
                         <a href="#" onclick="openLoginModal(event)">SIGN IN</a>
                     </li>

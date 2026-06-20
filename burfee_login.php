@@ -101,31 +101,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 include 'includes/header.php';
 ?>
 
-<div class="container" style="max-width: 500px;">
-    <div class="glass-card">
-        <h2 class="neon-text">Burfee Member Login</h2>
-        <p style="color: #aaa; margin-bottom: 20px; font-size: 0.9rem;">Access the SolarShop using your legacy Burfee Member ID.</p>
+<div class="container" style="max-width: 500px; margin: 150px auto 100px;">
+    <div class="card">
+        <h2 style="color: var(--brand-blue); font-weight: 800;">Burfee Member Login</h2>
+        <p style="color: var(--text-muted); margin-bottom: 20px; font-size: 0.9rem;">Access the SolarShop using your legacy Burfee Member ID.</p>
 
         <?php if ($error): ?>
-            <p style="color: #ff4d4d; margin-bottom: 15px; font-weight: bold;"><?php echo $error; ?></p>
+            <p style="color: #e74c3c; margin-bottom: 15px; font-weight: bold;"><?php echo $error; ?></p>
         <?php endif; ?>
 
         <form method="POST">
             <div style="margin-bottom: 15px;">
-                <label style="display: block; margin-bottom: 5px;">Member ID</label>
-                <input type="text" name="member_id" required placeholder="Enter Member ID" style="width: 100%; padding: 12px; border-radius: 5px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.1); color: white;">
+                <label style="display: block; margin-bottom: 5px; font-weight: 600;">Member ID</label>
+                <input type="text" name="member_id" required placeholder="Enter Member ID" style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid var(--border-color); background: var(--white); color: var(--text-main);">
             </div>
 
             <div style="margin-bottom: 20px;">
-                <label style="display: block; margin-bottom: 5px;">Password</label>
-                <input type="password" name="password" required placeholder="Enter Password" style="width: 100%; padding: 12px; border-radius: 5px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.1); color: white;">
+                <label style="display: block; margin-bottom: 5px; font-weight: 600;">Password</label>
+                <input type="password" name="password" required placeholder="Enter Password" style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid var(--border-color); background: var(--white); color: var(--text-main);">
             </div>
 
-            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px;">Authenticate Member</button>
+            <button type="submit" class="submit-btn" style="width: 100%;">Authenticate Member</button>
         </form>
 
         <p style="margin-top: 20px; text-align: center; font-size: 0.9rem;">
-            <a href="login.php" style="color: var(--neon-blue);">Back to Standard Login</a>
+            <a href="index.php" style="color: var(--brand-blue); text-decoration: none; font-weight: 600;">Back to Home</a>
         </p>
     </div>
 </div>

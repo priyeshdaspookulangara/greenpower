@@ -28,7 +28,7 @@ include 'includes/header.php';
         <img src="assets/images/solar-panel-grid.jpg" alt="Solar Panels">
         <div class="grid-overlay">
             <h3>Innovative Solar Solutions</h3>
-            <p>Maximizing energy yield with cutting-edge photovoltaic technology.</p>
+            <p>Maximizing energy yield with cutting-edge technology.</p>
         </div>
     </div>
     <div class="grid-item">
@@ -55,9 +55,9 @@ include 'includes/header.php';
     </div>
 </section>
 
-<section class="projects-gallery" id="products">
-    <h2>Our Latest Products</h2>
-    <p class="intro-p">Our products stem from a commitment to sustainability and the power of renewable ideas.</p>
+<section class="projects-gallery" id="products" style="padding: 10rem 5%;">
+    <h2 style="font-size: 4rem; color: var(--brand-blue); font-weight: 900; letter-spacing: -2px;">Our Latest Products</h2>
+    <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 5rem; max-width: 800px; margin-left: auto; margin-right: auto;">Our products stem from a commitment to sustainability and the power of renewable ideas.</p>
 
     <div class="product-grid">
         <?php foreach ($products as $p):
@@ -65,20 +65,20 @@ include 'includes/header.php';
             $stmt->execute([$p['id']]);
             $props = $stmt->fetchAll();
         ?>
-            <div class="glass-card product-card">
-                <h3 class="neon-text"><?php echo htmlspecialchars($p['name']); ?></h3>
-                <p style="color: #666; font-size: 0.8rem; margin-bottom: 1rem;"><?php echo strtoupper(str_replace('_', ' ', $p['category'])); ?></p>
-                <h4 style="font-size: 1.5rem; margin-bottom: 1rem;"><?php echo formatPrice($p['price']); ?></h4>
+            <div class="glass-card product-card" style="padding: 3rem;">
+                <h3 style="color: var(--brand-blue); font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem;"><?php echo htmlspecialchars($p['name']); ?></h3>
+                <p style="color: var(--brand-green); font-size: 0.8rem; font-weight: 800; margin-bottom: 1.5rem; letter-spacing: 1px;"><?php echo strtoupper(str_replace('_', ' ', $p['category'])); ?></p>
+                <h4 style="font-size: 2.2rem; margin-bottom: 2rem; color: var(--brand-blue); font-weight: 900;"><?php echo formatPrice($p['price']); ?></h4>
 
-                <ul class="property-list" style="list-style: none; margin-bottom: 1.5rem; font-size: 0.9rem; color: #666;">
+                <ul class="property-list" style="margin-bottom: 2.5rem;">
                     <?php foreach ($props as $prop): ?>
-                        <li style="border-bottom: 1px solid #eee; padding: 5px 0;"><strong><?php echo htmlspecialchars($prop['property_name']); ?>:</strong> <?php echo htmlspecialchars($prop['property_value']); ?></li>
+                        <li><span><?php echo htmlspecialchars($prop['property_name']); ?></span> <strong><?php echo htmlspecialchars($prop['property_value']); ?></strong></li>
                     <?php endforeach; ?>
                 </ul>
 
-                <div style="display: flex; gap: 10px;">
-                    <a href="product.php?id=<?php echo $p['id']; ?>" class="btn" style="background: #f8f9fa; color: #333; flex: 1; text-align: center;">View Details</a>
-                    <a href="index.php?add=<?php echo $p['id']; ?>" class="btn btn-primary" style="flex: 1; text-align: center;">Add to Cart</a>
+                <div style="display: flex; gap: 15px;">
+                    <a href="product.php?id=<?php echo $p['id']; ?>" class="btn" style="background: var(--light-bg); color: var(--brand-blue); flex: 1; text-align: center; font-weight: 800;">DETAILS</a>
+                    <a href="index.php?add=<?php echo $p['id']; ?>" class="btn btn-primary" style="flex: 1; text-align: center; font-weight: 800;">BUY NOW</a>
                 </div>
             </div>
         <?php endforeach; ?>
@@ -103,15 +103,15 @@ include 'includes/header.php';
     </div>
 </section>
 
-<section class="dark-lifecycle">
+<section class="light-lifecycle">
     <div style="text-align:center; margin-bottom: 70px;">
-        <h2 style="font-size: 3rem; font-weight: 300;">Our Process</h2>
+        <h2 style="font-size: 4rem; font-weight: 900; color: var(--brand-blue); letter-spacing: -2px;">Our Process</h2>
     </div>
-    <div class="lifecycle-grid-alt" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1600px; margin: 0 auto; padding: 0 5%;">
-        <div class="glass-card" style="background: rgba(255,255,255,0.03); color: white; border: 1px solid rgba(255,255,255,0.1);"><div class="watermark-num">01</div><h3>Analysis</h3><p>CIBIL-based credit assessment and subsidy qualification.</p></div>
-        <div class="glass-card" style="background: rgba(255,255,255,0.03); color: white; border: 1px solid rgba(255,255,255,0.1);"><div class="watermark-num">02</div><h3>Design</h3><p>Custom engineering for optimal wattage and storage capacity.</p></div>
-        <div class="glass-card" style="background: rgba(255,255,255,0.03); color: white; border: 1px solid rgba(255,255,255,0.1);"><div class="watermark-num">03</div><h3>Payout</h3><p>Automated distribution of Level and Referral income.</p></div>
-        <div class="glass-card" style="background: rgba(255,255,255,0.03); color: white; border: 1px solid rgba(255,255,255,0.1);"><div class="watermark-num">04</div><h3>Success</h3><p>Sustainable returns for both the company and the customer.</p></div>
+    <div class="lifecycle-grid-alt" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; max-width: 1600px; margin: 0 auto; padding: 0 5%;">
+        <div class="card"><div class="watermark-num">01</div><h3>Analysis</h3><p>CIBIL-based credit assessment and subsidy qualification.</p></div>
+        <div class="card"><div class="watermark-num">02</div><h3>Design</h3><p>Custom engineering for optimal wattage and storage capacity.</p></div>
+        <div class="card"><div class="watermark-num">03</div><h3>Payout</h3><p>Automated distribution of Level and Referral income.</p></div>
+        <div class="card"><div class="watermark-num">04</div><h3>Success</h3><p>Sustainable returns for both the company and the customer.</p></div>
     </div>
 </section>
 

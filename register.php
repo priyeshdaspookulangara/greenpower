@@ -33,47 +33,47 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 include 'includes/header.php';
 ?>
 
-<div class="container" style="max-width: 600px;">
-    <div class="glass-card">
-        <h2 class="neon-text" style="margin-bottom: 1.5rem;">Join SolarShop</h2>
+<div class="container" style="max-width: 600px; margin: 150px auto 100px;">
+    <div class="card">
+        <h2 style="margin-bottom: 1.5rem; color: var(--brand-blue); font-weight: 800;">Join SolarShop</h2>
         <?php if ($error): ?>
-            <p style="color: #ff4d4d; margin-bottom: 15px;"><?php echo $error; ?></p>
+            <p style="color: #e74c3c; margin-bottom: 15px; font-weight: bold;"><?php echo $error; ?></p>
         <?php endif; ?>
 
         <form method="POST">
             <div style="margin-bottom: 15px;">
-                <label>Full Name</label>
-                <input type="text" name="name" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.1); color: white;">
+                <label style="display: block; margin-bottom: 5px; font-weight: 600;">Full Name</label>
+                <input type="text" name="name" required style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid var(--border-color); background: var(--white); color: var(--text-main);">
             </div>
 
             <div style="margin-bottom: 15px;">
-                <label>Email Address</label>
-                <input type="email" name="email" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.1); color: white;">
+                <label style="display: block; margin-bottom: 5px; font-weight: 600;">Email Address</label>
+                <input type="email" name="email" required style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid var(--border-color); background: var(--white); color: var(--text-main);">
             </div>
 
             <div style="margin-bottom: 15px;">
-                <label>Password</label>
-                <input type="password" name="password" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.1); color: white;">
+                <label style="display: block; margin-bottom: 5px; font-weight: 600;">Password</label>
+                <input type="password" name="password" required style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid var(--border-color); background: var(--white); color: var(--text-main);">
             </div>
 
             <div style="margin-bottom: 15px;">
-                <label>CIBIL Status</label>
-                <select name="cibil_status" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid var(--glass-border); background: rgba(10, 25, 41, 0.9); color: white;">
+                <label style="display: block; margin-bottom: 5px; font-weight: 600;">CIBIL Status</label>
+                <select name="cibil_status" required style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid var(--border-color); background: var(--white); color: var(--text-main);">
                     <option value="good">Good (Qualify for Subsidy)</option>
                     <option value="low">Low (Third-Party Routing)</option>
                 </select>
             </div>
 
             <div style="margin-bottom: 25px;">
-                <label>Referrer Email (Optional)</label>
-                <input type="email" name="referrer_email" value="<?php echo htmlspecialchars($_GET['ref'] ?? ''); ?>" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.1); color: white;">
+                <label style="display: block; margin-bottom: 5px; font-weight: 600;">Referrer Email (Optional)</label>
+                <input type="email" name="referrer_email" value="<?php echo htmlspecialchars($_GET['ref'] ?? ''); ?>" style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid var(--border-color); background: var(--white); color: var(--text-main);">
             </div>
 
-            <button type="submit" class="btn btn-primary" style="width: 100%;">Create Account</button>
+            <button type="submit" class="submit-btn" style="width: 100%;">Create Account</button>
         </form>
 
-        <p style="margin-top: 20px; text-align: center; font-size: 0.9rem;">
-            Already have an account? <a href="#" onclick="openLoginModal(event)" style="color: var(--neon-blue);">Login here</a>
+        <p style="margin-top: 20px; text-align: center; font-size: 0.9rem; color: var(--text-muted);">
+            Already have an account? <a href="#" onclick="openLoginModal(event)" style="color: var(--brand-blue); font-weight: 600; text-decoration: none;">Login here</a>
         </p>
     </div>
 </div>
