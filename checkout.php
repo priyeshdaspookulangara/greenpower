@@ -35,16 +35,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 if ($user['cibil_status'] === 'good') {
                     // Profile A Logic
 
-                    // 1. Company Revenue (Representing the manufacturer commission + subsidy incoming)
-                    // We'll record the full transaction but then distribute
+                    // 1. Company Revenue
                     $stmt = $pdo->prepare("INSERT INTO transactions (order_id, user_id, amount, type, description) VALUES (?, ?, ?, 'company_revenue', 'Sale of Solar Panel (Good CIBIL)')");
                     $stmt->execute([$order_id, $user['id'], $item['price']]);
 
                     // 2. Level Income Distribution (5000 from Subsidy)
-                    // Find uplines. For simplicity, we handle one level up (referrer).
                     if ($user['referrer_id']) {
                         $level_amount = 5000;
-                        $stmt = $pdo->prepare("INSERT INTO level_income (user_id, source_order_id, amount, level, status) VALUES (?, ?, ?, 1, 'credited')");
+                        $stmt = $pdo->prepare("INSERT INTO level_income (user_id, source_order_id, amount, level, status) VALUES (?, ?, ?, 1, 'paid')");
                         $stmt->execute([$user['referrer_id'], $order_id, $level_amount]);
 
                         $stmt = $pdo->prepare("INSERT INTO transactions (order_id, user_id, amount, type, description) VALUES (?, ?, ?, 'subsidy_payout', 'Level Income payout from subsidy')");
@@ -74,64 +72,68 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         unset($_SESSION['cart']);
         redirect('dashboard.php?success=1');
     } catch (Exception $e) {
-        $pdo->rollBack();
+        if ($pdo->inTransaction()) {
+            $pdo->rollBack();
+        }
         $error = "Transaction failed: " . $e->getMessage();
     }
 }
+
+include 'includes/header.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Checkout - Solar Shop</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    <div class="container" style="max-width: 800px;">
-        <nav>
-            <div class="logo"><h2 class="neon-text">SOLAR SHOP</h2></div>
-            <div class="links"><a href="cart.php">Back to Cart</a></div>
-        </nav>
 
-        <div class="glass-card">
-            <h2>Order Summary</h2>
-            <p><strong>Customer:</strong> <?php echo htmlspecialchars($user['name']); ?></p>
-            <p><strong>CIBIL Status:</strong> <span class="neon-text"><?php echo strtoupper($user['cibil_status']); ?></span></p>
+<div class="container" style="max-width: 900px;">
+    <div class="glass-card">
+        <h2 class="neon-text" style="margin-bottom: 1.5rem;">Order Confirmation</h2>
 
-            <div style="margin: 20px 0; border: 1px solid var(--glass-border); padding: 15px; border-radius: 10px;">
-                <h4>Financial Breakdown Logic:</h4>
-                <?php if ($user['cibil_status'] === 'good'): ?>
-                    <p>✅ <strong>Profile A:</strong> You qualify for Government Subsidies.</p>
-                    <ul>
-                        <li>Manufacturer Commission will be processed.</li>
-                        <li>₹5,000 Level Income will be distributed to your network from subsidy.</li>
-                        <li>₹4,500 Referral Income will be credited to your referrer.</li>
-                    </ul>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+            <div>
+                <p><strong>Customer:</strong> <?php echo htmlspecialchars($user['name'] ?? 'Guest'); ?></p>
+                <p><strong>CIBIL Status:</strong> <span class="neon-text" style="font-weight: bold;"><?php echo strtoupper($user['cibil_status'] ?? 'N/A'); ?></span></p>
+            </div>
+            <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 10px; border-left: 4px solid var(--neon-blue);">
+                <h4 style="margin-bottom: 10px;">Processing Logic:</h4>
+                <?php if (($user['cibil_status'] ?? '') === 'good'): ?>
+                    <p style="font-size: 0.9rem;">✅ <strong>Profile A:</strong> Direct Subsidy Active.</p>
+                    <p style="font-size: 0.8rem; color: #aaa;">Commissions and Level Income will be distributed as per system rules.</p>
                 <?php else: ?>
-                    <p>⚠️ <strong>Profile B:</strong> Standard Direct Subsidy not available.</p>
-                    <ul>
-                        <li>Order will be routed through <strong>Third-Party Subsidy</strong> mechanism.</li>
-                    </ul>
+                    <p style="font-size: 0.9rem;">⚠️ <strong>Profile B:</strong> Third-Party Routing.</p>
+                    <p style="font-size: 0.8rem; color: #aaa;">Transaction will be processed through the alternative subsidy channel.</p>
                 <?php endif; ?>
             </div>
+        </div>
 
-            <table>
+        <table style="margin-bottom: 2rem;">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th style="text-align: right;">Price</th>
+                </tr>
+            </thead>
+            <tbody>
                 <?php foreach ($cart_items as $item): ?>
                     <tr>
                         <td><?php echo htmlspecialchars($item['name']); ?></td>
-                        <td><?php echo formatPrice($item['price']); ?></td>
+                        <td style="text-align: right;"><?php echo formatPrice($item['price']); ?></td>
                     </tr>
                 <?php endforeach; ?>
+            </tbody>
+            <tfoot>
                 <tr>
-                    <th>Total to Pay</th>
-                    <th class="neon-text"><?php echo formatPrice($total); ?></th>
+                    <th style="font-size: 1.2rem;">Total Amount</th>
+                    <th class="neon-text" style="text-align: right; font-size: 1.8rem;"><?php echo formatPrice($total); ?></th>
                 </tr>
-            </table>
+            </tfoot>
+        </table>
 
-            <form method="POST" style="margin-top: 30px;">
-                <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.2em;">Confirm and Pay</button>
-            </form>
-        </div>
+        <?php if (isset($error)): ?>
+            <p style="color: #ff4d4d; margin-bottom: 20px;"><?php echo $error; ?></p>
+        <?php endif; ?>
+
+        <form method="POST">
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 18px; font-size: 1.3rem; letter-spacing: 1px;">Confirm and Pay</button>
+        </form>
     </div>
-</body>
-</html>
+</div>
+
+<?php include 'includes/footer.php'; ?>

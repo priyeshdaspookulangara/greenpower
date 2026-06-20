@@ -8,7 +8,7 @@ if (!isLoggedIn()) {
 $user = getLoggedInUser($pdo);
 
 // Fetch User Orders
-$stmt = $pdo->prepare("SELECT o.*, p.name as product_name, p.category FROM orders o JOIN products p ON o.product_id = p.id WHERE o.user_id = ? ORDER BY o.created_at DESC");
+$stmt = $pdo->prepare("SELECT o.*, p.name as product_name, p.id as product_id, p.category FROM orders o JOIN products p ON o.product_id = p.id WHERE o.user_id = ? ORDER BY o.created_at DESC");
 $stmt->execute([$user['id']]);
 $orders = $stmt->fetchAll();
 
@@ -22,51 +22,50 @@ $stmt = $pdo->prepare("SELECT SUM(amount) as total FROM transactions WHERE user_
 $stmt->execute([$user['id']]);
 $referral_income_total = $stmt->fetch()['total'] ?? 0;
 
-$referral_link = "http://" . $_SERVER['HTTP_HOST'] . "/solar/register.php?ref=" . $user['email'];
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Customer Dashboard - Solar Shop</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    <div class="container">
-        <nav>
-            <div class="logo"><h2 class="neon-text">SOLAR SHOP</h2></div>
-            <div class="links">
-                <a href="index.php">Catalog</a>
-                <a href="logout.php">Logout</a>
-            </div>
-        </nav>
+$referral_link = (isset($_SERVER['HTTPS']) ? "https://" : "http://") . $_SERVER['HTTP_HOST'] . "/register.php?ref=" . ($user['email'] ?? '');
 
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px;">
-            <div class="glass-card">
-                <h3>Welcome, <?php echo htmlspecialchars($user['name']); ?></h3>
-                <p>CIBIL Status: <span class="neon-text"><?php echo strtoupper($user['cibil_status']); ?></span></p>
-                <p>Your Referral Link: <br>
-                   <code style="background: #000; padding: 5px; display: block; margin-top: 5px;"><?php echo $referral_link; ?></code>
-                </p>
-            </div>
-            <div class="glass-card">
-                <h3>Earnings Summary</h3>
-                <p>Total Level Income: <span class="neon-text"><?php echo formatPrice($level_income_total); ?></span></p>
-                <p>Total Referral Commission: <span class="neon-text"><?php echo formatPrice($referral_income_total); ?></span></p>
+include 'includes/header.php';
+?>
+
+<div class="container">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+        <div class="glass-card">
+            <h3 class="neon-text" style="margin-bottom: 1rem;">Profile Info</h3>
+            <p style="font-size: 1.2rem; margin-bottom: 0.5rem;"><?php echo htmlspecialchars($user['name'] ?? 'Guest'); ?></p>
+            <p>Status: <span class="neon-text" style="font-weight: bold;"><?php echo strtoupper($user['cibil_status'] ?? 'N/A'); ?></span></p>
+            <div style="margin-top: 1.5rem; padding: 10px; background: rgba(0,0,0,0.3); border-radius: 5px;">
+                <p style="font-size: 0.8rem; color: #aaa; margin-bottom: 5px;">Your Unique Referral Link:</p>
+                <code style="word-break: break-all; color: var(--neon-blue); font-size: 0.85rem;"><?php echo $referral_link; ?></code>
             </div>
         </div>
 
-        <div class="glass-card">
-            <h3>My Orders</h3>
-            <?php if (empty($orders)): ?>
-                <p>No orders yet.</p>
-            <?php else: ?>
+        <div class="glass-card" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+            <h3 style="margin-bottom: 1.5rem;">Total Earnings</h3>
+            <div style="display: flex; gap: 2rem;">
+                <div>
+                    <p style="font-size: 0.8rem; color: #aaa;">Level Income</p>
+                    <p class="neon-text" style="font-size: 1.5rem; font-weight: bold;"><?php echo formatPrice($level_income_total); ?></p>
+                </div>
+                <div style="border-left: 1px solid var(--glass-border); padding-left: 2rem;">
+                    <p style="font-size: 0.8rem; color: #aaa;">Referral Bonus</p>
+                    <p class="neon-text" style="font-size: 1.5rem; font-weight: bold;"><?php echo formatPrice($referral_income_total); ?></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="glass-card">
+        <h3 class="neon-text" style="margin-bottom: 1.5rem;">Purchase History & Technical Specs</h3>
+        <?php if (empty($orders)): ?>
+            <p style="color: #aaa;">No orders found. Explore our <a href="index.php" style="color: var(--neon-blue);">products</a>.</p>
+        <?php else: ?>
+            <div style="overflow-x: auto;">
                 <table>
                     <thead>
                         <tr>
                             <th>Order ID</th>
-                            <th>Product</th>
-                            <th>Price</th>
+                            <th>Product Details</th>
+                            <th>Amount</th>
                             <th>Date</th>
                             <th>Status</th>
                         </tr>
@@ -80,20 +79,25 @@ $referral_link = "http://" . $_SERVER['HTTP_HOST'] . "/solar/register.php?ref=" 
                         <tr>
                             <td>#<?php echo $order['id']; ?></td>
                             <td>
-                                <strong><?php echo htmlspecialchars($order['product_name']); ?></strong><br>
-                                <small>
-                                    <?php foreach ($props as $pr) echo htmlspecialchars($pr['property_name'].": ".$pr['property_value']). " | "; ?>
-                                </small>
+                                <strong style="color: #fff;"><?php echo htmlspecialchars($order['product_name']); ?></strong><br>
+                                <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-top: 5px;">
+                                    <?php foreach ($props as $pr): ?>
+                                        <span style="font-size: 0.7rem; background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 3px;">
+                                            <?php echo htmlspecialchars($pr['property_name'].": ".$pr['property_value']); ?>
+                                        </span>
+                                    <?php endforeach; ?>
+                                </div>
                             </td>
                             <td><?php echo formatPrice($order['total_price']); ?></td>
-                            <td><?php echo $order['created_at']; ?></td>
-                            <td><?php echo strtoupper($order['order_status']); ?></td>
+                            <td style="font-size: 0.8rem; color: #aaa;"><?php echo date('M d, Y', strtotime($order['created_at'])); ?></td>
+                            <td><span style="background: #2e7d32; color: #fff; padding: 3px 8px; border-radius: 20px; font-size: 0.7rem;"><?php echo strtoupper($order['order_status']); ?></span></td>
                         </tr>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
-            <?php endif; ?>
-        </div>
+            </div>
+        <?php endif; ?>
     </div>
-</body>
-</html>
+</div>
+
+<?php include 'includes/footer.php'; ?>

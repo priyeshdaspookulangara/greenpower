@@ -21,30 +21,17 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
         }
     }
 }
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Shopping Cart - Solar Shop</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    <div class="container">
-        <nav>
-            <div class="logo"><h2 class="neon-text">SOLAR SHOP</h2></div>
-            <div class="links">
-                <a href="index.php">Home</a>
-                <a href="dashboard.php">Dashboard</a>
-                <a href="logout.php">Logout</a>
-            </div>
-        </nav>
 
-        <div class="glass-card">
-            <h2>Your Shopping Cart</h2>
-            <?php if (empty($cart_items)): ?>
-                <p>Your cart is empty. <a href="index.php" style="color: var(--neon-blue);">Go shopping</a></p>
-            <?php else: ?>
+include 'includes/header.php';
+?>
+
+<div class="container">
+    <div class="glass-card">
+        <h2 class="neon-text" style="margin-bottom: 1.5rem;">Your Shopping Cart</h2>
+        <?php if (empty($cart_items)): ?>
+            <p>Your cart is empty. <a href="index.php" style="color: var(--neon-blue);">Go shopping</a></p>
+        <?php else: ?>
+            <div style="overflow-x: auto;">
                 <table>
                     <thead>
                         <tr>
@@ -60,22 +47,23 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
                             <td><?php echo htmlspecialchars($item['name']); ?></td>
                             <td><?php echo strtoupper(str_replace('_', ' ', $item['category'])); ?></td>
                             <td><?php echo formatPrice($item['price']); ?></td>
-                            <td><a href="cart.php?remove=<?php echo $index; ?>" style="color: #ff4d4d;">Remove</a></td>
+                            <td><a href="cart.php?remove=<?php echo $index; ?>" style="color: #ff4d4d; text-decoration: none;">Remove</a></td>
                         </tr>
                         <?php endforeach; ?>
                     </tbody>
                     <tfoot>
                         <tr>
-                            <th colspan="2">Total</th>
-                            <th colspan="2" class="neon-text" style="font-size: 1.5em;"><?php echo formatPrice($total); ?></th>
+                            <th colspan="2" style="font-size: 1.2rem;">Total</th>
+                            <th colspan="2" class="neon-text" style="font-size: 1.8rem;"><?php echo formatPrice($total); ?></th>
                         </tr>
                     </tfoot>
                 </table>
-                <div style="margin-top: 20px; text-align: right;">
-                    <a href="checkout.php" class="btn btn-primary">Proceed to Checkout</a>
-                </div>
-            <?php endif; ?>
-        </div>
+            </div>
+            <div style="margin-top: 30px; text-align: right;">
+                <a href="checkout.php" class="btn btn-primary" style="padding: 15px 40px; font-size: 1.1rem;">Proceed to Checkout</a>
+            </div>
+        <?php endif; ?>
     </div>
-</body>
-</html>
+</div>
+
+<?php include 'includes/footer.php'; ?>

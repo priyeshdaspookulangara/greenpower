@@ -1,79 +1,85 @@
--- SQLite compatible schema
+-- Solar Shop Database Schema (MySQL Compatible)
 
+-- Users Table
 CREATE TABLE IF NOT EXISTS users (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL,
-    email TEXT NOT NULL UNIQUE,
-    password TEXT NOT NULL,
-    role TEXT CHECK(role IN ('admin', 'customer')) DEFAULT 'customer',
-    cibil_status TEXT CHECK(cibil_status IN ('good', 'low')) DEFAULT 'good',
-    referrer_id INTEGER DEFAULT NULL,
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    role ENUM('admin', 'customer') DEFAULT 'customer',
+    cibil_status ENUM('good', 'low') DEFAULT 'good',
+    referrer_id INT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (referrer_id) REFERENCES users(id) ON DELETE SET NULL
 );
 
+-- Products Table
 CREATE TABLE IF NOT EXISTS products (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL,
-    category TEXT CHECK(category IN ('solar_panel', 'battery')) NOT NULL,
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    category ENUM('solar_panel', 'battery') NOT NULL,
     price DECIMAL(10, 2) NOT NULL,
-    stock INTEGER NOT NULL,
+    stock INT DEFAULT 0,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+-- Product Properties Table (Custom Attributes)
 CREATE TABLE IF NOT EXISTS product_properties (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    product_id INTEGER NOT NULL,
-    property_name TEXT NOT NULL,
-    property_value TEXT NOT NULL,
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    product_id INT NOT NULL,
+    property_name VARCHAR(100) NOT NULL,
+    property_value VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
 );
 
+-- Orders Table
 CREATE TABLE IF NOT EXISTS orders (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    user_id INTEGER NOT NULL,
-    product_id INTEGER NOT NULL,
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    product_id INT NOT NULL,
     total_price DECIMAL(10, 2) NOT NULL,
-    cibil_status_at_purchase TEXT CHECK(cibil_status_at_purchase IN ('good', 'low')) NOT NULL,
-    order_status TEXT CHECK(order_status IN ('pending', 'completed', 'cancelled')) DEFAULT 'pending',
+    cibil_status_at_purchase ENUM('good', 'low') NOT NULL,
+    order_status ENUM('pending', 'processing', 'completed', 'cancelled') DEFAULT 'completed',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY (product_id) REFERENCES products(id)
 );
 
+-- Transactions Table (Financial Ledger)
 CREATE TABLE IF NOT EXISTS transactions (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    order_id INTEGER NOT NULL,
-    user_id INTEGER NOT NULL,
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT NOT NULL,
+    user_id INT NOT NULL,
     amount DECIMAL(10, 2) NOT NULL,
-    type TEXT CHECK(type IN ('subsidy_payout', 'referral_commission', 'company_revenue', 'third_party_subsidy')) NOT NULL,
+    type ENUM('subsidy_payout', 'referral_commission', 'company_revenue', 'third_party_subsidy') NOT NULL,
     description TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (order_id) REFERENCES orders(id),
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
+-- Level Income Table
 CREATE TABLE IF NOT EXISTS level_income (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    user_id INTEGER NOT NULL,
-    source_order_id INTEGER NOT NULL,
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    source_order_id INT NOT NULL,
     amount DECIMAL(10, 2) NOT NULL,
-    level INTEGER NOT NULL,
-    status TEXT CHECK(status IN ('pending', 'credited')) DEFAULT 'credited',
+    level INT NOT NULL,
+    status ENUM('pending', 'paid') DEFAULT 'paid',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY (source_order_id) REFERENCES orders(id)
 );
 
--- Table for existing Burfee members
+-- Customer Table (Legacy/External Support)
 CREATE TABLE IF NOT EXISTS customer (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    MemberId TEXT NOT NULL UNIQUE,
-    MemberPass TEXT NOT NULL,
-    name TEXT NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    name VARCHAR(255)
 );
 
--- Seed some dummy data
-INSERT INTO customer (MemberId, MemberPass, name) VALUES ('BC1001', 'password123', 'John Burfee');
+-- Seed Admin User (password: admin123)
+INSERT INTO users (name, email, password, role, cibil_status)
+VALUES ('Admin User', 'admin@example.com', '$2y$10$eb4MRnTj.ZpYW03465eaDOx8ltTltaEByRpEyrFgVcXQPCm40J/PG', 'admin', 'good');

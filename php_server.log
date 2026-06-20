@@ -1,61 +1,790 @@
-[Sat Jun 20 08:06:04 2026] PHP 8.3.6 Development Server (http://localhost:8000) started
-[Sat Jun 20 08:06:13 2026] [::1]:37316 Accepted
-[Sat Jun 20 08:06:13 2026] [::1]:37316 [200]: GET /register.php
-[Sat Jun 20 08:06:13 2026] [::1]:37316 Closing
-[Sat Jun 20 08:06:13 2026] [::1]:37318 Accepted
-[Sat Jun 20 08:06:13 2026] [::1]:37318 [200]: GET /assets/css/style.css
-[Sat Jun 20 08:06:13 2026] [::1]:37318 Closing
-[Sat Jun 20 08:06:13 2026] [::1]:37334 Accepted
-[Sat Jun 20 08:06:13 2026] [::1]:37334 [302]: POST /register.php
-[Sat Jun 20 08:06:13 2026] [::1]:37334 Closing
-[Sat Jun 20 08:06:13 2026] [::1]:37340 Accepted
-[Sat Jun 20 08:06:13 2026] [::1]:37340 [200]: GET /login.php
-[Sat Jun 20 08:06:13 2026] [::1]:37340 Closing
-[Sat Jun 20 08:06:13 2026] [::1]:37342 Accepted
-[Sat Jun 20 08:06:13 2026] [::1]:37342 [200]: GET /assets/css/style.css
-[Sat Jun 20 08:06:13 2026] [::1]:37342 Closing
-[Sat Jun 20 08:06:14 2026] [::1]:52016 Accepted
-[Sat Jun 20 08:06:14 2026] [::1]:52016 [200]: GET /login.php
-[Sat Jun 20 08:06:14 2026] [::1]:52016 Closing
-[Sat Jun 20 08:06:14 2026] [::1]:52020 Accepted
-[Sat Jun 20 08:06:14 2026] [::1]:52020 [200]: GET /assets/css/style.css
-[Sat Jun 20 08:06:14 2026] [::1]:52020 Closing
-[Sat Jun 20 08:06:15 2026] [::1]:52036 Accepted
-[Sat Jun 20 08:06:15 2026] [::1]:52036 [302]: POST /login.php
-[Sat Jun 20 08:06:15 2026] [::1]:52036 Closing
-[Sat Jun 20 08:06:15 2026] [::1]:52046 Accepted
-[Sat Jun 20 08:06:15 2026] [::1]:52046 [200]: GET /index.php
-[Sat Jun 20 08:06:15 2026] [::1]:52046 Closing
-[Sat Jun 20 08:06:15 2026] [::1]:52062 Accepted
-[Sat Jun 20 08:06:15 2026] [::1]:52062 [200]: GET /assets/css/style.css
-[Sat Jun 20 08:06:15 2026] [::1]:52062 Closing
-[Sat Jun 20 08:06:16 2026] [::1]:52066 Accepted
-[Sat Jun 20 08:06:16 2026] [::1]:52066 [200]: GET /admin.php
-[Sat Jun 20 08:06:16 2026] [::1]:52066 Closing
-[Sat Jun 20 08:06:16 2026] [::1]:52080 Accepted
-[Sat Jun 20 08:06:16 2026] [::1]:52080 [200]: GET /assets/css/style.css
-[Sat Jun 20 08:06:16 2026] [::1]:52080 Closing
-[Sat Jun 20 08:06:16 2026] [::1]:52094 Accepted
-[Sat Jun 20 08:06:16 2026] [::1]:52094 [200]: POST /admin.php
-[Sat Jun 20 08:06:16 2026] [::1]:52094 Closing
-[Sat Jun 20 08:06:16 2026] [::1]:52100 Accepted
-[Sat Jun 20 08:06:16 2026] [::1]:52100 [200]: GET /assets/css/style.css
-[Sat Jun 20 08:06:16 2026] [::1]:52100 Closing
-[Sat Jun 20 08:06:18 2026] [::1]:52112 Accepted
-[Sat Jun 20 08:06:18 2026] [::1]:52112 [200]: GET /index.php
-[Sat Jun 20 08:06:18 2026] [::1]:52112 Closing
-[Sat Jun 20 08:06:18 2026] [::1]:52120 Accepted
-[Sat Jun 20 08:06:18 2026] [::1]:52120 [200]: GET /assets/css/style.css
-[Sat Jun 20 08:06:18 2026] [::1]:52120 Closing
-[Sat Jun 20 08:23:36 2026] [::1]:51474 Accepted
-[Sat Jun 20 08:23:37 2026] [::1]:51474 [200]: GET /burfee_login.php
-[Sat Jun 20 08:23:37 2026] [::1]:51474 Closing
-[Sat Jun 20 08:23:37 2026] [::1]:51482 Accepted
-[Sat Jun 20 08:23:37 2026] [::1]:51482 [302]: POST /burfee_login.php
-[Sat Jun 20 08:23:37 2026] [::1]:51482 Closing
-[Sat Jun 20 08:23:37 2026] [::1]:51490 Accepted
-[Sat Jun 20 08:23:37 2026] [::1]:51490 [200]: GET /dashboard.php
-[Sat Jun 20 08:23:37 2026] [::1]:51490 Closing
-[Sat Jun 20 08:23:37 2026] [::1]:51506 Accepted
-[Sat Jun 20 08:23:37 2026] [::1]:51506 [200]: GET /assets/css/style.css
-[Sat Jun 20 08:23:37 2026] [::1]:51506 Closing
+[Sat Jun 20 08:40:33 2026] PHP 8.3.6 Development Server (http://localhost:8000) started
+[Sat Jun 20 08:40:36 2026] [::1]:42512 Accepted
+[Sat Jun 20 08:40:36 2026] [::1]:42512 [200]: GET /login.php
+[Sat Jun 20 08:40:36 2026] [::1]:42512 Closing
+[Sat Jun 20 08:40:36 2026] [::1]:42520 Accepted
+[Sat Jun 20 08:40:36 2026] [::1]:42520 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:40:36 2026] [::1]:42520 Closing
+[Sat Jun 20 08:40:37 2026] [::1]:42530 Accepted
+[Sat Jun 20 08:40:37 2026] [::1]:42530 [302]: POST /login.php
+[Sat Jun 20 08:40:37 2026] [::1]:42530 Closing
+[Sat Jun 20 08:40:37 2026] [::1]:42534 Accepted
+[Sat Jun 20 08:40:37 2026] [::1]:42534 [200]: GET /index.php
+[Sat Jun 20 08:40:37 2026] [::1]:42534 Closing
+[Sat Jun 20 08:40:37 2026] [::1]:42544 Accepted
+[Sat Jun 20 08:40:37 2026] [::1]:42544 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:40:37 2026] [::1]:42544 Closing
+[Sat Jun 20 08:40:38 2026] [::1]:42558 Accepted
+[Sat Jun 20 08:40:38 2026] [::1]:42558 [200]: GET /admin.php
+[Sat Jun 20 08:40:38 2026] [::1]:42558 Closing
+[Sat Jun 20 08:40:41 2026] [::1]:58560 Accepted
+[Sat Jun 20 08:40:41 2026] [::1]:58560 [302]: GET /logout.php
+[Sat Jun 20 08:40:41 2026] [::1]:58560 Closing
+[Sat Jun 20 08:40:41 2026] [::1]:58564 Accepted
+[Sat Jun 20 08:40:41 2026] [::1]:58564 [200]: GET /login.php
+[Sat Jun 20 08:40:41 2026] [::1]:58564 Closing
+[Sat Jun 20 08:40:41 2026] [::1]:58572 Accepted
+[Sat Jun 20 08:40:41 2026] [::1]:58572 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:40:41 2026] [::1]:58572 Closing
+[Sat Jun 20 08:40:41 2026] [::1]:58582 Accepted
+[Sat Jun 20 08:40:41 2026] [::1]:58582 [200]: GET /register.php
+[Sat Jun 20 08:40:41 2026] [::1]:58582 Closing
+[Sat Jun 20 08:40:41 2026] [::1]:58592 Accepted
+[Sat Jun 20 08:40:41 2026] [::1]:58592 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:40:41 2026] [::1]:58592 Closing
+[Sat Jun 20 08:40:42 2026] [::1]:58602 Accepted
+[Sat Jun 20 08:40:42 2026] [::1]:58602 [200]: POST /register.php
+[Sat Jun 20 08:40:42 2026] [::1]:58602 Closing
+[Sat Jun 20 08:40:42 2026] [::1]:58614 Accepted
+[Sat Jun 20 08:40:42 2026] [::1]:58614 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:40:42 2026] [::1]:58614 Closing
+[Sat Jun 20 08:40:43 2026] [::1]:58630 Accepted
+[Sat Jun 20 08:40:43 2026] [::1]:58630 [200]: GET /index.php
+[Sat Jun 20 08:40:43 2026] [::1]:58630 Closing
+[Sat Jun 20 08:40:43 2026] [::1]:58644 Accepted
+[Sat Jun 20 08:40:43 2026] [::1]:58644 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:40:43 2026] [::1]:58644 Closing
+[Sat Jun 20 08:40:44 2026] [::1]:58660 Accepted
+[Sat Jun 20 08:40:44 2026] [::1]:58660 [302]: GET /index.php?add=1
+[Sat Jun 20 08:40:44 2026] [::1]:58660 Closing
+[Sat Jun 20 08:40:44 2026] [::1]:58668 Accepted
+[Sat Jun 20 08:40:44 2026] [::1]:58668 [200]: GET /index.php
+[Sat Jun 20 08:40:44 2026] [::1]:58668 Closing
+[Sat Jun 20 08:40:44 2026] [::1]:58676 Accepted
+[Sat Jun 20 08:40:44 2026] [::1]:58676 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:40:44 2026] [::1]:58676 Closing
+[Sat Jun 20 08:40:45 2026] [::1]:58680 Accepted
+[Sat Jun 20 08:40:45 2026] [::1]:58680 [302]: GET /checkout.php
+[Sat Jun 20 08:40:45 2026] [::1]:58680 Closing
+[Sat Jun 20 08:40:45 2026] [::1]:58684 Accepted
+[Sat Jun 20 08:40:45 2026] [::1]:58684 [200]: GET /login.php
+[Sat Jun 20 08:40:45 2026] [::1]:58684 Closing
+[Sat Jun 20 08:40:45 2026] [::1]:58700 Accepted
+[Sat Jun 20 08:40:45 2026] [::1]:58700 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:40:45 2026] [::1]:58700 Closing
+[Sat Jun 20 08:42:04 2026] [::1]:37326 Accepted
+[Sat Jun 20 08:42:04 2026] [::1]:37326 [200]: GET /
+[Sat Jun 20 08:42:04 2026] [::1]:37326 Closing
+[Sat Jun 20 08:42:04 2026] [::1]:37336 Accepted
+[Sat Jun 20 08:42:04 2026] [::1]:37336 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:42:04 2026] [::1]:37336 Closing
+[Sat Jun 20 08:42:05 2026] [::1]:37340 Accepted
+[Sat Jun 20 08:42:05 2026] [::1]:37340 [200]: GET /login.php
+[Sat Jun 20 08:42:05 2026] [::1]:37340 Closing
+[Sat Jun 20 08:42:05 2026] [::1]:37352 Accepted
+[Sat Jun 20 08:42:05 2026] [::1]:37352 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:42:05 2026] [::1]:37352 Closing
+[Sat Jun 20 08:42:05 2026] [::1]:37354 Accepted
+[Sat Jun 20 08:42:05 2026] [::1]:37354 [200]: POST /login.php
+[Sat Jun 20 08:42:05 2026] [::1]:37354 Closing
+[Sat Jun 20 08:42:05 2026] [::1]:37360 Accepted
+[Sat Jun 20 08:42:05 2026] [::1]:37360 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:42:05 2026] [::1]:37360 Closing
+[Sat Jun 20 08:46:34 2026] [::1]:34712 Accepted
+[Sat Jun 20 08:46:34 2026] [::1]:34712 [200]: GET /
+[Sat Jun 20 08:46:34 2026] [::1]:34712 Closing
+[Sat Jun 20 08:46:34 2026] [::1]:34726 Accepted
+[Sat Jun 20 08:46:34 2026] [::1]:34726 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:46:34 2026] [::1]:34726 Closing
+[Sat Jun 20 08:46:35 2026] [::1]:34740 Accepted
+[Sat Jun 20 08:46:35 2026] [::1]:34740 [200]: GET /login.php
+[Sat Jun 20 08:46:35 2026] [::1]:34740 Closing
+[Sat Jun 20 08:46:35 2026] [::1]:34752 Accepted
+[Sat Jun 20 08:46:35 2026] [::1]:34752 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:46:35 2026] [::1]:34752 Closing
+[Sat Jun 20 08:46:35 2026] [::1]:34768 Accepted
+[Sat Jun 20 08:46:35 2026] [::1]:34768 [200]: POST /login.php
+[Sat Jun 20 08:46:35 2026] [::1]:34768 Closing
+[Sat Jun 20 08:46:35 2026] [::1]:34774 Accepted
+[Sat Jun 20 08:46:35 2026] [::1]:34774 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:46:35 2026] [::1]:34774 Closing
+[Sat Jun 20 08:48:05 2026] [::1]:38870 Accepted
+[Sat Jun 20 08:48:05 2026] [::1]:38870 [200]: GET /
+[Sat Jun 20 08:48:05 2026] [::1]:38870 Closing
+[Sat Jun 20 08:48:05 2026] [::1]:38886 Accepted
+[Sat Jun 20 08:48:05 2026] [::1]:38886 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:48:05 2026] [::1]:38886 Closing
+[Sat Jun 20 08:48:05 2026] [::1]:38896 Accepted
+[Sat Jun 20 08:48:05 2026] [::1]:38896 [200]: GET /login.php
+[Sat Jun 20 08:48:05 2026] [::1]:38896 Closing
+[Sat Jun 20 08:48:05 2026] [::1]:38910 Accepted
+[Sat Jun 20 08:48:05 2026] [::1]:38910 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:48:05 2026] [::1]:38910 Closing
+[Sat Jun 20 08:48:06 2026] [::1]:38920 Accepted
+[Sat Jun 20 08:48:06 2026] [::1]:38920 [200]: POST /login.php
+[Sat Jun 20 08:48:06 2026] [::1]:38920 Closing
+[Sat Jun 20 08:48:06 2026] [::1]:38930 Accepted
+[Sat Jun 20 08:48:06 2026] [::1]:38930 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:48:06 2026] [::1]:38930 Closing
+[Sat Jun 20 08:51:56 2026] [::1]:48914 Accepted
+[Sat Jun 20 08:51:56 2026] [::1]:48914 [200]: GET /login.php
+[Sat Jun 20 08:51:56 2026] [::1]:48914 Closing
+[Sat Jun 20 08:51:56 2026] [::1]:48926 Accepted
+[Sat Jun 20 08:51:56 2026] [::1]:48926 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:51:56 2026] [::1]:48926 Closing
+[Sat Jun 20 08:51:57 2026] [::1]:48942 Accepted
+[Sat Jun 20 08:51:57 2026] [::1]:48942 [200]: POST /login.php
+[Sat Jun 20 08:51:57 2026] [::1]:48942 Closing
+[Sat Jun 20 08:51:57 2026] [::1]:48952 Accepted
+[Sat Jun 20 08:51:57 2026] [::1]:48952 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:51:57 2026] [::1]:48952 Closing
+[Sat Jun 20 08:51:58 2026] [::1]:48958 Accepted
+[Sat Jun 20 08:51:58 2026] [::1]:48958 [302]: GET /admin.php
+[Sat Jun 20 08:51:58 2026] [::1]:48958 Closing
+[Sat Jun 20 08:51:58 2026] [::1]:48964 Accepted
+[Sat Jun 20 08:51:58 2026] [::1]:48964 [200]: GET /index.php
+[Sat Jun 20 08:51:58 2026] [::1]:48964 Closing
+[Sat Jun 20 08:51:58 2026] [::1]:48968 Accepted
+[Sat Jun 20 08:51:58 2026] [::1]:48968 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:51:58 2026] [::1]:48968 Closing
+[Sat Jun 20 08:55:28 2026] [::1]:36988 Accepted
+[Sat Jun 20 08:55:28 2026] [::1]:36988 [200]: GET /login.php
+[Sat Jun 20 08:55:28 2026] [::1]:36988 Closing
+[Sat Jun 20 08:55:28 2026] [::1]:36992 Accepted
+[Sat Jun 20 08:55:28 2026] [::1]:36992 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:55:28 2026] [::1]:36992 Closing
+[Sat Jun 20 08:56:25 2026] [::1]:37840 Accepted
+[Sat Jun 20 08:56:25 2026] [::1]:37840 [200]: GET /index.php
+[Sat Jun 20 08:56:25 2026] [::1]:37840 Closing
+[Sat Jun 20 08:56:25 2026] [::1]:37844 Accepted
+[Sat Jun 20 08:56:25 2026] [::1]:37844 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:56:25 2026] [::1]:37844 Closing
+[Sat Jun 20 08:56:25 2026] [::1]:37856 Accepted
+[Sat Jun 20 08:56:25 2026] [::1]:37856 [404]: GET /assets/images/solar-hero.jpg - No such file or directory
+[Sat Jun 20 08:56:25 2026] [::1]:37856 Closing
+[Sat Jun 20 08:56:26 2026] [::1]:37864 Accepted
+[Sat Jun 20 08:56:26 2026] [::1]:37864 [200]: POST /login.php
+[Sat Jun 20 08:56:26 2026] [::1]:37864 Closing
+[Sat Jun 20 08:56:26 2026] [::1]:37876 Accepted
+[Sat Jun 20 08:56:26 2026] [::1]:37876 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:56:26 2026] [::1]:37876 Closing
+[Sat Jun 20 08:56:27 2026] [::1]:37882 Accepted
+[Sat Jun 20 08:56:27 2026] [::1]:37882 [302]: GET /admin.php
+[Sat Jun 20 08:56:27 2026] [::1]:37882 Closing
+[Sat Jun 20 08:56:27 2026] [::1]:37886 Accepted
+[Sat Jun 20 08:56:27 2026] [::1]:37886 [200]: GET /index.php
+[Sat Jun 20 08:56:27 2026] [::1]:37886 Closing
+[Sat Jun 20 08:56:27 2026] [::1]:37890 Accepted
+[Sat Jun 20 08:56:27 2026] [::1]:37890 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:56:27 2026] [::1]:37890 Closing
+[Sat Jun 20 08:56:27 2026] [::1]:37904 Accepted
+[Sat Jun 20 08:56:27 2026] [::1]:37904 [404]: GET /assets/images/solar-hero.jpg - No such file or directory
+[Sat Jun 20 08:56:27 2026] [::1]:37904 Closing
+[Sat Jun 20 08:57:52 2026] [::1]:40466 Accepted
+[Sat Jun 20 08:57:52 2026] [::1]:40466 [200]: GET /index.php
+[Sat Jun 20 08:57:52 2026] [::1]:40466 Closing
+[Sat Jun 20 08:57:52 2026] [::1]:40480 Accepted
+[Sat Jun 20 08:57:52 2026] [::1]:40480 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:57:52 2026] [::1]:40480 Closing
+[Sat Jun 20 08:57:52 2026] [::1]:40488 Accepted
+[Sat Jun 20 08:57:52 2026] [::1]:40488 [404]: GET /assets/images/solar-hero.jpg - No such file or directory
+[Sat Jun 20 08:57:52 2026] [::1]:40488 Closing
+[Sat Jun 20 08:57:54 2026] [::1]:40502 Accepted
+[Sat Jun 20 08:57:54 2026] [::1]:40502 [302]: POST /login.php
+[Sat Jun 20 08:57:54 2026] [::1]:40502 Closing
+[Sat Jun 20 08:57:54 2026] [::1]:40518 Accepted
+[Sat Jun 20 08:57:54 2026] [::1]:40518 [200]: GET /index.php
+[Sat Jun 20 08:57:54 2026] [::1]:40518 Closing
+[Sat Jun 20 08:57:54 2026] [::1]:40528 Accepted
+[Sat Jun 20 08:57:54 2026] [::1]:40528 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:57:54 2026] [::1]:40528 Closing
+[Sat Jun 20 08:57:54 2026] [::1]:40544 Accepted
+[Sat Jun 20 08:57:54 2026] [::1]:40544 [404]: GET /assets/images/solar-hero.jpg - No such file or directory
+[Sat Jun 20 08:57:54 2026] [::1]:40544 Closing
+[Sat Jun 20 08:57:55 2026] [::1]:40546 Accepted
+[Sat Jun 20 08:57:55 2026] [::1]:40546 [200]: GET /admin.php
+[Sat Jun 20 08:57:55 2026] [::1]:40546 Closing
+[Sat Jun 20 08:57:55 2026] [::1]:40556 Accepted
+[Sat Jun 20 08:57:55 2026] [::1]:40556 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:57:55 2026] [::1]:40556 Closing
+[Sat Jun 20 08:57:57 2026] [::1]:40560 Accepted
+[Sat Jun 20 08:57:57 2026] [::1]:40560 [200]: POST /admin.php
+[Sat Jun 20 08:57:57 2026] [::1]:40560 Closing
+[Sat Jun 20 08:57:57 2026] [::1]:40566 Accepted
+[Sat Jun 20 08:57:57 2026] [::1]:40566 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:57:57 2026] [::1]:40566 Closing
+[Sat Jun 20 08:57:59 2026] [::1]:40574 Accepted
+[Sat Jun 20 08:57:59 2026] [::1]:40574 [302]: GET /logout.php
+[Sat Jun 20 08:57:59 2026] [::1]:40574 Closing
+[Sat Jun 20 08:57:59 2026] [::1]:40588 Accepted
+[Sat Jun 20 08:57:59 2026] [::1]:40588 [200]: GET /login.php
+[Sat Jun 20 08:57:59 2026] [::1]:40588 Closing
+[Sat Jun 20 08:57:59 2026] [::1]:40600 Accepted
+[Sat Jun 20 08:57:59 2026] [::1]:40600 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:57:59 2026] [::1]:40600 Closing
+[Sat Jun 20 08:57:59 2026] [::1]:40604 Accepted
+[Sat Jun 20 08:57:59 2026] [::1]:40604 [200]: GET /register.php
+[Sat Jun 20 08:57:59 2026] [::1]:40604 Closing
+[Sat Jun 20 08:57:59 2026] [::1]:40616 Accepted
+[Sat Jun 20 08:57:59 2026] [::1]:40616 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:57:59 2026] [::1]:40616 Closing
+[Sat Jun 20 08:58:47 2026] [::1]:57996 Accepted
+[Sat Jun 20 08:58:47 2026] [::1]:57996 [200]: GET /index.php
+[Sat Jun 20 08:58:47 2026] [::1]:57996 Closing
+[Sat Jun 20 08:58:47 2026] [::1]:57998 Accepted
+[Sat Jun 20 08:58:47 2026] [::1]:57998 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:58:47 2026] [::1]:57998 Closing
+[Sat Jun 20 08:58:47 2026] [::1]:58004 Accepted
+[Sat Jun 20 08:58:47 2026] [::1]:58004 [404]: GET /assets/images/solar-hero.jpg - No such file or directory
+[Sat Jun 20 08:58:47 2026] [::1]:58004 Closing
+[Sat Jun 20 08:58:49 2026] [::1]:58008 Accepted
+[Sat Jun 20 08:58:49 2026] [::1]:58008 [302]: POST /login.php
+[Sat Jun 20 08:58:49 2026] [::1]:58008 Closing
+[Sat Jun 20 08:58:49 2026] [::1]:58018 Accepted
+[Sat Jun 20 08:58:49 2026] [::1]:58018 [200]: GET /index.php
+[Sat Jun 20 08:58:49 2026] [::1]:58018 Closing
+[Sat Jun 20 08:58:49 2026] [::1]:58032 Accepted
+[Sat Jun 20 08:58:49 2026] [::1]:58032 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:58:49 2026] [::1]:58032 Closing
+[Sat Jun 20 08:58:49 2026] [::1]:58046 Accepted
+[Sat Jun 20 08:58:49 2026] [::1]:58046 [404]: GET /assets/images/solar-hero.jpg - No such file or directory
+[Sat Jun 20 08:58:49 2026] [::1]:58046 Closing
+[Sat Jun 20 08:58:50 2026] [::1]:60636 Accepted
+[Sat Jun 20 08:58:50 2026] [::1]:60636 [200]: GET /admin.php
+[Sat Jun 20 08:58:50 2026] [::1]:60636 Closing
+[Sat Jun 20 08:58:50 2026] [::1]:60638 Accepted
+[Sat Jun 20 08:58:50 2026] [::1]:60638 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:58:50 2026] [::1]:60638 Closing
+[Sat Jun 20 08:58:52 2026] [::1]:60646 Accepted
+[Sat Jun 20 08:58:52 2026] [::1]:60646 [200]: POST /admin.php
+[Sat Jun 20 08:58:53 2026] [::1]:60646 Closing
+[Sat Jun 20 08:58:53 2026] [::1]:60656 Accepted
+[Sat Jun 20 08:58:53 2026] [::1]:60656 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:58:53 2026] [::1]:60656 Closing
+[Sat Jun 20 08:58:54 2026] [::1]:60672 Accepted
+[Sat Jun 20 08:58:54 2026] [::1]:60672 [302]: GET /logout.php
+[Sat Jun 20 08:58:54 2026] [::1]:60672 Closing
+[Sat Jun 20 08:58:54 2026] [::1]:60678 Accepted
+[Sat Jun 20 08:58:54 2026] [::1]:60678 [200]: GET /login.php
+[Sat Jun 20 08:58:54 2026] [::1]:60678 Closing
+[Sat Jun 20 08:58:54 2026] [::1]:60694 Accepted
+[Sat Jun 20 08:58:54 2026] [::1]:60694 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:58:54 2026] [::1]:60694 Closing
+[Sat Jun 20 08:58:54 2026] [::1]:60708 Accepted
+[Sat Jun 20 08:58:54 2026] [::1]:60708 [200]: GET /register.php
+[Sat Jun 20 08:58:54 2026] [::1]:60708 Closing
+[Sat Jun 20 08:58:54 2026] [::1]:60724 Accepted
+[Sat Jun 20 08:58:54 2026] [::1]:60724 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:58:54 2026] [::1]:60724 Closing
+[Sat Jun 20 08:59:44 2026] [::1]:46688 Accepted
+[Sat Jun 20 08:59:44 2026] [::1]:46688 [200]: GET /index.php
+[Sat Jun 20 08:59:44 2026] [::1]:46688 Closing
+[Sat Jun 20 08:59:44 2026] [::1]:46694 Accepted
+[Sat Jun 20 08:59:44 2026] [::1]:46694 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:59:44 2026] [::1]:46694 Closing
+[Sat Jun 20 08:59:44 2026] [::1]:46704 Accepted
+[Sat Jun 20 08:59:44 2026] [::1]:46704 [404]: GET /assets/images/solar-hero.jpg - No such file or directory
+[Sat Jun 20 08:59:44 2026] [::1]:46704 Closing
+[Sat Jun 20 08:59:45 2026] [::1]:46708 Accepted
+[Sat Jun 20 08:59:45 2026] [::1]:46708 [302]: POST /login.php
+[Sat Jun 20 08:59:45 2026] [::1]:46708 Closing
+[Sat Jun 20 08:59:45 2026] [::1]:46718 Accepted
+[Sat Jun 20 08:59:45 2026] [::1]:46718 [200]: GET /index.php
+[Sat Jun 20 08:59:45 2026] [::1]:46718 Closing
+[Sat Jun 20 08:59:45 2026] [::1]:46726 Accepted
+[Sat Jun 20 08:59:45 2026] [::1]:46726 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:59:45 2026] [::1]:46726 Closing
+[Sat Jun 20 08:59:45 2026] [::1]:46738 Accepted
+[Sat Jun 20 08:59:45 2026] [::1]:46738 [404]: GET /assets/images/solar-hero.jpg - No such file or directory
+[Sat Jun 20 08:59:45 2026] [::1]:46738 Closing
+[Sat Jun 20 08:59:46 2026] [::1]:46742 Accepted
+[Sat Jun 20 08:59:46 2026] [::1]:46742 [200]: GET /admin.php
+[Sat Jun 20 08:59:46 2026] [::1]:46742 Closing
+[Sat Jun 20 08:59:46 2026] [::1]:46750 Accepted
+[Sat Jun 20 08:59:46 2026] [::1]:46750 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:59:46 2026] [::1]:46750 Closing
+[Sat Jun 20 08:59:49 2026] [::1]:46752 Accepted
+[Sat Jun 20 08:59:49 2026] [::1]:46752 [200]: POST /admin.php
+[Sat Jun 20 08:59:49 2026] [::1]:46752 Closing
+[Sat Jun 20 08:59:49 2026] [::1]:46760 Accepted
+[Sat Jun 20 08:59:49 2026] [::1]:46760 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:59:49 2026] [::1]:46760 Closing
+[Sat Jun 20 08:59:50 2026] [::1]:48234 Accepted
+[Sat Jun 20 08:59:50 2026] [::1]:48234 [302]: GET /logout.php
+[Sat Jun 20 08:59:50 2026] [::1]:48234 Closing
+[Sat Jun 20 08:59:50 2026] [::1]:48236 Accepted
+[Sat Jun 20 08:59:50 2026] [::1]:48236 [200]: GET /login.php
+[Sat Jun 20 08:59:50 2026] [::1]:48236 Closing
+[Sat Jun 20 08:59:50 2026] [::1]:48238 Accepted
+[Sat Jun 20 08:59:50 2026] [::1]:48238 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:59:50 2026] [::1]:48238 Closing
+[Sat Jun 20 08:59:51 2026] [::1]:48252 Accepted
+[Sat Jun 20 08:59:51 2026] [::1]:48252 [200]: GET /register.php
+[Sat Jun 20 08:59:51 2026] [::1]:48252 Closing
+[Sat Jun 20 08:59:51 2026] [::1]:48266 Accepted
+[Sat Jun 20 08:59:51 2026] [::1]:48266 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:59:51 2026] [::1]:48266 Closing
+[Sat Jun 20 08:59:51 2026] [::1]:48268 Accepted
+[Sat Jun 20 08:59:51 2026] [::1]:48268 [302]: POST /register.php
+[Sat Jun 20 08:59:51 2026] [::1]:48268 Closing
+[Sat Jun 20 08:59:51 2026] [::1]:48280 Accepted
+[Sat Jun 20 08:59:51 2026] [::1]:48280 [200]: GET /login.php?registered=1
+[Sat Jun 20 08:59:51 2026] [::1]:48280 Closing
+[Sat Jun 20 08:59:51 2026] [::1]:48286 Accepted
+[Sat Jun 20 08:59:51 2026] [::1]:48286 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:59:51 2026] [::1]:48286 Closing
+[Sat Jun 20 08:59:52 2026] [::1]:48290 Accepted
+[Sat Jun 20 08:59:52 2026] [::1]:48290 [200]: GET /index.php
+[Sat Jun 20 08:59:52 2026] [::1]:48290 Closing
+[Sat Jun 20 08:59:52 2026] [::1]:48304 Accepted
+[Sat Jun 20 08:59:52 2026] [::1]:48304 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:59:52 2026] [::1]:48304 Closing
+[Sat Jun 20 08:59:52 2026] [::1]:48308 Accepted
+[Sat Jun 20 08:59:52 2026] [::1]:48308 [404]: GET /assets/images/solar-hero.jpg - No such file or directory
+[Sat Jun 20 08:59:52 2026] [::1]:48308 Closing
+[Sat Jun 20 08:59:52 2026] [::1]:48324 Accepted
+[Sat Jun 20 08:59:52 2026] [::1]:48324 [302]: GET /index.php?add=1
+[Sat Jun 20 08:59:52 2026] [::1]:48324 Closing
+[Sat Jun 20 08:59:52 2026] [::1]:48326 Accepted
+[Sat Jun 20 08:59:52 2026] [::1]:48326 [200]: GET /index.php
+[Sat Jun 20 08:59:52 2026] [::1]:48326 Closing
+[Sat Jun 20 08:59:53 2026] [::1]:48338 Accepted
+[Sat Jun 20 08:59:53 2026] [::1]:48338 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:59:53 2026] [::1]:48338 Closing
+[Sat Jun 20 08:59:53 2026] [::1]:48348 Accepted
+[Sat Jun 20 08:59:53 2026] [::1]:48348 [404]: GET /assets/images/solar-hero.jpg - No such file or directory
+[Sat Jun 20 08:59:53 2026] [::1]:48348 Closing
+[Sat Jun 20 08:59:53 2026] [::1]:48360 Accepted
+[Sat Jun 20 08:59:53 2026] [::1]:48360 [200]: GET /cart.php
+[Sat Jun 20 08:59:53 2026] [::1]:48360 Closing
+[Sat Jun 20 08:59:53 2026] [::1]:48368 Accepted
+[Sat Jun 20 08:59:53 2026] [::1]:48368 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:59:53 2026] [::1]:48368 Closing
+[Sat Jun 20 08:59:54 2026] [::1]:48370 Accepted
+[Sat Jun 20 08:59:54 2026] [::1]:48370 [302]: GET /checkout.php
+[Sat Jun 20 08:59:54 2026] [::1]:48370 Closing
+[Sat Jun 20 08:59:54 2026] [::1]:48384 Accepted
+[Sat Jun 20 08:59:54 2026] [::1]:48384 [200]: GET /login.php
+[Sat Jun 20 08:59:54 2026] [::1]:48384 Closing
+[Sat Jun 20 08:59:54 2026] [::1]:48392 Accepted
+[Sat Jun 20 08:59:54 2026] [::1]:48392 [200]: GET /assets/css/style.css
+[Sat Jun 20 08:59:54 2026] [::1]:48392 Closing
+[Sat Jun 20 09:00:43 2026] [::1]:43148 Accepted
+[Sat Jun 20 09:00:43 2026] [::1]:43148 [200]: GET /index.php
+[Sat Jun 20 09:00:43 2026] [::1]:43148 Closing
+[Sat Jun 20 09:00:43 2026] [::1]:43156 Accepted
+[Sat Jun 20 09:00:43 2026] [::1]:43156 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:00:43 2026] [::1]:43156 Closing
+[Sat Jun 20 09:00:43 2026] [::1]:43162 Accepted
+[Sat Jun 20 09:00:43 2026] [::1]:43162 [404]: GET /assets/images/solar-hero.jpg - No such file or directory
+[Sat Jun 20 09:00:43 2026] [::1]:43162 Closing
+[Sat Jun 20 09:00:44 2026] [::1]:43164 Accepted
+[Sat Jun 20 09:00:44 2026] [::1]:43164 [302]: POST /login.php
+[Sat Jun 20 09:00:44 2026] [::1]:43164 Closing
+[Sat Jun 20 09:00:44 2026] [::1]:43166 Accepted
+[Sat Jun 20 09:00:44 2026] [::1]:43166 [200]: GET /index.php
+[Sat Jun 20 09:00:44 2026] [::1]:43166 Closing
+[Sat Jun 20 09:00:44 2026] [::1]:43178 Accepted
+[Sat Jun 20 09:00:44 2026] [::1]:43178 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:00:44 2026] [::1]:43178 Closing
+[Sat Jun 20 09:00:44 2026] [::1]:43186 Accepted
+[Sat Jun 20 09:00:44 2026] [::1]:43186 [404]: GET /assets/images/solar-hero.jpg - No such file or directory
+[Sat Jun 20 09:00:44 2026] [::1]:43186 Closing
+[Sat Jun 20 09:00:45 2026] [::1]:43200 Accepted
+[Sat Jun 20 09:00:45 2026] [::1]:43200 [200]: GET /admin.php
+[Sat Jun 20 09:00:45 2026] [::1]:43200 Closing
+[Sat Jun 20 09:00:45 2026] [::1]:43212 Accepted
+[Sat Jun 20 09:00:45 2026] [::1]:43212 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:00:45 2026] [::1]:43212 Closing
+[Sat Jun 20 09:00:48 2026] [::1]:43218 Accepted
+[Sat Jun 20 09:00:48 2026] [::1]:43218 [200]: POST /admin.php
+[Sat Jun 20 09:00:48 2026] [::1]:43218 Closing
+[Sat Jun 20 09:00:48 2026] [::1]:43226 Accepted
+[Sat Jun 20 09:00:48 2026] [::1]:43226 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:00:48 2026] [::1]:43226 Closing
+[Sat Jun 20 09:00:49 2026] [::1]:43228 Accepted
+[Sat Jun 20 09:00:49 2026] [::1]:43228 [302]: GET /logout.php
+[Sat Jun 20 09:00:49 2026] [::1]:43228 Closing
+[Sat Jun 20 09:00:49 2026] [::1]:43238 Accepted
+[Sat Jun 20 09:00:49 2026] [::1]:43238 [200]: GET /login.php
+[Sat Jun 20 09:00:49 2026] [::1]:43238 Closing
+[Sat Jun 20 09:00:49 2026] [::1]:43242 Accepted
+[Sat Jun 20 09:00:49 2026] [::1]:43242 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:00:49 2026] [::1]:43242 Closing
+[Sat Jun 20 09:00:49 2026] [::1]:43258 Accepted
+[Sat Jun 20 09:00:49 2026] [::1]:43258 [200]: GET /register.php
+[Sat Jun 20 09:00:49 2026] [::1]:43258 Closing
+[Sat Jun 20 09:00:49 2026] [::1]:43260 Accepted
+[Sat Jun 20 09:00:49 2026] [::1]:43260 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:00:49 2026] [::1]:43260 Closing
+[Sat Jun 20 09:00:49 2026] [::1]:59410 Accepted
+[Sat Jun 20 09:00:49 2026] [::1]:59410 [200]: POST /register.php
+[Sat Jun 20 09:00:49 2026] [::1]:59410 Closing
+[Sat Jun 20 09:00:49 2026] [::1]:59426 Accepted
+[Sat Jun 20 09:00:49 2026] [::1]:59426 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:00:49 2026] [::1]:59426 Closing
+[Sat Jun 20 09:00:50 2026] [::1]:59434 Accepted
+[Sat Jun 20 09:00:50 2026] [::1]:59434 [200]: GET /index.php
+[Sat Jun 20 09:00:50 2026] [::1]:59434 Closing
+[Sat Jun 20 09:00:50 2026] [::1]:59444 Accepted
+[Sat Jun 20 09:00:50 2026] [::1]:59444 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:00:50 2026] [::1]:59444 Closing
+[Sat Jun 20 09:00:50 2026] [::1]:59458 Accepted
+[Sat Jun 20 09:00:50 2026] [::1]:59458 [404]: GET /assets/images/solar-hero.jpg - No such file or directory
+[Sat Jun 20 09:00:50 2026] [::1]:59458 Closing
+[Sat Jun 20 09:00:51 2026] [::1]:59472 Accepted
+[Sat Jun 20 09:00:51 2026] [::1]:59472 [302]: GET /index.php?add=1
+[Sat Jun 20 09:00:51 2026] [::1]:59472 Closing
+[Sat Jun 20 09:00:51 2026] [::1]:59474 Accepted
+[Sat Jun 20 09:00:51 2026] [::1]:59474 [200]: GET /index.php
+[Sat Jun 20 09:00:51 2026] [::1]:59474 Closing
+[Sat Jun 20 09:00:51 2026] [::1]:59486 Accepted
+[Sat Jun 20 09:00:51 2026] [::1]:59486 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:00:51 2026] [::1]:59486 Closing
+[Sat Jun 20 09:00:51 2026] [::1]:59502 Accepted
+[Sat Jun 20 09:00:51 2026] [::1]:59502 [404]: GET /assets/images/solar-hero.jpg - No such file or directory
+[Sat Jun 20 09:00:51 2026] [::1]:59502 Closing
+[Sat Jun 20 09:00:52 2026] [::1]:59506 Accepted
+[Sat Jun 20 09:00:52 2026] [::1]:59506 [200]: GET /cart.php
+[Sat Jun 20 09:00:52 2026] [::1]:59506 Closing
+[Sat Jun 20 09:00:52 2026] [::1]:59508 Accepted
+[Sat Jun 20 09:00:52 2026] [::1]:59508 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:00:52 2026] [::1]:59508 Closing
+[Sat Jun 20 09:00:52 2026] [::1]:59524 Accepted
+[Sat Jun 20 09:00:52 2026] [::1]:59524 [302]: GET /checkout.php
+[Sat Jun 20 09:00:52 2026] [::1]:59524 Closing
+[Sat Jun 20 09:00:52 2026] [::1]:59532 Accepted
+[Sat Jun 20 09:00:52 2026] [::1]:59532 [200]: GET /login.php
+[Sat Jun 20 09:00:52 2026] [::1]:59532 Closing
+[Sat Jun 20 09:00:52 2026] [::1]:59546 Accepted
+[Sat Jun 20 09:00:52 2026] [::1]:59546 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:00:52 2026] [::1]:59546 Closing
+[Sat Jun 20 09:01:45 2026] [::1]:33878 Accepted
+[Sat Jun 20 09:01:45 2026] [::1]:33878 [200]: GET /index.php
+[Sat Jun 20 09:01:45 2026] [::1]:33878 Closing
+[Sat Jun 20 09:01:45 2026] [::1]:33880 Accepted
+[Sat Jun 20 09:01:45 2026] [::1]:33880 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:01:45 2026] [::1]:33880 Closing
+[Sat Jun 20 09:01:45 2026] [::1]:33884 Accepted
+[Sat Jun 20 09:01:45 2026] [::1]:33884 [404]: GET /assets/images/solar-hero.jpg - No such file or directory
+[Sat Jun 20 09:01:45 2026] [::1]:33884 Closing
+[Sat Jun 20 09:01:48 2026] [::1]:33892 Accepted
+[Sat Jun 20 09:01:48 2026] [::1]:33892 [302]: POST /login.php
+[Sat Jun 20 09:01:48 2026] [::1]:33892 Closing
+[Sat Jun 20 09:01:48 2026] [::1]:33898 Accepted
+[Sat Jun 20 09:01:48 2026] [::1]:33898 [200]: GET /index.php
+[Sat Jun 20 09:01:48 2026] [::1]:33898 Closing
+[Sat Jun 20 09:01:48 2026] [::1]:33908 Accepted
+[Sat Jun 20 09:01:48 2026] [::1]:33908 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:01:48 2026] [::1]:33908 Closing
+[Sat Jun 20 09:01:48 2026] [::1]:33924 Accepted
+[Sat Jun 20 09:01:48 2026] [::1]:33924 [404]: GET /assets/images/solar-hero.jpg - No such file or directory
+[Sat Jun 20 09:01:48 2026] [::1]:33924 Closing
+[Sat Jun 20 09:01:50 2026] [::1]:42200 Accepted
+[Sat Jun 20 09:01:50 2026] [::1]:42200 [200]: GET /admin.php
+[Sat Jun 20 09:01:50 2026] [::1]:42200 Closing
+[Sat Jun 20 09:01:50 2026] [::1]:42214 Accepted
+[Sat Jun 20 09:01:50 2026] [::1]:42214 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:01:50 2026] [::1]:42214 Closing
+[Sat Jun 20 09:01:53 2026] [::1]:42224 Accepted
+[Sat Jun 20 09:01:53 2026] [::1]:42224 [200]: POST /admin.php
+[Sat Jun 20 09:01:53 2026] [::1]:42224 Closing
+[Sat Jun 20 09:01:53 2026] [::1]:42226 Accepted
+[Sat Jun 20 09:01:53 2026] [::1]:42226 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:01:53 2026] [::1]:42226 Closing
+[Sat Jun 20 09:01:55 2026] [::1]:42240 Accepted
+[Sat Jun 20 09:01:55 2026] [::1]:42240 [302]: GET /logout.php
+[Sat Jun 20 09:01:55 2026] [::1]:42240 Closing
+[Sat Jun 20 09:01:55 2026] [::1]:42242 Accepted
+[Sat Jun 20 09:01:55 2026] [::1]:42242 [200]: GET /login.php
+[Sat Jun 20 09:01:55 2026] [::1]:42242 Closing
+[Sat Jun 20 09:01:55 2026] [::1]:42244 Accepted
+[Sat Jun 20 09:01:55 2026] [::1]:42244 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:01:55 2026] [::1]:42244 Closing
+[Sat Jun 20 09:01:56 2026] [::1]:42260 Accepted
+[Sat Jun 20 09:01:56 2026] [::1]:42260 [200]: GET /register.php
+[Sat Jun 20 09:01:56 2026] [::1]:42260 Closing
+[Sat Jun 20 09:01:56 2026] [::1]:42272 Accepted
+[Sat Jun 20 09:01:56 2026] [::1]:42272 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:01:56 2026] [::1]:42272 Closing
+[Sat Jun 20 09:01:58 2026] [::1]:42288 Accepted
+[Sat Jun 20 09:01:58 2026] [::1]:42288 [200]: POST /register.php
+[Sat Jun 20 09:01:58 2026] [::1]:42288 Closing
+[Sat Jun 20 09:01:58 2026] [::1]:42290 Accepted
+[Sat Jun 20 09:01:58 2026] [::1]:42290 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:01:58 2026] [::1]:42290 Closing
+[Sat Jun 20 09:02:00 2026] [::1]:56372 Accepted
+[Sat Jun 20 09:02:00 2026] [::1]:56372 [200]: GET /index.php
+[Sat Jun 20 09:02:00 2026] [::1]:56372 Closing
+[Sat Jun 20 09:02:00 2026] [::1]:56386 Accepted
+[Sat Jun 20 09:02:00 2026] [::1]:56386 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:02:00 2026] [::1]:56386 Closing
+[Sat Jun 20 09:02:00 2026] [::1]:56402 Accepted
+[Sat Jun 20 09:02:00 2026] [::1]:56402 [404]: GET /assets/images/solar-hero.jpg - No such file or directory
+[Sat Jun 20 09:02:00 2026] [::1]:56402 Closing
+[Sat Jun 20 09:02:01 2026] [::1]:56418 Accepted
+[Sat Jun 20 09:02:01 2026] [::1]:56418 [302]: GET /index.php?add=1
+[Sat Jun 20 09:02:01 2026] [::1]:56418 Closing
+[Sat Jun 20 09:02:01 2026] [::1]:56430 Accepted
+[Sat Jun 20 09:02:01 2026] [::1]:56430 [200]: GET /index.php
+[Sat Jun 20 09:02:01 2026] [::1]:56430 Closing
+[Sat Jun 20 09:02:01 2026] [::1]:56444 Accepted
+[Sat Jun 20 09:02:01 2026] [::1]:56444 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:02:01 2026] [::1]:56444 Closing
+[Sat Jun 20 09:02:01 2026] [::1]:56446 Accepted
+[Sat Jun 20 09:02:01 2026] [::1]:56446 [404]: GET /assets/images/solar-hero.jpg - No such file or directory
+[Sat Jun 20 09:02:01 2026] [::1]:56446 Closing
+[Sat Jun 20 09:02:02 2026] [::1]:56458 Accepted
+[Sat Jun 20 09:02:02 2026] [::1]:56458 [200]: GET /cart.php
+[Sat Jun 20 09:02:02 2026] [::1]:56458 Closing
+[Sat Jun 20 09:02:02 2026] [::1]:56474 Accepted
+[Sat Jun 20 09:02:02 2026] [::1]:56474 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:02:02 2026] [::1]:56474 Closing
+[Sat Jun 20 09:02:03 2026] [::1]:56486 Accepted
+[Sat Jun 20 09:02:03 2026] [::1]:56486 [302]: GET /checkout.php
+[Sat Jun 20 09:02:03 2026] [::1]:56486 Closing
+[Sat Jun 20 09:02:03 2026] [::1]:56502 Accepted
+[Sat Jun 20 09:02:03 2026] [::1]:56502 [200]: GET /login.php
+[Sat Jun 20 09:02:03 2026] [::1]:56502 Closing
+[Sat Jun 20 09:02:03 2026] [::1]:56514 Accepted
+[Sat Jun 20 09:02:03 2026] [::1]:56514 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:02:03 2026] [::1]:56514 Closing
+[Sat Jun 20 09:03:13 2026] [::1]:38932 Accepted
+[Sat Jun 20 09:03:13 2026] [::1]:38932 [200]: GET /index.php
+[Sat Jun 20 09:03:13 2026] [::1]:38932 Closing
+[Sat Jun 20 09:03:13 2026] [::1]:38936 Accepted
+[Sat Jun 20 09:03:13 2026] [::1]:38936 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:03:13 2026] [::1]:38936 Closing
+[Sat Jun 20 09:03:13 2026] [::1]:38942 Accepted
+[Sat Jun 20 09:03:13 2026] [::1]:38942 [404]: GET /assets/images/solar-hero.jpg - No such file or directory
+[Sat Jun 20 09:03:13 2026] [::1]:38942 Closing
+[Sat Jun 20 09:03:15 2026] [::1]:38952 Accepted
+[Sat Jun 20 09:03:16 2026] [::1]:38952 [302]: POST /login.php
+[Sat Jun 20 09:03:16 2026] [::1]:38952 Closing
+[Sat Jun 20 09:03:16 2026] [::1]:38960 Accepted
+[Sat Jun 20 09:03:16 2026] [::1]:38960 [200]: GET /index.php
+[Sat Jun 20 09:03:16 2026] [::1]:38960 Closing
+[Sat Jun 20 09:03:16 2026] [::1]:38970 Accepted
+[Sat Jun 20 09:03:16 2026] [::1]:38970 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:03:16 2026] [::1]:38970 Closing
+[Sat Jun 20 09:03:16 2026] [::1]:38982 Accepted
+[Sat Jun 20 09:03:16 2026] [::1]:38982 [404]: GET /assets/images/solar-hero.jpg - No such file or directory
+[Sat Jun 20 09:03:16 2026] [::1]:38982 Closing
+[Sat Jun 20 09:03:18 2026] [::1]:38994 Accepted
+[Sat Jun 20 09:03:18 2026] [::1]:38994 [200]: GET /admin.php
+[Sat Jun 20 09:03:18 2026] [::1]:38994 Closing
+[Sat Jun 20 09:03:18 2026] [::1]:39000 Accepted
+[Sat Jun 20 09:03:18 2026] [::1]:39000 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:03:18 2026] [::1]:39000 Closing
+[Sat Jun 20 09:03:21 2026] [::1]:38614 Accepted
+[Sat Jun 20 09:03:21 2026] [::1]:38614 [200]: POST /admin.php
+[Sat Jun 20 09:03:21 2026] [::1]:38614 Closing
+[Sat Jun 20 09:03:21 2026] [::1]:38626 Accepted
+[Sat Jun 20 09:03:21 2026] [::1]:38626 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:03:21 2026] [::1]:38626 Closing
+[Sat Jun 20 09:03:23 2026] [::1]:38634 Accepted
+[Sat Jun 20 09:03:23 2026] [::1]:38634 [302]: GET /logout.php
+[Sat Jun 20 09:03:23 2026] [::1]:38634 Closing
+[Sat Jun 20 09:03:23 2026] [::1]:38644 Accepted
+[Sat Jun 20 09:03:23 2026] [::1]:38644 [200]: GET /login.php
+[Sat Jun 20 09:03:23 2026] [::1]:38644 Closing
+[Sat Jun 20 09:03:23 2026] [::1]:38660 Accepted
+[Sat Jun 20 09:03:23 2026] [::1]:38660 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:03:23 2026] [::1]:38660 Closing
+[Sat Jun 20 09:03:24 2026] [::1]:38664 Accepted
+[Sat Jun 20 09:03:24 2026] [::1]:38664 [200]: GET /register.php
+[Sat Jun 20 09:03:24 2026] [::1]:38664 Closing
+[Sat Jun 20 09:03:24 2026] [::1]:38680 Accepted
+[Sat Jun 20 09:03:24 2026] [::1]:38680 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:03:24 2026] [::1]:38680 Closing
+[Sat Jun 20 09:03:26 2026] [::1]:38696 Accepted
+[Sat Jun 20 09:03:26 2026] [::1]:38696 [302]: POST /register.php
+[Sat Jun 20 09:03:26 2026] [::1]:38696 Closing
+[Sat Jun 20 09:03:26 2026] [::1]:38698 Accepted
+[Sat Jun 20 09:03:26 2026] [::1]:38698 [200]: GET /login.php?registered=1
+[Sat Jun 20 09:03:26 2026] [::1]:38698 Closing
+[Sat Jun 20 09:03:26 2026] [::1]:38700 Accepted
+[Sat Jun 20 09:03:26 2026] [::1]:38700 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:03:26 2026] [::1]:38700 Closing
+[Sat Jun 20 09:03:29 2026] [::1]:38706 Accepted
+[Sat Jun 20 09:03:29 2026] [::1]:38706 [302]: POST /login.php
+[Sat Jun 20 09:03:29 2026] [::1]:38706 Closing
+[Sat Jun 20 09:03:29 2026] [::1]:38718 Accepted
+[Sat Jun 20 09:03:29 2026] [::1]:38718 [200]: GET /index.php
+[Sat Jun 20 09:03:29 2026] [::1]:38718 Closing
+[Sat Jun 20 09:03:29 2026] [::1]:38730 Accepted
+[Sat Jun 20 09:03:29 2026] [::1]:38730 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:03:29 2026] [::1]:38730 Closing
+[Sat Jun 20 09:03:29 2026] [::1]:38738 Accepted
+[Sat Jun 20 09:03:29 2026] [::1]:38738 [404]: GET /assets/images/solar-hero.jpg - No such file or directory
+[Sat Jun 20 09:03:29 2026] [::1]:38738 Closing
+[Sat Jun 20 09:03:31 2026] [::1]:40866 Accepted
+[Sat Jun 20 09:03:31 2026] [::1]:40866 [200]: GET /index.php
+[Sat Jun 20 09:03:31 2026] [::1]:40866 Closing
+[Sat Jun 20 09:03:31 2026] [::1]:40880 Accepted
+[Sat Jun 20 09:03:31 2026] [::1]:40880 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:03:31 2026] [::1]:40880 Closing
+[Sat Jun 20 09:03:31 2026] [::1]:40890 Accepted
+[Sat Jun 20 09:03:31 2026] [::1]:40890 [404]: GET /assets/images/solar-hero.jpg - No such file or directory
+[Sat Jun 20 09:03:31 2026] [::1]:40890 Closing
+[Sat Jun 20 09:03:32 2026] [::1]:40892 Accepted
+[Sat Jun 20 09:03:32 2026] [::1]:40892 [302]: GET /index.php?add=1
+[Sat Jun 20 09:03:32 2026] [::1]:40892 Closing
+[Sat Jun 20 09:03:32 2026] [::1]:40904 Accepted
+[Sat Jun 20 09:03:32 2026] [::1]:40904 [200]: GET /index.php
+[Sat Jun 20 09:03:32 2026] [::1]:40904 Closing
+[Sat Jun 20 09:03:32 2026] [::1]:40910 Accepted
+[Sat Jun 20 09:03:32 2026] [::1]:40910 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:03:32 2026] [::1]:40910 Closing
+[Sat Jun 20 09:03:32 2026] [::1]:40912 Accepted
+[Sat Jun 20 09:03:32 2026] [::1]:40912 [404]: GET /assets/images/solar-hero.jpg - No such file or directory
+[Sat Jun 20 09:03:32 2026] [::1]:40912 Closing
+[Sat Jun 20 09:03:33 2026] [::1]:40922 Accepted
+[Sat Jun 20 09:03:33 2026] [::1]:40922 [200]: GET /cart.php
+[Sat Jun 20 09:03:33 2026] [::1]:40922 Closing
+[Sat Jun 20 09:03:33 2026] [::1]:40932 Accepted
+[Sat Jun 20 09:03:33 2026] [::1]:40932 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:03:33 2026] [::1]:40932 Closing
+[Sat Jun 20 09:03:34 2026] [::1]:40948 Accepted
+[Sat Jun 20 09:03:34 2026] [::1]:40948 [200]: GET /checkout.php
+[Sat Jun 20 09:03:34 2026] [::1]:40948 Closing
+[Sat Jun 20 09:03:34 2026] [::1]:40954 Accepted
+[Sat Jun 20 09:03:34 2026] [::1]:40954 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:03:34 2026] [::1]:40954 Closing
+[Sat Jun 20 09:03:37 2026] [::1]:40964 Accepted
+[Sat Jun 20 09:03:37 2026] [::1]:40964 [302]: POST /checkout.php
+[Sat Jun 20 09:03:37 2026] [::1]:40964 Closing
+[Sat Jun 20 09:03:37 2026] [::1]:40968 Accepted
+[Sat Jun 20 09:03:37 2026] [::1]:40968 [200]: GET /dashboard.php?success=1
+[Sat Jun 20 09:03:37 2026] [::1]:40968 Closing
+[Sat Jun 20 09:03:37 2026] [::1]:40970 Accepted
+[Sat Jun 20 09:03:37 2026] [::1]:40970 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:03:37 2026] [::1]:40970 Closing
+[Sat Jun 20 09:03:39 2026] [::1]:40980 Accepted
+[Sat Jun 20 09:03:39 2026] [::1]:40980 [200]: GET /dashboard.php
+[Sat Jun 20 09:03:39 2026] [::1]:40980 Closing
+[Sat Jun 20 09:03:39 2026] [::1]:40984 Accepted
+[Sat Jun 20 09:03:39 2026] [::1]:40984 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:03:39 2026] [::1]:40984 Closing
+[Sat Jun 20 09:03:41 2026] [::1]:39082 Accepted
+[Sat Jun 20 09:03:41 2026] [::1]:39082 [302]: GET /logout.php
+[Sat Jun 20 09:03:41 2026] [::1]:39082 Closing
+[Sat Jun 20 09:03:41 2026] [::1]:39096 Accepted
+[Sat Jun 20 09:03:41 2026] [::1]:39096 [200]: GET /login.php
+[Sat Jun 20 09:03:41 2026] [::1]:39096 Closing
+[Sat Jun 20 09:03:41 2026] [::1]:39104 Accepted
+[Sat Jun 20 09:03:41 2026] [::1]:39104 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:03:41 2026] [::1]:39104 Closing
+[Sat Jun 20 09:03:43 2026] [::1]:39114 Accepted
+[Sat Jun 20 09:03:43 2026] [::1]:39114 [302]: POST /login.php
+[Sat Jun 20 09:03:43 2026] [::1]:39114 Closing
+[Sat Jun 20 09:03:43 2026] [::1]:39120 Accepted
+[Sat Jun 20 09:03:43 2026] [::1]:39120 [200]: GET /index.php
+[Sat Jun 20 09:03:43 2026] [::1]:39120 Closing
+[Sat Jun 20 09:03:43 2026] [::1]:39128 Accepted
+[Sat Jun 20 09:03:43 2026] [::1]:39128 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:03:43 2026] [::1]:39128 Closing
+[Sat Jun 20 09:03:43 2026] [::1]:39138 Accepted
+[Sat Jun 20 09:03:43 2026] [::1]:39138 [404]: GET /assets/images/solar-hero.jpg - No such file or directory
+[Sat Jun 20 09:03:43 2026] [::1]:39138 Closing
+[Sat Jun 20 09:03:45 2026] [::1]:39140 Accepted
+[Sat Jun 20 09:03:45 2026] [::1]:39140 [200]: GET /admin.php
+[Sat Jun 20 09:03:45 2026] [::1]:39140 Closing
+[Sat Jun 20 09:03:45 2026] [::1]:39144 Accepted
+[Sat Jun 20 09:03:45 2026] [::1]:39144 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:03:45 2026] [::1]:39144 Closing
+[Sat Jun 20 09:05:33 2026] [::1]:52610 Accepted
+[Sat Jun 20 09:05:33 2026] [::1]:52610 [200]: GET /register.php
+[Sat Jun 20 09:05:33 2026] [::1]:52610 Closing
+[Sat Jun 20 09:05:33 2026] [::1]:52616 Accepted
+[Sat Jun 20 09:05:33 2026] [::1]:52616 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:05:33 2026] [::1]:52616 Closing
+[Sat Jun 20 09:05:33 2026] [::1]:52622 Accepted
+[Sat Jun 20 09:05:33 2026] [::1]:52622 [302]: POST /register.php
+[Sat Jun 20 09:05:33 2026] [::1]:52622 Closing
+[Sat Jun 20 09:05:33 2026] [::1]:52636 Accepted
+[Sat Jun 20 09:05:33 2026] [::1]:52636 [200]: GET /login.php?registered=1
+[Sat Jun 20 09:05:33 2026] [::1]:52636 Closing
+[Sat Jun 20 09:05:33 2026] [::1]:52640 Accepted
+[Sat Jun 20 09:05:33 2026] [::1]:52640 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:05:33 2026] [::1]:52640 Closing
+[Sat Jun 20 09:05:34 2026] [::1]:52648 Accepted
+[Sat Jun 20 09:05:34 2026] [::1]:52648 [200]: GET /register.php
+[Sat Jun 20 09:05:34 2026] [::1]:52648 Closing
+[Sat Jun 20 09:05:34 2026] [::1]:52656 Accepted
+[Sat Jun 20 09:05:34 2026] [::1]:52656 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:05:34 2026] [::1]:52656 Closing
+[Sat Jun 20 09:05:34 2026] [::1]:52658 Accepted
+[Sat Jun 20 09:05:34 2026] [::1]:52658 [302]: POST /register.php
+[Sat Jun 20 09:05:34 2026] [::1]:52658 Closing
+[Sat Jun 20 09:05:34 2026] [::1]:52660 Accepted
+[Sat Jun 20 09:05:34 2026] [::1]:52660 [200]: GET /login.php?registered=1
+[Sat Jun 20 09:05:34 2026] [::1]:52660 Closing
+[Sat Jun 20 09:05:34 2026] [::1]:52666 Accepted
+[Sat Jun 20 09:05:34 2026] [::1]:52666 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:05:34 2026] [::1]:52666 Closing
+[Sat Jun 20 09:05:36 2026] [::1]:52670 Accepted
+[Sat Jun 20 09:05:36 2026] [::1]:52670 [302]: POST /login.php
+[Sat Jun 20 09:05:36 2026] [::1]:52670 Closing
+[Sat Jun 20 09:05:36 2026] [::1]:52676 Accepted
+[Sat Jun 20 09:05:36 2026] [::1]:52676 [200]: GET /index.php
+[Sat Jun 20 09:05:36 2026] [::1]:52676 Closing
+[Sat Jun 20 09:05:36 2026] [::1]:52686 Accepted
+[Sat Jun 20 09:05:36 2026] [::1]:52686 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:05:36 2026] [::1]:52686 Closing
+[Sat Jun 20 09:05:36 2026] [::1]:52698 Accepted
+[Sat Jun 20 09:05:36 2026] [::1]:52698 [404]: GET /assets/images/solar-hero.jpg - No such file or directory
+[Sat Jun 20 09:05:36 2026] [::1]:52698 Closing
+[Sat Jun 20 09:05:37 2026] [::1]:52706 Accepted
+[Sat Jun 20 09:05:37 2026] [::1]:52706 [200]: GET /index.php
+[Sat Jun 20 09:05:37 2026] [::1]:52706 Closing
+[Sat Jun 20 09:05:37 2026] [::1]:52714 Accepted
+[Sat Jun 20 09:05:37 2026] [::1]:52714 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:05:37 2026] [::1]:52714 Closing
+[Sat Jun 20 09:05:37 2026] [::1]:52720 Accepted
+[Sat Jun 20 09:05:37 2026] [::1]:52720 [404]: GET /assets/images/solar-hero.jpg - No such file or directory
+[Sat Jun 20 09:05:37 2026] [::1]:52720 Closing
+[Sat Jun 20 09:05:37 2026] [::1]:52736 Accepted
+[Sat Jun 20 09:05:37 2026] [::1]:52736 [302]: GET /index.php?add=1
+[Sat Jun 20 09:05:37 2026] [::1]:52736 Closing
+[Sat Jun 20 09:05:37 2026] [::1]:52746 Accepted
+[Sat Jun 20 09:05:37 2026] [::1]:52746 [200]: GET /index.php
+[Sat Jun 20 09:05:37 2026] [::1]:52746 Closing
+[Sat Jun 20 09:05:37 2026] [::1]:52762 Accepted
+[Sat Jun 20 09:05:37 2026] [::1]:52762 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:05:37 2026] [::1]:52762 Closing
+[Sat Jun 20 09:05:37 2026] [::1]:52766 Accepted
+[Sat Jun 20 09:05:37 2026] [::1]:52766 [404]: GET /assets/images/solar-hero.jpg - No such file or directory
+[Sat Jun 20 09:05:37 2026] [::1]:52766 Closing
+[Sat Jun 20 09:05:38 2026] [::1]:52774 Accepted
+[Sat Jun 20 09:05:38 2026] [::1]:52774 [200]: GET /checkout.php
+[Sat Jun 20 09:05:38 2026] [::1]:52774 Closing
+[Sat Jun 20 09:05:38 2026] [::1]:52782 Accepted
+[Sat Jun 20 09:05:38 2026] [::1]:52782 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:05:38 2026] [::1]:52782 Closing
+[Sat Jun 20 09:05:38 2026] [::1]:52796 Accepted
+[Sat Jun 20 09:05:38 2026] [::1]:52796 [302]: POST /checkout.php
+[Sat Jun 20 09:05:38 2026] [::1]:52796 Closing
+[Sat Jun 20 09:05:38 2026] [::1]:52798 Accepted
+[Sat Jun 20 09:05:38 2026] [::1]:52798 [200]: GET /dashboard.php?success=1
+[Sat Jun 20 09:05:38 2026] [::1]:52798 Closing
+[Sat Jun 20 09:05:38 2026] [::1]:52808 Accepted
+[Sat Jun 20 09:05:38 2026] [::1]:52808 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:05:38 2026] [::1]:52808 Closing
+[Sat Jun 20 09:05:39 2026] [::1]:52812 Accepted
+[Sat Jun 20 09:05:39 2026] [::1]:52812 [302]: GET /logout.php
+[Sat Jun 20 09:05:39 2026] [::1]:52812 Closing
+[Sat Jun 20 09:05:39 2026] [::1]:52822 Accepted
+[Sat Jun 20 09:05:39 2026] [::1]:52822 [200]: GET /login.php
+[Sat Jun 20 09:05:39 2026] [::1]:52822 Closing
+[Sat Jun 20 09:05:39 2026] [::1]:52824 Accepted
+[Sat Jun 20 09:05:39 2026] [::1]:52824 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:05:39 2026] [::1]:52824 Closing
+[Sat Jun 20 09:05:40 2026] [::1]:41528 Accepted
+[Sat Jun 20 09:05:40 2026] [::1]:41528 [302]: POST /login.php
+[Sat Jun 20 09:05:40 2026] [::1]:41528 Closing
+[Sat Jun 20 09:05:40 2026] [::1]:41532 Accepted
+[Sat Jun 20 09:05:40 2026] [::1]:41532 [200]: GET /index.php
+[Sat Jun 20 09:05:40 2026] [::1]:41532 Closing
+[Sat Jun 20 09:05:40 2026] [::1]:41540 Accepted
+[Sat Jun 20 09:05:40 2026] [::1]:41540 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:05:40 2026] [::1]:41540 Closing
+[Sat Jun 20 09:05:40 2026] [::1]:41548 Accepted
+[Sat Jun 20 09:05:40 2026] [::1]:41548 [404]: GET /assets/images/solar-hero.jpg - No such file or directory
+[Sat Jun 20 09:05:40 2026] [::1]:41548 Closing
+[Sat Jun 20 09:05:41 2026] [::1]:41550 Accepted
+[Sat Jun 20 09:05:41 2026] [::1]:41550 [200]: GET /dashboard.php
+[Sat Jun 20 09:05:41 2026] [::1]:41550 Closing
+[Sat Jun 20 09:05:41 2026] [::1]:41554 Accepted
+[Sat Jun 20 09:05:41 2026] [::1]:41554 [200]: GET /assets/css/style.css
+[Sat Jun 20 09:05:41 2026] [::1]:41554 Closing

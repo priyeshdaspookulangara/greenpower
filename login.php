@@ -23,37 +23,38 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $error = "Invalid email or password.";
     }
 }
+
+include 'includes/header.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Login - Solar Shop</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    <div class="container" style="max-width: 400px; margin-top: 100px;">
-        <div class="glass-card">
-            <h2 class="neon-text">Login</h2>
-            <?php if ($error): ?>
-                <p style="color: #ff4d4d;"><?php echo $error; ?></p>
-            <?php endif; ?>
-            <form method="POST">
-                <label>Email Address</label>
-                <input type="email" name="email" required>
 
-                <label>Password</label>
-                <input type="password" name="password" required>
+<div class="container" style="max-width: 500px;">
+    <div class="glass-card">
+        <h2 class="neon-text">Login</h2>
+        <?php if ($error): ?>
+            <p style="color: #ff4d4d; margin-bottom: 15px;"><?php echo $error; ?></p>
+        <?php endif; ?>
 
-                <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
-            </form>
-            <p style="margin-top: 15px; text-align: center;">
-                Need an account? <a href="register.php" style="color: var(--neon-blue);">Register here</a>
-            </p>
-            <p style="text-align: center;">
-                Existing Burfee Member? <a href="burfee_login.php" style="color: var(--neon-blue);">Login here</a>
-            </p>
-        </div>
+        <form method="POST">
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 5px;">Email Address</label>
+                <input type="email" name="email" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.1); color: white;">
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <label style="display: block; margin-bottom: 5px;">Password</label>
+                <input type="password" name="password" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.1); color: white;">
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
+        </form>
+
+        <p style="margin-top: 20px; text-align: center; font-size: 0.9rem;">
+            Need an account? <a href="register.php" style="color: var(--neon-blue);">Register here</a>
+        </p>
+        <p style="text-align: center; font-size: 0.9rem; margin-top: 10px;">
+            Existing Burfee Member? <a href="burfee_login.php" style="color: var(--neon-blue);">Login here</a>
+        </p>
     </div>
-</body>
-</html>
+</div>
+
+<?php include 'includes/footer.php'; ?>
