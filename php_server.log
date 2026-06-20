@@ -2306,3 +2306,66 @@
 [Sat Jun 20 11:36:06 2026] [::1]:35268 Accepted
 [Sat Jun 20 11:36:06 2026] [::1]:35268 [200]: GET /assets/css/style.css
 [Sat Jun 20 11:36:06 2026] [::1]:35268 Closing
+[Sat Jun 20 12:06:24 2026] [::1]:45666 Accepted
+[Sat Jun 20 12:06:25 2026] [::1]:45666 [200]: GET /burfee_login.php
+[Sat Jun 20 12:06:25 2026] [::1]:45666 Closing
+[Sat Jun 20 12:06:25 2026] [::1]:45674 Accepted
+[Sat Jun 20 12:06:25 2026] [::1]:45674 [200]: GET /assets/css/style.css
+[Sat Jun 20 12:06:25 2026] [::1]:45674 Closing
+[Sat Jun 20 12:07:49 2026] [::1]:37938 Accepted
+[Sat Jun 20 12:07:49 2026] [::1]:37938 [200]: GET /burfee_login.php
+[Sat Jun 20 12:07:49 2026] [::1]:37938 Closing
+[Sat Jun 20 12:07:49 2026] [::1]:37954 Accepted
+[Sat Jun 20 12:07:49 2026] [::1]:37954 [200]: GET /assets/css/style.css
+[Sat Jun 20 12:07:49 2026] [::1]:37954 Closing
+[Sat Jun 20 12:07:49 2026] [::1]:37970 Accepted
+[Sat Jun 20 12:07:49 2026] [::1]:37970 [302]: POST /burfee_login.php
+[Sat Jun 20 12:07:49 2026] [::1]:37970 Closing
+[Sat Jun 20 12:07:49 2026] [::1]:37974 Accepted
+[Sat Jun 20 12:07:49 2026] [::1]:37974 [200]: GET /index.php
+[Sat Jun 20 12:07:49 2026] [::1]:37974 Closing
+[Sat Jun 20 12:07:49 2026] [::1]:37976 Accepted
+[Sat Jun 20 12:07:49 2026] [::1]:37976 [200]: GET /assets/css/style.css
+[Sat Jun 20 12:07:49 2026] [::1]:37976 Closing
+[Sat Jun 20 12:07:49 2026] [::1]:37980 Accepted
+[Sat Jun 20 12:07:49 2026] [::1]:37990 Accepted
+[Sat Jun 20 12:07:49 2026] [::1]:37980 [200]: GET /assets/images/solar-panel-grid.jpg
+[Sat Jun 20 12:07:49 2026] [::1]:37990 [200]: GET /assets/images/battery-grid.jpg
+[Sat Jun 20 12:07:49 2026] [::1]:37980 Closing
+[Sat Jun 20 12:07:49 2026] [::1]:37990 Closing
+[Sat Jun 20 12:07:49 2026] [::1]:38000 Accepted
+[Sat Jun 20 12:07:49 2026] [::1]:38000 [200]: GET /assets/images/solar-maintenance.jpg
+[Sat Jun 20 12:07:49 2026] [::1]:38000 Closing
+[Sat Jun 20 12:07:49 2026] [::1]:38008 Accepted
+[Sat Jun 20 12:07:49 2026] [::1]:38008 [200]: GET /assets/images/solar-hero.jpg
+[Sat Jun 20 12:07:49 2026] [::1]:38008 Closing
+[Sat Jun 20 12:07:49 2026] [::1]:38012 Accepted
+[Sat Jun 20 12:07:49 2026] [::1]:38012 [200]: GET /dashboard.php
+[Sat Jun 20 12:07:49 2026] [::1]:38012 Closing
+[Sat Jun 20 12:07:49 2026] [::1]:38018 Accepted
+[Sat Jun 20 12:07:49 2026] [::1]:38018 [200]: GET /assets/css/style.css
+[Sat Jun 20 12:07:49 2026] [::1]:38018 Closing
+[Sat Jun 20 12:10:08 2026] [::1]:54452 Accepted
+[Sat Jun 20 12:10:08 2026] [::1]:54452 [200]: GET /index.php
+[Sat Jun 20 12:10:08 2026] [::1]:54452 Closing
+[Sat Jun 20 12:10:08 2026] [::1]:54462 Accepted
+[Sat Jun 20 12:10:08 2026] [::1]:54462 [200]: GET /assets/css/style.css
+[Sat Jun 20 12:10:08 2026] [::1]:54462 Closing
+[Sat Jun 20 12:10:08 2026] [::1]:54472 Accepted
+[Sat Jun 20 12:10:08 2026] [::1]:54484 Accepted
+[Sat Jun 20 12:10:08 2026] [::1]:54490 Accepted
+[Sat Jun 20 12:10:08 2026] [::1]:54472 [200]: GET /assets/images/solar-panel-grid.jpg
+[Sat Jun 20 12:10:08 2026] [::1]:54484 [200]: GET /assets/images/battery-grid.jpg
+[Sat Jun 20 12:10:08 2026] [::1]:54472 Closing
+[Sat Jun 20 12:10:08 2026] [::1]:54484 Closing
+[Sat Jun 20 12:10:08 2026] [::1]:54490 [200]: GET /assets/images/solar-maintenance.jpg
+[Sat Jun 20 12:10:08 2026] [::1]:54490 Closing
+[Sat Jun 20 12:10:08 2026] [::1]:54506 Accepted
+[Sat Jun 20 12:10:08 2026] [::1]:54506 [200]: GET /assets/images/solar-hero.jpg
+[Sat Jun 20 12:10:08 2026] [::1]:54506 Closing
+[Sat Jun 20 12:10:09 2026] [::1]:54516 Accepted
+[Sat Jun 20 12:10:09 2026] [::1]:54516 [200]: GET /burfee_login.php
+[Sat Jun 20 12:10:09 2026] [::1]:54516 Closing
+[Sat Jun 20 12:10:09 2026] [::1]:54518 Accepted
+[Sat Jun 20 12:10:09 2026] [::1]:54518 [200]: GET /assets/css/style.css
+[Sat Jun 20 12:10:09 2026] [::1]:54518 Closing

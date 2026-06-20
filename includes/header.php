@@ -33,6 +33,7 @@ require_once __DIR__ . '/functions.php';
                     <li class="nav-item"><a href="logout.php" class="nav-btn-signup">LOGOUT</a></li>
                 <?php else: ?>
                     <li class="nav-item"><a href="index.php#products">PRODUCTS</a></li>
+                    <li class="nav-item"><a href="burfee_login.php" style="color: #ffcc00; font-weight: bold;">BURFEE LOGIN</a></li>
                     <li class="nav-item">
                         <a href="#" onclick="openLoginModal(event)">SIGN IN</a>
                     </li>

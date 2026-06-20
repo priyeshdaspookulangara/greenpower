@@ -10,46 +10,83 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $member_id = $_POST['member_id'];
     $password = $_POST['password'];
 
-    // Check existing legacy customer table
-    // Using MemberId and MemberPass as per production requirements
-    $stmt = $pdo->prepare("SELECT * FROM customer WHERE MemberId = ?");
-    $stmt->execute([$member_id]);
-    $member = $stmt->fetch();
+    // 🕵️ Debug Log - Helping the developer find the mismatch
+    $log_file = 'burfee_auth.log';
+    $timestamp = date('Y-m-d H:i:s');
 
-    // Legacy passwords might be plain text or hashed
-    $authenticated = false;
-    if ($member) {
-        if ($member['MemberPass'] === $password) {
-            $authenticated = true;
-        } elseif (strpos($member['MemberPass'], '$2y$') === 0 && password_verify($password, $member['MemberPass'])) {
-            $authenticated = true;
+    try {
+        // We attempt to find the column names dynamically to avoid crashes
+        $stmt = $pdo->query("SELECT * FROM customer LIMIT 1");
+        $sample = $stmt->fetch();
+
+        $col_id = 'MemberId';
+        $col_pass = 'MemberPass';
+        $col_name = 'FullName';
+        $col_cibil = 'CibilStatus';
+
+        if ($sample) {
+            $cols = array_keys($sample);
+            // Fallback logic if production names differ in casing or style
+            foreach (['member_id', 'memberid', 'MemberID', 'email'] as $f) {
+                if (in_array($f, $cols)) { $col_id = $f; break; }
+            }
+            foreach (['member_pass', 'memberpass', 'MemberPassword', 'password'] as $f) {
+                if (in_array($f, $cols)) { $col_pass = $f; break; }
+            }
+            foreach (['full_name', 'name', 'FullName', 'Name'] as $f) {
+                if (in_array($f, $cols)) { $col_name = $f; break; }
+            }
         }
-    }
 
-    if ($authenticated) {
-        // Find if user already exists in main users table
-        // We use the MemberId as the unique identifier in the email column if they don't have an email
-        $stmt = $pdo->prepare("SELECT * FROM users WHERE email = ?");
-        $stmt->execute([$member['MemberId']]);
-        $user = $stmt->fetch();
+        $stmt = $pdo->prepare("SELECT * FROM customer WHERE $col_id = ?");
+        $stmt->execute([$member_id]);
+        $member = $stmt->fetch();
 
-        if (!$user) {
-            // Auto-register them in our main system
-            $stmt = $pdo->prepare("INSERT INTO users (name, email, password, role, cibil_status) VALUES (?, ?, ?, 'customer', ?)");
-            $stmt->execute([$member['FullName'], $member['MemberId'], password_hash($password, PASSWORD_DEFAULT), $member['CibilStatus'] ?? 'good']);
-            $user_id = $pdo->lastInsertId();
-
-            $_SESSION['user_id'] = $user_id;
-            $_SESSION['role'] = 'customer';
-            $_SESSION['name'] = $member['FullName'];
+        $authenticated = false;
+        if ($member) {
+            // Support both plain text (old legacy) and hashed (migrated/modern legacy)
+            if ($member[$col_pass] === $password) {
+                $authenticated = true;
+            } elseif (password_verify($password, $member[$col_pass])) {
+                $authenticated = true;
+            } else {
+                file_put_contents($log_file, "[$timestamp] Fail: Password mismatch for $member_id\n", FILE_APPEND);
+            }
         } else {
-            $_SESSION['user_id'] = $user['id'];
-            $_SESSION['role'] = $user['role'];
-            $_SESSION['name'] = $user['name'];
+            file_put_contents($log_file, "[$timestamp] Fail: Member $member_id not found in table using column $col_id\n", FILE_APPEND);
         }
-        redirect('index.php');
-    } else {
-        $error = "Invalid Member ID or Password.";
+
+        if ($authenticated) {
+            // Find or Migrate to 'users' table
+            $stmt = $pdo->prepare("SELECT * FROM users WHERE email = ?");
+            $stmt->execute([$member[$col_id]]);
+            $user = $stmt->fetch();
+
+            if (!$user) {
+                $status = $member[$col_cibil] ?? 'good';
+                $name = $member[$col_name] ?? $member[$col_id];
+
+                $stmt = $pdo->prepare("INSERT INTO users (name, email, password, role, cibil_status) VALUES (?, ?, ?, 'customer', ?)");
+                $stmt->execute([$name, $member[$col_id], password_hash($password, PASSWORD_DEFAULT), $status]);
+                $user_id = $pdo->lastInsertId();
+
+                $_SESSION['user_id'] = $user_id;
+                $_SESSION['role'] = 'customer';
+                $_SESSION['name'] = $name;
+            } else {
+                $_SESSION['user_id'] = $user['id'];
+                $_SESSION['role'] = $user['role'];
+                $_SESSION['name'] = $user['name'];
+            }
+            file_put_contents($log_file, "[$timestamp] Success: $member_id logged in\n", FILE_APPEND);
+            redirect('index.php');
+        } else {
+            $error = "Invalid Member ID or Password.";
+        }
+
+    } catch (PDOException $e) {
+        $error = "Auth System Error. Please contact admin.";
+        file_put_contents($log_file, "[$timestamp] DB Error: " . $e->getMessage() . "\n", FILE_APPEND);
     }
 }
 
@@ -62,21 +99,21 @@ include 'includes/header.php';
         <p style="color: #aaa; margin-bottom: 20px; font-size: 0.9rem;">Access the SolarShop using your legacy Burfee Member ID.</p>
 
         <?php if ($error): ?>
-            <p style="color: #ff4d4d; margin-bottom: 15px;"><?php echo $error; ?></p>
+            <p style="color: #ff4d4d; margin-bottom: 15px; font-weight: bold;"><?php echo $error; ?></p>
         <?php endif; ?>
 
         <form method="POST">
             <div style="margin-bottom: 15px;">
                 <label style="display: block; margin-bottom: 5px;">Member ID</label>
-                <input type="text" name="member_id" required placeholder="Enter Member ID" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.1); color: white;">
+                <input type="text" name="member_id" required placeholder="Enter Member ID" style="width: 100%; padding: 12px; border-radius: 5px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.1); color: white;">
             </div>
 
             <div style="margin-bottom: 20px;">
                 <label style="display: block; margin-bottom: 5px;">Password</label>
-                <input type="password" name="password" required placeholder="Enter Password" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.1); color: white;">
+                <input type="password" name="password" required placeholder="Enter Password" style="width: 100%; padding: 12px; border-radius: 5px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.1); color: white;">
             </div>
 
-            <button type="submit" class="btn btn-primary" style="width: 100%;">Authenticate Member</button>
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px;">Authenticate Member</button>
         </form>
 
         <p style="margin-top: 20px; text-align: center; font-size: 0.9rem;">
