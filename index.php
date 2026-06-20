@@ -1,16 +1,6 @@
 <?php
 require_once 'includes/functions.php';
 
-// Simple cart logic
-if (isset($_GET['add'])) {
-    $product_id = (int)$_GET['add'];
-    if (!isset($_SESSION['cart'])) {
-        $_SESSION['cart'] = [];
-    }
-    $_SESSION['cart'][] = $product_id;
-    redirect('index.php');
-}
-
 $products = $pdo->query("SELECT * FROM products")->fetchAll();
 include 'includes/header.php';
 ?>
@@ -27,7 +17,7 @@ include 'includes/header.php';
 
     <div class="product-grid">
         <?php foreach ($products as $p):
-            $stmt = $pdo->prepare("SELECT * FROM product_properties WHERE product_id = ?");
+            $stmt = $pdo->prepare("SELECT * FROM product_properties WHERE product_id = ? LIMIT 3");
             $stmt->execute([$p['id']]);
             $props = $stmt->fetchAll();
         ?>
@@ -38,11 +28,14 @@ include 'includes/header.php';
 
                 <ul class="property-list">
                     <?php foreach ($props as $prop): ?>
-                        <li><strong><?php echo htmlspecialchars($prop['property_name']); ?>:</strong> <?php echo htmlspecialchars($prop['property_value']); ?></li>
+                        <li style="font-size: 0.8rem;"><strong><?php echo htmlspecialchars($prop['property_name']); ?>:</strong> <?php echo htmlspecialchars($prop['property_value']); ?></li>
                     <?php endforeach; ?>
                 </ul>
 
-                <a href="index.php?add=<?php echo $p['id']; ?>" class="btn btn-primary" style="width: 100%; text-align: center;">Add to Cart</a>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                    <a href="product.php?id=<?php echo $p['id']; ?>" class="btn" style="background: rgba(255,255,255,0.1); color: #fff; text-align: center;">Details</a>
+                    <a href="index.php?add=<?php echo $p['id']; ?>" class="btn btn-primary" style="text-align: center;">Quick Add</a>
+                </div>
             </div>
         <?php endforeach; ?>
     </div>
