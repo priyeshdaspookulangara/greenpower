@@ -22,6 +22,11 @@ $stmt = $pdo->prepare("SELECT SUM(amount) as total FROM transactions WHERE user_
 $stmt->execute([$user['id']]);
 $referral_income_total = $stmt->fetch()['total'] ?? 0;
 
+// Fetch Additional Packages
+$stmt = $pdo->prepare("SELECT * FROM additional_packages WHERE user_id = ? ORDER BY created_at DESC");
+$stmt->execute([$user['id']]);
+$additional_packages = $stmt->fetchAll();
+
 $referral_link = (isset($_SERVER['HTTPS']) ? "https://" : "http://") . $_SERVER['HTTP_HOST'] . "/register.php?ref=" . ($user['email'] ?? '');
 
 include 'includes/header.php';
@@ -46,10 +51,26 @@ include 'includes/header.php';
         </div>
     </div>
 
-    <div class="glass-card" style="margin-bottom: 2rem;">
-        <div class="label" style="margin-bottom: 10px;">Unique Referral Link</div>
-        <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px; border: 1px dashed var(--neon-green);">
-            <code style="color: var(--neon-green); font-size: 1.1rem;"><?php echo $referral_link; ?></code>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+        <div class="glass-card">
+            <div class="label" style="margin-bottom: 10px;">Unique Referral Link</div>
+            <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px; border: 1px dashed var(--neon-green);">
+                <code style="color: var(--neon-green); font-size: 0.9rem; word-break: break-all;"><?php echo $referral_link; ?></code>
+            </div>
+        </div>
+        <div class="glass-card">
+            <div class="label" style="margin-bottom: 10px;">Active Packages</div>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <?php if (empty($additional_packages)): ?>
+                    <span style="color: var(--text-dim);">No active packages.</span>
+                <?php else: ?>
+                    <?php foreach ($additional_packages as $pkg): ?>
+                        <span class="badge" style="background: var(--brand-green); color: black; font-weight: 800;">
+                            <i class="fas fa-box-open me-1"></i> <?php echo strtoupper($pkg['package_label']); ?>
+                        </span>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+            </div>
         </div>
     </div>
 

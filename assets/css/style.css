@@ -317,3 +317,60 @@ td {
     .nav-links { display: none; }
     .section-title { font-size: 2rem; }
 }
+
+/* ADMIN LAYOUT */
+.admin-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 280px;
+    background: var(--brand-dark);
+    color: white;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    padding: 20px 0;
+}
+
+.sidebar-nav a {
+    display: block;
+    padding: 15px 30px;
+    color: #bdc3c7;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    font-size: 0.9rem;
+}
+
+.sidebar-nav a:hover, .sidebar-nav a.active {
+    background: rgba(255,255,255,0.05);
+    color: var(--brand-green);
+    border-left: 4px solid var(--brand-green);
+}
+
+.admin-content {
+    flex: 1;
+    padding: 40px;
+    background: var(--bg-light);
+}
+
+/* MODALS */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(5px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-overlay.active {
+    display: flex;
+}

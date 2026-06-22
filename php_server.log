@@ -1,13 +1,13 @@
-[Mon Jun 22 09:33:08 2026] PHP 8.3.6 Development Server (http://localhost:8001) started
-[Mon Jun 22 09:33:10 2026] [::1]:35562 Accepted
-[Mon Jun 22 09:33:10 2026] [::1]:35562 [200]: GET /index.php
-[Mon Jun 22 09:33:10 2026] [::1]:35562 Closing
-[Mon Jun 22 09:33:10 2026] [::1]:35564 Accepted
-[Mon Jun 22 09:33:10 2026] [::1]:35564 [200]: GET /assets/css/style.css
-[Mon Jun 22 09:33:10 2026] [::1]:35564 Closing
-[Mon Jun 22 09:33:11 2026] [::1]:35570 Accepted
-[Mon Jun 22 09:33:11 2026] [::1]:35570 [200]: GET /login.php
-[Mon Jun 22 09:33:11 2026] [::1]:35570 Closing
-[Mon Jun 22 09:33:11 2026] [::1]:35582 Accepted
-[Mon Jun 22 09:33:11 2026] [::1]:35582 [200]: GET /assets/css/style.css
-[Mon Jun 22 09:33:11 2026] [::1]:35582 Closing
+[Mon Jun 22 12:26:34 2026] PHP 8.3.6 Development Server (http://localhost:8001) started
+[Mon Jun 22 12:26:36 2026] [::1]:41044 Accepted
+[Mon Jun 22 12:26:36 2026] [::1]:41044 [200]: GET /index.php
+[Mon Jun 22 12:26:36 2026] [::1]:41044 Closing
+[Mon Jun 22 12:26:36 2026] [::1]:41054 Accepted
+[Mon Jun 22 12:26:36 2026] [::1]:41054 [200]: GET /assets/css/style.css
+[Mon Jun 22 12:26:36 2026] [::1]:41054 Closing
+[Mon Jun 22 12:26:38 2026] [::1]:41068 Accepted
+[Mon Jun 22 12:26:38 2026] [::1]:41068 [200]: GET /login.php
+[Mon Jun 22 12:26:38 2026] [::1]:41068 Closing
+[Mon Jun 22 12:26:38 2026] [::1]:41078 Accepted
+[Mon Jun 22 12:26:38 2026] [::1]:41078 [200]: GET /assets/css/style.css
+[Mon Jun 22 12:26:38 2026] [::1]:41078 Closing

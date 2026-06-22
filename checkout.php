@@ -23,6 +23,7 @@ foreach ($_SESSION['cart'] as $id) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $payment_method = $_POST['payment_method'] ?? 'online';
     $pdo->beginTransaction();
     try {
         foreach ($cart_items as $item) {
@@ -34,9 +35,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
 
             // Create Order
-            $stmt = $pdo->prepare("INSERT INTO orders (user_id, product_id, total_price, cibil_status_at_purchase, order_status) VALUES (?, ?, ?, ?, 'completed')");
-            $stmt->execute([$user['id'], $item['id'], $item['price'], $user['cibil_status']]);
+            $stmt = $pdo->prepare("INSERT INTO orders (user_id, product_id, total_price, payment_method, cibil_status_at_purchase, order_status) VALUES (?, ?, ?, ?, ?, 'completed')");
+            $stmt->execute([$user['id'], $item['id'], $item['price'], $payment_method, $user['cibil_status']]);
             $order_id = $pdo->lastInsertId();
+
+            // Add Solar Package if successful
+            $stmt = $pdo->prepare("INSERT INTO additional_packages (user_id, member_skyid, package_label, gross_amount) VALUES (?, ?, 'solar', ?)");
+            $stmt->execute([$user['id'], $user['email'], 'solar', $item['price']]);
 
             if ($item['category'] === 'solar_panel') {
                 if ($user['cibil_status'] === 'good') {
@@ -146,6 +151,19 @@ include 'includes/header.php';
         <?php endif; ?>
 
         <form method="POST">
+            <div style="margin-top: 2rem;">
+                <label style="display: block; margin-bottom: 1rem; font-weight: 700; color: var(--neon-blue);">SELECT PAYMENT METHOD</label>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <label class="glass-card" style="display: flex; align-items: center; gap: 10px; cursor: pointer; padding: 1rem;">
+                        <input type="radio" name="payment_method" value="online" checked style="width: auto; margin: 0;">
+                        <span>Online Payment</span>
+                    </label>
+                    <label class="glass-card" style="display: flex; align-items: center; gap: 10px; cursor: pointer; padding: 1rem;">
+                        <input type="radio" name="payment_method" value="pod" style="width: auto; margin: 0;">
+                        <span>Pay on Delivery</span>
+                    </label>
+                </div>
+            </div>
             <button type="submit" class="btn btn-primary" style="width: 100%; padding: 20px; font-size: 1.2rem; margin-top: 2rem;">AUTHORIZE & COMPLETE TRANSACTION</button>
         </form>
     </div>

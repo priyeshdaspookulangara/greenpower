@@ -49,6 +49,7 @@ CREATE TABLE IF NOT EXISTS orders (
     user_id INT NOT NULL,
     product_id INT NOT NULL,
     total_price DECIMAL(15, 2) NOT NULL,
+    payment_method VARCHAR(50) DEFAULT 'online',
     cibil_status_at_purchase ENUM('good', 'low') NOT NULL,
     order_status ENUM('pending', 'completed', 'cancelled') DEFAULT 'pending',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -80,6 +81,17 @@ CREATE TABLE IF NOT EXISTS level_income (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY (source_order_id) REFERENCES orders(id)
+);
+
+-- 8. Additional Packages (Solar Package Tracking)
+CREATE TABLE IF NOT EXISTS additional_packages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    member_skyid VARCHAR(255) NULL,
+    package_label VARCHAR(255) NOT NULL,
+    gross_amount DECIMAL(15, 2),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
 -- Seed Initial Data
