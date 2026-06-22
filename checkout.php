@@ -41,19 +41,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($item['category'] === 'solar_panel') {
                 if ($user['cibil_status'] === 'good') {
                     // Profile A Logic
+                    // 1. Company receives full product price
                     $stmt = $pdo->prepare("INSERT INTO transactions (order_id, user_id, amount, type, description) VALUES (?, ?, ?, 'company_revenue', 'Sale of Solar Panel (Good CIBIL)')");
                     $stmt->execute([$order_id, $user['id'], $item['price']]);
 
+                    // 2. Company receives Govt Subsidy (Implicit in logic, recorded as inflow for ledger clarity)
+                    $stmt = $pdo->prepare("INSERT INTO transactions (order_id, user_id, amount, type, description) VALUES (?, ?, ?, 'company_revenue', 'Inflow: Government Subsidy Received')");
+                    $stmt->execute([$order_id, $user['id'], 10000]); // Example inflow amount
+
+                    // 3. Company receives Manufacturer Commission
+                    $stmt = $pdo->prepare("INSERT INTO transactions (order_id, user_id, amount, type, description) VALUES (?, ?, ?, 'company_revenue', 'Inflow: Manufacturer Commission Received')");
+                    $stmt->execute([$order_id, $user['id'], 8000]); // Example inflow amount
+
                     if ($user['referrer_id']) {
+                        // 4. Extract 5000 for Level Income
                         $level_amount = 5000;
                         $stmt = $pdo->prepare("INSERT INTO level_income (user_id, source_order_id, amount, level, status) VALUES (?, ?, ?, 1, 'paid')");
                         $stmt->execute([$user['referrer_id'], $order_id, $level_amount]);
 
-                        $stmt = $pdo->prepare("INSERT INTO transactions (order_id, user_id, amount, type, description) VALUES (?, ?, ?, 'subsidy_payout', 'Level Income payout from subsidy')");
+                        $stmt = $pdo->prepare("INSERT INTO transactions (order_id, user_id, amount, type, description) VALUES (?, ?, ?, 'subsidy_payout', 'Outflow: Level Income (Extracted from Subsidy)')");
                         $stmt->execute([$order_id, $user['referrer_id'], $level_amount]);
 
+                        // 5. Extract 4500 for Referral Bonus
                         $referral_bonus = 4500;
-                        $stmt = $pdo->prepare("INSERT INTO transactions (order_id, user_id, amount, type, description) VALUES (?, ?, ?, 'referral_commission', 'Immediate Referral Bonus from manufacturer commission')");
+                        $stmt = $pdo->prepare("INSERT INTO transactions (order_id, user_id, amount, type, description) VALUES (?, ?, ?, 'referral_commission', 'Outflow: Referral Bonus (Extracted from Commission)')");
                         $stmt->execute([$order_id, $user['referrer_id'], $referral_bonus]);
                     }
                 } else {
