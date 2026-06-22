@@ -41,12 +41,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($item['category'] === 'solar_panel') {
                 if ($user['cibil_status'] === 'good') {
                     // Profile A Logic
-
-                    // 1. Company Revenue
                     $stmt = $pdo->prepare("INSERT INTO transactions (order_id, user_id, amount, type, description) VALUES (?, ?, ?, 'company_revenue', 'Sale of Solar Panel (Good CIBIL)')");
                     $stmt->execute([$order_id, $user['id'], $item['price']]);
 
-                    // 2. Level Income Distribution (5000 from Subsidy)
                     if ($user['referrer_id']) {
                         $level_amount = 5000;
                         $stmt = $pdo->prepare("INSERT INTO level_income (user_id, source_order_id, amount, level, status) VALUES (?, ?, ?, 1, 'paid')");
@@ -54,22 +51,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                         $stmt = $pdo->prepare("INSERT INTO transactions (order_id, user_id, amount, type, description) VALUES (?, ?, ?, 'subsidy_payout', 'Level Income payout from subsidy')");
                         $stmt->execute([$order_id, $user['referrer_id'], $level_amount]);
-                    }
 
-                    // 3. Referral Income (4500 from Manufacturer Commission)
-                    if ($user['referrer_id']) {
                         $referral_bonus = 4500;
                         $stmt = $pdo->prepare("INSERT INTO transactions (order_id, user_id, amount, type, description) VALUES (?, ?, ?, 'referral_commission', 'Immediate Referral Bonus from manufacturer commission')");
                         $stmt->execute([$order_id, $user['referrer_id'], $referral_bonus]);
                     }
-
                 } else {
                     // Profile B Logic
                     $stmt = $pdo->prepare("INSERT INTO transactions (order_id, user_id, amount, type, description) VALUES (?, ?, ?, 'third_party_subsidy', 'Processed via Third-Party Subsidy mechanism (Low CIBIL)')");
                     $stmt->execute([$order_id, $user['id'], $item['price']]);
                 }
             } else {
-                // Regular Battery Sale
                 $stmt = $pdo->prepare("INSERT INTO transactions (order_id, user_id, amount, type, description) VALUES (?, ?, ?, 'company_revenue', 'Sale of Battery')");
                 $stmt->execute([$order_id, $user['id'], $item['price']]);
             }
@@ -89,58 +81,61 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 include 'includes/header.php';
 ?>
 
-<div class="container" style="max-width: 900px; padding-top: 40px; padding-bottom: 80px;">
-    <div class="card" style="padding: 40px;">
-        <h2 style="margin-bottom: 1.5rem; color: var(--brand-blue);">Order Confirmation</h2>
+<div class="container" style="max-width: 900px;">
+    <h1 class="section-title">Finalize Order</h1>
 
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+    <div class="glass-card">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid var(--glass-border);">
             <div>
-                <p style="margin-bottom: 10px;"><strong>Customer:</strong> <?php echo htmlspecialchars($user['name'] ?? 'Guest'); ?></p>
-                <p><strong>CIBIL Status:</strong> <span style="font-weight: bold; color: var(--brand-green);"><?php echo strtoupper($user['cibil_status'] ?? 'N/A'); ?></span></p>
+                <p style="color: var(--text-dim); margin-bottom: 5px;">Customer</p>
+                <h3 style="margin-bottom: 15px;"><?php echo htmlspecialchars($user['name']); ?></h3>
+                <span class="badge <?php echo $user['cibil_status'] == 'good' ? 'badge-success' : 'badge-info'; ?>">
+                    CIBIL: <?php echo strtoupper($user['cibil_status']); ?>
+                </span>
             </div>
-            <div style="background: var(--light-bg); padding: 20px; border-radius: 8px; border-left: 4px solid var(--brand-green);">
-                <h4 style="margin-bottom: 10px; color: var(--brand-blue);">Financial Processing Logic:</h4>
-                <?php if (($user['cibil_status'] ?? '') === 'good'): ?>
-                    <p style="font-size: 0.95rem; margin-bottom: 5px;">✅ <strong>Profile A:</strong> Direct Government Subsidy</p>
-                    <p style="font-size: 0.85rem; color: #666; line-height: 1.4;">Subsidy-based Level Income and Manufacturer Commission bonuses will be automatically distributed.</p>
+            <div style="background: rgba(255,255,255,0.03); padding: 1.5rem; border-radius: 12px; border-left: 4px solid var(--neon-green);">
+                <h4 style="color: var(--neon-blue); margin-bottom: 10px;">Protocol Routing</h4>
+                <?php if ($user['cibil_status'] === 'good'): ?>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">Profile A triggered: Level Income and Referral Bonus distribution active.</p>
                 <?php else: ?>
-                    <p style="font-size: 0.95rem; margin-bottom: 5px;">⚠️ <strong>Profile B:</strong> Third-Party Routing</p>
-                    <p style="font-size: 0.85rem; color: #666; line-height: 1.4;">Your order will be processed through our designated third-party subsidy channel for approval.</p>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">Profile B triggered: Third-Party Subsidy routing active.</p>
                 <?php endif; ?>
             </div>
         </div>
 
-        <table class="table" style="margin-bottom: 2rem; width: 100%; border-collapse: collapse;">
-            <thead>
-                <tr style="border-bottom: 2px solid #eee;">
-                    <th style="padding: 15px; text-align: left;">Item Description</th>
-                    <th style="padding: 15px; text-align: right;">Price</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($cart_items as $item): ?>
-                    <tr style="border-bottom: 1px solid #eee;">
-                        <td style="padding: 15px;"><?php echo htmlspecialchars($item['name']); ?></td>
-                        <td style="padding: 15px; text-align: right;"><?php echo formatPrice($item['price']); ?></td>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
                     </tr>
-                <?php endforeach; ?>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <th style="padding: 20px 15px; font-size: 1.2rem; text-align: left;">Total Payable Amount</th>
-                    <th style="padding: 20px 15px; text-align: right; font-size: 1.8rem; color: var(--brand-green);"><?php echo formatPrice($total); ?></th>
-                </tr>
-            </tfoot>
-        </table>
+                </thead>
+                <tbody>
+                    <?php foreach ($cart_items as $item): ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($item['name']); ?></td>
+                        <td class="neon-text"><?php echo formatPrice($item['price']); ?></td>
+                    </tr>
+                    <?php endforeach; ?>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td style="font-weight: 800; padding: 2rem;">Total Commitment</td>
+                        <td class="neon-text" style="font-size: 2.2rem; font-weight: 900; padding: 2rem;"><?php echo formatPrice($total); ?></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
 
         <?php if (isset($error)): ?>
-            <div style="background: #fff5f5; color: #e53e3e; padding: 15px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #feb2b2;">
+            <div style="background: rgba(255,0,0,0.1); border: 1px solid #ff4d4d; color: #ff4d4d; padding: 1rem; border-radius: 8px; margin: 2rem 0;">
                 <?php echo $error; ?>
             </div>
         <?php endif; ?>
 
         <form method="POST">
-            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 20px; font-size: 1.3rem; border-radius: 10px;">Complete Transaction</button>
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 20px; font-size: 1.2rem; margin-top: 2rem;">AUTHORIZE & COMPLETE TRANSACTION</button>
         </form>
     </div>
 </div>

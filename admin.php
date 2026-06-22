@@ -31,7 +31,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (isset($_POST['add_product']) || is
         if ($is_edit) {
             $stmt = $pdo->prepare("UPDATE products SET name = ?, category = ?, price = ?, stock = ? WHERE id = ?");
             $stmt->execute([$name, $category, $price, $stock, $product_id]);
-            // Delete old properties and re-insert
             $stmt = $pdo->prepare("DELETE FROM product_properties WHERE product_id = ?");
             $stmt->execute([$product_id]);
         } else {
@@ -77,81 +76,66 @@ include 'includes/header.php';
 
 <div class="admin-wrapper">
     <aside class="sidebar">
-        <div class="sidebar-header">
-            <h4 style="color: var(--brand-blue); margin: 0; font-weight: 900; letter-spacing: -1px;">SOLARSHOP ADMIN</h4>
+        <div class="sidebar-header" style="padding: 20px; text-align: center;">
+            <h2 class="neon-text" style="font-size: 1.5rem;">ADMIN PANEL</h2>
         </div>
-        <ul class="sidebar-nav" style="margin-top: 20px;">
-            <li><a href="admin.php" class="active"><i class="fas fa-th-large" style="width: 20px;"></i> Overview</a></li>
-            <li><a href="#inventory"><i class="fas fa-box" style="width: 20px;"></i> Inventory</a></li>
-            <li><a href="#ledger"><i class="fas fa-file-invoice-dollar" style="width: 20px;"></i> Financial Ledger</a></li>
-            <li><a href="index.php"><i class="fas fa-shopping-cart" style="width: 20px;"></i> View Shop</a></li>
-            <li><a href="logout.php"><i class="fas fa-sign-out-alt" style="width: 20px;"></i> Logout</a></li>
-        </ul>
+        <nav class="sidebar-nav">
+            <a href="admin.php" class="active">Dashboard</a>
+            <a href="#inventory">Inventory</a>
+            <a href="#ledger">Financial Ledger</a>
+            <a href="index.php">View Shop</a>
+            <a href="logout.php">Logout</a>
+        </nav>
     </aside>
 
     <main class="admin-content">
-        <div class="page-header">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Admin Dashboard</li>
-                </ol>
-            </nav>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-                <h1 class="m-0" style="color: var(--brand-blue); font-weight: 900;">Admin Overview</h1>
-                <button class="btn btn-primary" onclick="openProductModal()" style="background-color: var(--brand-green); color: #fff; font-weight: 700;">
-                    <i class="fas fa-plus" style="margin-right: 10px;"></i> Add New Product
-                </button>
-            </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <h1 class="neon-text">Overview</h1>
+            <button class="btn btn-primary" onclick="openProductModal()">+ Add Product</button>
         </div>
 
         <?php if(isset($error)): ?>
-            <div style="background: #fee2e2; color: #dc2626; padding: 1rem; border-radius: 8px; margin-bottom: 2rem;"><?php echo $error; ?></div>
+            <div style="background: rgba(220, 38, 38, 0.2); border: 1px solid #dc2626; color: white; padding: 1rem; border-radius: 8px; margin-bottom: 2rem;"><?php echo $error; ?></div>
         <?php endif; ?>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem;">
-            <div class="admin-card stat-box">
+        <div class="stats-grid">
+            <div class="glass-card stat-box">
                 <div class="label">Total Revenue</div>
-                <div class="value" style="color: var(--brand-green);"><?php echo formatPrice($total_revenue); ?></div>
+                <div class="value"><?php echo formatPrice($total_revenue); ?></div>
             </div>
-            <div class="admin-card stat-box">
+            <div class="glass-card stat-box">
                 <div class="label">Total Orders</div>
                 <div class="value"><?php echo $total_orders; ?></div>
             </div>
-            <div class="admin-card stat-box">
+            <div class="glass-card stat-box">
                 <div class="label">Active Products</div>
                 <div class="value"><?php echo count($products); ?></div>
             </div>
         </div>
 
-        <div class="admin-card" id="inventory">
-            <div class="admin-card-header">
-                <span>Product Inventory</span>
-                <span style="font-size: 0.8rem; background: #e1e5eb; padding: 4px 10px; border-radius: 20px;">
-                    <?php echo count($products); ?> Items
-                </span>
-            </div>
-            <div class="admin-card-body p-0">
-                <table style="color: #333; margin-top: 0;">
-                    <thead style="background: #f8f9fb;">
+        <div class="glass-card" id="inventory" style="margin-bottom: 2rem;">
+            <h3 style="margin-bottom: 1.5rem; color: var(--neon-blue);">Product Inventory</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
                         <tr>
-                            <th style="padding-left: 20px;">Product Name</th>
+                            <th>Product Name</th>
                             <th>Category</th>
                             <th>Price</th>
                             <th>Stock</th>
-                            <th style="text-align: right; padding-right: 20px;">Actions</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php foreach ($products as $p): ?>
                         <tr>
-                            <td style="padding-left: 20px;"><strong><?php echo htmlspecialchars($p['name']); ?></strong></td>
-                            <td><span style="font-size: 0.75rem; color: #666; background: #f0f2f5; padding: 2px 8px; border-radius: 4px;"><?php echo strtoupper(str_replace('_', ' ', $p['category'])); ?></span></td>
-                            <td style="font-weight: 600;"><?php echo formatPrice($p['price']); ?></td>
+                            <td><strong><?php echo htmlspecialchars($p['name']); ?></strong></td>
+                            <td><span class="badge badge-info"><?php echo strtoupper(str_replace('_', ' ', $p['category'])); ?></span></td>
+                            <td class="neon-text"><?php echo formatPrice($p['price']); ?></td>
                             <td><?php echo $p['stock']; ?> units</td>
-                            <td style="text-align: right; padding-right: 20px;">
-                                <a href="admin.php?edit_product=<?php echo $p['id']; ?>" style="color: #007bff; margin-right: 15px;"><i class="fas fa-edit"></i></a>
-                                <a href="admin.php?delete_product=<?php echo $p['id']; ?>" style="color: #dc3545;" onclick="return confirm('Delete this product?')"><i class="fas fa-trash"></i></a>
+                            <td>
+                                <a href="admin.php?edit_product=<?php echo $p['id']; ?>" style="color: var(--neon-blue); margin-right: 15px;"><i class="fas fa-edit"></i></a>
+                                <a href="admin.php?delete_product=<?php echo $p['id']; ?>" style="color: #ff4d4d;" onclick="return confirm('Delete this product?')"><i class="fas fa-trash"></i></a>
                             </td>
                         </tr>
                         <?php endforeach; ?>
@@ -160,38 +144,33 @@ include 'includes/header.php';
             </div>
         </div>
 
-        <div class="admin-card" id="ledger" style="margin-top: 2rem;">
-            <div class="admin-card-header">
-                <span>Financial Ledger & Commission Tracking</span>
-            </div>
-            <div class="admin-card-body p-0">
-                <table style="color: #333; margin-top: 0;">
-                    <thead style="background: #f8f9fb;">
+        <div class="glass-card" id="ledger">
+            <h3 style="margin-bottom: 1.5rem; color: var(--neon-blue);">Financial Ledger</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
                         <tr>
-                            <th style="padding-left: 20px;">Date</th>
+                            <th>Date</th>
                             <th>Order</th>
                             <th>Beneficiary</th>
                             <th>Type</th>
                             <th>Amount</th>
-                            <th style="padding-right: 20px;">Details</th>
+                            <th>Details</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php foreach ($transactions as $t): ?>
                         <tr>
-                            <td style="padding-left: 20px; font-size: 0.8rem; color: #666;"><?php echo date('d M, Y H:i', strtotime($t['created_at'])); ?></td>
+                            <td style="font-size: 0.8rem; color: var(--text-dim);"><?php echo date('d M, H:i', strtotime($t['created_at'])); ?></td>
                             <td>#<?php echo $t['order_id']; ?></td>
                             <td><?php echo htmlspecialchars($t['user_name'] ?? 'System'); ?></td>
                             <td>
-                                <span class="badge" style="font-size: 0.7rem; color: #fff; background: <?php
-                                    if($t['type'] == 'company_revenue') echo '#28a745';
-                                    elseif($t['type'] == 'referral_commission') echo '#fd7e14';
-                                    elseif($t['type'] == 'subsidy_payout') echo '#007bff';
-                                    else echo '#dc3545';
-                                ?>; padding: 2px 6px; border-radius: 3px;"><?php echo strtoupper($t['type']); ?></span>
+                                <span class="badge" style="background: rgba(255,255,255,0.1); border: 1px solid var(--glass-border);">
+                                    <?php echo strtoupper($t['type']); ?>
+                                </span>
                             </td>
-                            <td style="font-weight: 700;"><?php echo formatPrice($t['amount']); ?></td>
-                            <td style="font-size: 0.8rem; color: #666; padding-right: 20px;"><?php echo htmlspecialchars($t['description']); ?></td>
+                            <td class="neon-text"><?php echo formatPrice($t['amount']); ?></td>
+                            <td style="font-size: 0.8rem; color: var(--text-dim);"><?php echo htmlspecialchars($t['description']); ?></td>
                         </tr>
                         <?php endforeach; ?>
                     </tbody>
@@ -201,82 +180,67 @@ include 'includes/header.php';
     </main>
 </div>
 
-<!-- PRODUCT MODAL (ADD/EDIT) -->
-<div class="modal-overlay <?php echo $edit_product ? 'active' : ''; ?>" id="productModal">
-    <div class="login-modal" style="max-width: 600px; text-align: left;">
-        <span class="close-btn" onclick="closeProductModal()">&times;</span>
-        <h3 style="margin-bottom: 1.5rem; color: #333;"><?php echo $edit_product ? 'Edit Product' : 'Add New Product'; ?></h3>
+<!-- PRODUCT MODAL -->
+<div class="modal-overlay <?php echo $edit_product ? 'active' : ''; ?>" id="productModal" style="display: <?php echo $edit_product ? 'flex' : 'none'; ?>;">
+    <div class="glass-card" style="width: 90%; max-width: 600px;">
+        <h3 class="neon-text" style="margin-bottom: 1.5rem;"><?php echo $edit_product ? 'Edit Product' : 'Add New Product'; ?></h3>
         <form method="POST">
             <?php if($edit_product): ?>
                 <input type="hidden" name="product_id" value="<?php echo $edit_product['id']; ?>">
             <?php endif; ?>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+
+            <label>Product Name</label>
+            <input type="text" name="name" required value="<?php echo $edit_product ? htmlspecialchars($edit_product['name']) : ''; ?>">
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
                 <div>
-                    <label style="color: #666; font-size: 0.9rem;">Product Name</label>
-                    <input type="text" name="name" required value="<?php echo $edit_product ? htmlspecialchars($edit_product['name']) : ''; ?>" placeholder="e.g. 440W Solar Panel">
-                </div>
-                <div>
-                    <label style="color: #666; font-size: 0.9rem;">Category</label>
-                    <select name="category" style="width: 100%; padding: 14px; border-radius: 6px; border: 1px solid #ddd; margin-bottom: 15px;">
+                    <label>Category</label>
+                    <select name="category">
                         <option value="solar_panel" <?php echo ($edit_product && $edit_product['category'] == 'solar_panel') ? 'selected' : ''; ?>>Solar Panel</option>
                         <option value="battery" <?php echo ($edit_product && $edit_product['category'] == 'battery') ? 'selected' : ''; ?>>Battery</option>
                     </select>
                 </div>
-            </div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
                 <div>
-                    <label style="color: #666; font-size: 0.9rem;">Unit Price (₹)</label>
+                    <label>Price (₹)</label>
                     <input type="number" name="price" step="0.01" required value="<?php echo $edit_product ? $edit_product['price'] : ''; ?>">
-                </div>
-                <div>
-                    <label style="color: #666; font-size: 0.9rem;">Inventory Stock</label>
-                    <input type="number" name="stock" required value="<?php echo $edit_product ? $edit_product['stock'] : ''; ?>">
                 </div>
             </div>
 
-            <h5 style="margin: 1rem 0 0.5rem; color: #333; font-size: 0.9rem;">Technical Specifications</h5>
+            <label>Inventory Stock</label>
+            <input type="number" name="stock" required value="<?php echo $edit_product ? $edit_product['stock'] : ''; ?>">
+
+            <h4 style="margin: 1.5rem 0 1rem; color: var(--neon-blue);">Technical Specifications</h4>
             <div id="specs-container">
                 <?php if($edit_product && !empty($edit_product['properties'])): ?>
                     <?php foreach($edit_product['properties'] as $prop): ?>
                         <div style="display: flex; gap: 10px; margin-bottom: 10px;">
-                            <input type="text" name="prop_names[]" value="<?php echo htmlspecialchars($prop['property_name']); ?>" placeholder="Spec Name" style="margin-bottom: 0;">
-                            <input type="text" name="prop_values[]" value="<?php echo htmlspecialchars($prop['property_value']); ?>" placeholder="Value" style="margin-bottom: 0;">
+                            <input type="text" name="prop_names[]" value="<?php echo htmlspecialchars($prop['property_name']); ?>" placeholder="Property (e.g. Wattage)">
+                            <input type="text" name="prop_values[]" value="<?php echo htmlspecialchars($prop['property_value']); ?>" placeholder="Value (e.g. 440W)">
                         </div>
                     <?php endforeach; ?>
                 <?php else: ?>
                     <div style="display: flex; gap: 10px; margin-bottom: 10px;">
-                        <input type="text" name="prop_names[]" placeholder="Spec Name" style="margin-bottom: 0;">
-                        <input type="text" name="prop_values[]" placeholder="Value" style="margin-bottom: 0;">
+                        <input type="text" name="prop_names[]" placeholder="Property">
+                        <input type="text" name="prop_values[]" placeholder="Value">
                     </div>
                 <?php endif; ?>
             </div>
-            <button type="button" class="btn" style="background: #f8f9fa; color: #333; font-size: 0.8rem; border: 1px solid #ddd; margin-top: 5px;" onclick="addSpecRow()">
-                <i class="fas fa-plus mr-1"></i> Add Specification
-            </button>
+            <button type="button" class="btn btn-outline" style="font-size: 0.7rem; padding: 5px 15px; margin-bottom: 1rem;" onclick="addSpecRow()">+ Add Spec</button>
 
-            <div style="text-align: right; margin-top: 2rem;">
-                <button type="button" class="btn" style="background: #6c757d; color: #fff; margin-right: 10px;" onclick="closeProductModal()">Cancel</button>
-                <button type="submit" name="<?php echo $edit_product ? 'edit_product_submit' : 'add_product'; ?>" class="btn" style="background: #28a745; color: #fff; padding: 12px 30px;">
-                    <?php echo $edit_product ? 'Update Product' : 'Save Product'; ?>
-                </button>
+            <div style="display: flex; justify-content: flex-end; gap: 1rem; margin-top: 1rem;">
+                <button type="button" class="btn" style="background: rgba(255,255,255,0.1);" onclick="closeProductModal()">Cancel</button>
+                <button type="submit" name="<?php echo $edit_product ? 'edit_product_submit' : 'add_product'; ?>" class="btn btn-primary">Save Changes</button>
             </div>
         </form>
     </div>
 </div>
 
 <script>
-    const productModal = document.getElementById('productModal');
     function openProductModal() {
-        // Clear form if it was an edit
-        if (!productModal.classList.contains('active')) {
-            window.location.href = 'admin.php';
-        }
-        productModal.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        document.getElementById('productModal').style.display = 'flex';
     }
     function closeProductModal() {
-        productModal.classList.remove('active');
-        document.body.style.overflow = 'auto';
+        document.getElementById('productModal').style.display = 'none';
         if (window.location.search.includes('edit_product')) {
             window.location.href = 'admin.php';
         }
@@ -287,16 +251,8 @@ include 'includes/header.php';
         div.style.display = 'flex';
         div.style.gap = '10px';
         div.style.marginBottom = '10px';
-        div.innerHTML = `
-            <input type="text" name="prop_names[]" placeholder="Spec Name" style="margin-bottom: 0;">
-            <input type="text" name="prop_values[]" placeholder="Value" style="margin-bottom: 0;">
-        `;
+        div.innerHTML = `<input type="text" name="prop_names[]" placeholder="Property"> <input type="text" name="prop_values[]" placeholder="Value">`;
         container.appendChild(div);
-    }
-
-    // If modal is open from PHP, ensure overflow hidden
-    if (productModal.classList.contains('active')) {
-        document.body.style.overflow = 'hidden';
     }
 </script>
 

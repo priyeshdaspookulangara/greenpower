@@ -27,33 +27,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 include 'includes/header.php';
 ?>
 
-<div class="container" style="max-width: 500px; margin: 150px auto 100px;">
-    <div class="card">
-        <h2 style="color: var(--brand-blue); margin-bottom: 1.5rem; font-weight: 800;">Login</h2>
+<div class="container" style="max-width: 450px;">
+    <div class="glass-card" style="margin-top: 50px;">
+        <h2 class="neon-text" style="text-align: center; margin-bottom: 2rem;">Sign In</h2>
+
         <?php if ($error): ?>
-            <p style="color: #e74c3c; margin-bottom: 15px; font-weight: bold;"><?php echo $error; ?></p>
+            <div style="background: rgba(255,0,0,0.1); border: 1px solid #ff4d4d; color: #ff4d4d; padding: 10px; border-radius: 8px; margin-bottom: 1.5rem; text-align: center;">
+                <?php echo $error; ?>
+            </div>
         <?php endif; ?>
 
         <form method="POST">
-            <div style="margin-bottom: 15px;">
-                <label style="display: block; margin-bottom: 5px; font-weight: 600;">Email Address</label>
-                <input type="email" name="email" required style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid var(--border-color); background: var(--white); color: var(--text-main);">
-            </div>
+            <label>Email Address</label>
+            <input type="email" name="email" required>
 
-            <div style="margin-bottom: 20px;">
-                <label style="display: block; margin-bottom: 5px; font-weight: 600;">Password</label>
-                <input type="password" name="password" required style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid var(--border-color); background: var(--white); color: var(--text-main);">
-            </div>
+            <label>Password</label>
+            <input type="password" name="password" required>
 
-            <button type="submit" class="submit-btn" style="width: 100%;">Login</button>
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Access Dashboard</button>
         </form>
 
-        <p style="margin-top: 20px; text-align: center; font-size: 0.9rem; color: var(--text-muted);">
-            Need an account? <a href="register.php" style="color: var(--brand-blue); font-weight: 600; text-decoration: none;">Register here</a>
-        </p>
-        <p style="text-align: center; font-size: 0.9rem; margin-top: 10px; color: var(--text-muted);">
-            Existing Burfee Member? <a href="burfee_login.php" style="color: var(--brand-blue); font-weight: 600; text-decoration: none;">Login here</a>
-        </p>
+        <div style="margin-top: 2rem; text-align: center; font-size: 0.9rem;">
+            <p style="color: var(--text-dim);">New to SolarShop? <a href="register.php" class="neon-text" style="text-decoration: none;">Create Account</a></p>
+            <p style="margin-top: 10px;"><a href="burfee_login.php" style="color: var(--neon-blue); text-decoration: none;">Legacy Member Login</a></p>
+        </div>
     </div>
 </div>
 

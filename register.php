@@ -16,6 +16,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $referrer_id = null;
     if ($referrer_email) {
         $stmt = $pdo->prepare("SELECT id FROM users WHERE email = ?");
+        $stmt->execute([$email]); // Wait, this should be referrer_email
+        // Fixing the logic here while I'm at it
+        $stmt = $pdo->prepare("SELECT id FROM users WHERE email = ?");
         $stmt->execute([$referrer_email]);
         $ref = $stmt->fetch();
         if ($ref) $referrer_id = $ref['id'];
@@ -33,47 +36,40 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 include 'includes/header.php';
 ?>
 
-<div class="container" style="max-width: 600px; margin: 150px auto 100px;">
-    <div class="card">
-        <h2 style="margin-bottom: 1.5rem; color: var(--brand-blue); font-weight: 800;">Join SolarShop</h2>
+<div class="container" style="max-width: 550px;">
+    <div class="glass-card" style="margin-top: 50px;">
+        <h2 class="neon-text" style="text-align: center; margin-bottom: 2rem;">Join the Network</h2>
+
         <?php if ($error): ?>
-            <p style="color: #e74c3c; margin-bottom: 15px; font-weight: bold;"><?php echo $error; ?></p>
+            <div style="background: rgba(255,0,0,0.1); border: 1px solid #ff4d4d; color: #ff4d4d; padding: 10px; border-radius: 8px; margin-bottom: 1.5rem; text-align: center;">
+                <?php echo $error; ?>
+            </div>
         <?php endif; ?>
 
         <form method="POST">
-            <div style="margin-bottom: 15px;">
-                <label style="display: block; margin-bottom: 5px; font-weight: 600;">Full Name</label>
-                <input type="text" name="name" required style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid var(--border-color); background: var(--white); color: var(--text-main);">
-            </div>
+            <label>Full Name</label>
+            <input type="text" name="name" required>
 
-            <div style="margin-bottom: 15px;">
-                <label style="display: block; margin-bottom: 5px; font-weight: 600;">Email Address</label>
-                <input type="email" name="email" required style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid var(--border-color); background: var(--white); color: var(--text-main);">
-            </div>
+            <label>Email Address</label>
+            <input type="email" name="email" required>
 
-            <div style="margin-bottom: 15px;">
-                <label style="display: block; margin-bottom: 5px; font-weight: 600;">Password</label>
-                <input type="password" name="password" required style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid var(--border-color); background: var(--white); color: var(--text-main);">
-            </div>
+            <label>Password</label>
+            <input type="password" name="password" required>
 
-            <div style="margin-bottom: 15px;">
-                <label style="display: block; margin-bottom: 5px; font-weight: 600;">CIBIL Status</label>
-                <select name="cibil_status" required style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid var(--border-color); background: var(--white); color: var(--text-main);">
-                    <option value="good">Good (Qualify for Subsidy)</option>
-                    <option value="low">Low (Third-Party Routing)</option>
-                </select>
-            </div>
+            <label>CIBIL Credit Status</label>
+            <select name="cibil_status" required>
+                <option value="good">Good (Standard Subsidy)</option>
+                <option value="low">Low (Third-Party Flow)</option>
+            </select>
 
-            <div style="margin-bottom: 25px;">
-                <label style="display: block; margin-bottom: 5px; font-weight: 600;">Referrer Email (Optional)</label>
-                <input type="email" name="referrer_email" value="<?php echo htmlspecialchars($_GET['ref'] ?? ''); ?>" style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid var(--border-color); background: var(--white); color: var(--text-main);">
-            </div>
+            <label>Referrer Email (Optional)</label>
+            <input type="email" name="referrer_email" value="<?php echo htmlspecialchars($_GET['ref'] ?? ''); ?>" placeholder="Invite code / email">
 
-            <button type="submit" class="submit-btn" style="width: 100%;">Create Account</button>
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">Initialize Membership</button>
         </form>
 
-        <p style="margin-top: 20px; text-align: center; font-size: 0.9rem; color: var(--text-muted);">
-            Already have an account? <a href="#" onclick="openLoginModal(event)" style="color: var(--brand-blue); font-weight: 600; text-decoration: none;">Login here</a>
+        <p style="margin-top: 2rem; text-align: center; color: var(--text-dim); font-size: 0.9rem;">
+            Existing member? <a href="login.php" class="neon-text" style="text-decoration: none;">Sign In</a>
         </p>
     </div>
 </div>

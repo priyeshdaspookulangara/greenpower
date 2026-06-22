@@ -4,7 +4,7 @@ require_once 'includes/functions.php';
 if (isset($_GET['remove'])) {
     $index = (int)$_GET['remove'];
     unset($_SESSION['cart'][$index]);
-    $_SESSION['cart'] = array_values($_SESSION['cart']); // re-index
+    $_SESSION['cart'] = array_values($_SESSION['cart']);
     redirect('cart.php');
 }
 
@@ -25,42 +25,47 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
 include 'includes/header.php';
 ?>
 
-<div class="container" style="margin-top: 150px; margin-bottom: 80px;">
-    <div class="card">
-        <h2 style="margin-bottom: 2rem; color: var(--brand-blue); font-weight: 900;">Your Shopping Cart</h2>
+<div class="container">
+    <h1 class="section-title">Shopping Cart</h1>
+
+    <div class="glass-card">
         <?php if (empty($cart_items)): ?>
-            <p style="color: var(--text-muted); font-size: 1.1rem;">Your cart is empty. <a href="index.php" style="color: var(--brand-green); font-weight: 700; text-decoration: none;">Go shopping</a></p>
+            <div style="text-align: center; padding: 3rem;">
+                <p style="color: var(--text-dim); font-size: 1.2rem; margin-bottom: 2rem;">Your cart is currently empty.</p>
+                <a href="index.php" class="btn btn-outline">Start Shopping</a>
+            </div>
         <?php else: ?>
-            <div style="overflow-x: auto;">
+            <div class="table-container">
                 <table>
                     <thead>
                         <tr>
                             <th>Product</th>
                             <th>Category</th>
                             <th>Price</th>
-                            <th style="text-align: right;">Action</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php foreach ($cart_items as $index => $item): ?>
                         <tr>
-                            <td style="font-weight: 600; color: var(--text-main);"><?php echo htmlspecialchars($item['name']); ?></td>
-                            <td><span style="font-size: 0.75rem; color: var(--text-muted); background: var(--light-bg); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--border-color);"><?php echo strtoupper(str_replace('_', ' ', $item['category'])); ?></span></td>
-                            <td style="font-weight: 700; color: var(--brand-blue);"><?php echo formatPrice($item['price']); ?></td>
-                            <td style="text-align: right;"><a href="cart.php?remove=<?php echo $index; ?>" style="color: #e74c3c; text-decoration: none; font-weight: 600; font-size: 0.9rem;"><i class="fas fa-trash"></i> Remove</a></td>
+                            <td><strong><?php echo htmlspecialchars($item['name']); ?></strong></td>
+                            <td><span class="badge badge-info"><?php echo strtoupper(str_replace('_', ' ', $item['category'])); ?></span></td>
+                            <td class="neon-text"><?php echo formatPrice($item['price']); ?></td>
+                            <td><a href="cart.php?remove=<?php echo $index; ?>" style="color: #ff4d4d;"><i class="fas fa-trash"></i></a></td>
                         </tr>
                         <?php endforeach; ?>
                     </tbody>
                     <tfoot>
-                        <tr>
-                            <th colspan="2" style="font-size: 1.2rem; background: var(--white); border-top: 2px solid var(--border-color);">Total Amount</th>
-                            <th colspan="2" style="font-size: 2rem; background: var(--white); border-top: 2px solid var(--border-color); color: var(--brand-green); font-weight: 900; text-align: right;"><?php echo formatPrice($total); ?></th>
+                        <tr style="background: rgba(255,255,255,0.05);">
+                            <td colspan="2" style="font-weight: 800; font-size: 1.2rem;">TOTAL</td>
+                            <td colspan="2" class="neon-text" style="font-size: 2rem; font-weight: 900;"><?php echo formatPrice($total); ?></td>
                         </tr>
                     </tfoot>
                 </table>
             </div>
-            <div style="margin-top: 40px; text-align: right;">
-                <a href="checkout.php" class="btn btn-primary" style="padding: 18px 50px; font-size: 1rem; font-weight: 800; border-radius: 4px;">PROCEED TO CHECKOUT</a>
+            <div style="margin-top: 3rem; display: flex; justify-content: space-between; align-items: center;">
+                <a href="index.php" style="color: var(--text-dim); text-decoration: none;"><i class="fas fa-arrow-left"></i> Continue Shopping</a>
+                <a href="checkout.php" class="btn btn-primary" style="padding: 16px 40px;">PROCEED TO CHECKOUT</a>
             </div>
         <?php endif; ?>
     </div>
